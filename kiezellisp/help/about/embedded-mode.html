@@ -1,0 +1,70 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/embedded-mode.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:embedded-mode</p>
+<h2>Description</h2>
+<p>A .NET program can call Kiezellisp functions by using the <code>Kiezel.EmbeddedMode</code>
+class contained in <code>kiezellisp-lib.dll</code>.</p>
+<p>The following example can be found in the Kiezellisp C# solution:</p>
+<pre><code>static void Main( string[] args )
+{
+    try
+    {
+        Kiezel.EmbeddedMode.Init( debugMode: false );
+        var a = Kiezel.EmbeddedMode.Funcall( &quot;+&quot;, 3, 4 );
+        Kiezel.EmbeddedMode.Funcall( &quot;print&quot;, a );
+        var b = Kiezel.EmbeddedMode.Funcall( &quot;+&quot;, a, a );
+        Kiezel.EmbeddedMode.Funcall( &quot;++&quot;, 3, 4 );
+</code></pre>
+<pre><code>}
+catch ( Exception ex )
+{
+    var s = Kiezel.EmbeddedMode.GetDiagnostics( ex );
+    Console.WriteLine( s );
+}
+</code></pre>
+<p>}</p>
+
+</div></body></html>

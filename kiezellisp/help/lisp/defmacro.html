@@ -1,0 +1,86 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/defmacro.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>defmacro</p>
+<h2>Usage</h2>
+<p>special-form</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>defmacro</strong> <em>name</em> (<em>arg*</em>) <em>[doc-string]</em> <em>form*</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Macros are functions that do not evaluate their arguments but use them as given
+in order to construct and return lisp code which is then compiled and executed.</p>
+<p>Typically, the return value of a macro is a backquote (aka quasiquote) expression:</p>
+<pre><code>user &gt; (defmacro my-trace (expr)
+           (when $debugging
+               (var result (gentemp))
+               `(when $tracing
+                   (var ,result ,expr)
+                   (write-line (string
+                                   ,(write-to-string expr :escape true)
+                                   &quot; =&gt; &quot;
+                                   (write-to-string ,result :escape true)) :stream $stdlog))))
+it: my-trace
+</code></pre>
+<p>The code returned by this macro is always <code>null</code> in no-debug mode, but otherwise...</p>
+<pre><code>user &gt; (macroexpand '(my-trace (setq x (blabla))))
+it: (if $tracing
+      (do?
+        (var temp:temp-398 (setq x (blabla)))
+        (write-line (string &quot;(setq x (blabla))&quot;
+                             &quot; =&gt; &quot;
+                             (write-to-string temp:temp-398 :escape true))
+                    :stream
+                    $stdlog)))
+</code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/code-walk.html">code-walk</a> <a href="../lisp/code-walk-list.html">code-walk-list</a>
+<a href="../lisp/define-compiler-macro.html">define-compiler-macro</a>
+<a href="../lisp/define-symbol-macro.html">define-symbol-macro</a> <a href="../lisp/defmacro.html">defmacro</a>
+<a href="../lisp/gentemp.html">gentemp</a> <a href="../lisp/let-symbol-macro.html">let-symbol-macro</a>
+<a href="../lisp/letmacro.html">letmacro</a> <a href="../lisp/macroexpand.html">macroexpand</a>
+<a href="../lisp/macroexpand-1.html">macroexpand-1</a> <a href="../lisp/macroexpand-all.html">macroexpand-all</a></p>
+
+</div></body></html>

@@ -1,0 +1,147 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/api.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:api</p>
+<h1>CLR</h1>
+<p><a href="../lisp/add-event-handler.html">add-event-handler</a> <a href="../lisp/import.html">import</a>
+<a href="../lisp/reference.html">reference</a></p>
+<h3>Explicit interfaces</h3>
+<p>To call a method on an explicit interface, first import the interface, then call
+the corresponding function in its package.</p>
+<pre><code>user &gt; (import &quot;system.collections.ilist&quot;)
+it: &lt;Package Name=&quot;ilist&quot;&gt;
+user &gt; (ilist:item (vector 'a 'b 'c) 2)
+it: c
+</code></pre>
+<h1>Conditionals</h1>
+<p><a href="../lisp/case.html">case</a> <a href="../lisp/case-match.html">case-match</a> <a href="../lisp/cond.html">cond</a>
+<a href="../lisp/ecase.html">ecase</a> <a href="../lisp/ecase-match.html">ecase-match</a>
+<a href="../lisp/etypecase.html">etypecase</a> <a href="../lisp/if.html">if</a> <a href="../lisp/if-let.html">if-let</a>
+<a href="../lisp/if-match.html">if-match</a> <a href="../lisp/typecase.html">typecase</a> <a href="../lisp/when.html">when</a>
+<a href="../lisp/when-let.html">when-let</a> <a href="../lisp/when-match.html">when-match</a></p>
+<h1>Math</h1>
+<p><a href="../math/conjugate.html">math:conjugate</a></p>
+<p>The package <code>math</code> replaces the class <code>System.Math</code> and adds support for big
+integers, rationals and complex numbers.</p>
+<h1>Functions</h1>
+<p><a href="../about/parameter-lists.html">about:parameter-lists</a> <a href="../lisp/defmethod.html">defmethod</a>
+<a href="../lisp/defmulti.html">defmulti</a> <a href="../lisp/defun.html">defun</a> <a href="../lisp/defun(star).html">defun*</a>
+<a href="../lisp/lambda.html">lambda</a> <a href="../lisp/lambda(star).html">lambda*</a>
+<a href="../lisp/lambda(qm).html">lambda?</a> <a href="../lisp/letfun.html">letfun</a> <a href="../user//recur.html">recur</a>
+<a href="../lisp/return.html">return</a> <a href="../lisp/return-if.html">return-if</a> <a href="../lisp/self.html">self</a>
+<a href="../user//tail-recursion.html">tail-recursion</a></p>
+<h1>Macros</h1>
+<p><a href="../about/parameters.html">about:parameters</a>
+<a href="../lisp/define-compiler-macro.html">define-compiler-macro</a>
+<a href="../lisp/define-symbol-macro.html">define-symbol-macro</a> <a href="../lisp/defmacro.html">defmacro</a>
+<a href="../lisp/let-symbol-macro.html">let-symbol-macro</a> <a href="../lisp/letmacro.html">letmacro</a></p>
+<h1>Loops</h1>
+<p><a href="../lisp/break.html">break</a> <a href="../lisp/break-if.html">break-if</a> <a href="../lisp/continue.html">continue</a>
+<a href="../lisp/continue-if.html">continue-if</a> <a href="../lisp/finish.html">finish</a>
+<a href="../lisp/finish-if.html">finish-if</a> <a href="../lisp/foreach.html">foreach</a> <a href="../lisp/loop.html">loop</a>
+<a href="../lisp/while.html">while</a></p>
+<h1>Arrays</h1>
+<p><a href="../lisp/as-array.html">as-array</a> <a href="../lisp/create-array.html">create-array</a></p>
+<h1>Vectors</h1>
+<p><a href="../lisp/as-vector.html">as-vector</a> <a href="../lisp/vector.html">vector</a></p>
+<h1>Lists</h1>
+<p><a href="../lisp/as-lazy-list.html">as-lazy-list</a> <a href="../lisp/as-list.html">as-list</a> <a href="../lisp/caar.html">caar</a>
+<a href="../lisp/cadr.html">cadr</a> <a href="../lisp/car.html">car</a> <a href="../lisp/cdar.html">cdar</a>
+<a href="../lisp/cddr.html">cddr</a> <a href="../lisp/cdr.html">cdr</a> <a href="../lisp/cons.html">cons</a>
+<a href="../lisp/first.html">first</a> <a href="../lisp/last.html">last</a> <a href="../lisp/list.html">list</a>
+<a href="../lisp/list(star).html">list*</a> <a href="../lisp/parallel-list.html">parallel-list</a>
+<a href="../lisp/rest.html">rest</a> <a href="../lisp/set-car.html">set-car</a> <a href="../lisp/set-cdr.html">set-cdr</a></p>
+<h1>Sequences</h1>
+<p><a href="../lisp/adjoin.html">adjoin</a> <a href="../lisp/any(qm).html">any?</a> <a href="../lisp/append.html">append</a>
+<a href="../lisp/as-array.html">as-array</a> <a href="../lisp/as-lazy-list.html">as-lazy-list</a>
+<a href="../lisp/as-list.html">as-list</a> <a href="../lisp/as-vector.html">as-vector</a>
+<a href="../lisp/average.html">average</a> <a href="../lisp/cat.html">cat</a> <a href="../user//conjoin.html">conjoin</a>
+<a href="../lisp/copy-seq.html">copy-seq</a> <a href="../lisp/count.html">count</a> <a href="../lisp/cycle.html">cycle</a>
+<a href="../lisp/dedupe.html">dedupe</a> <a href="../lisp/distinct.html">distinct</a> <a href="../lisp/drop.html">drop</a>
+<a href="../lisp/drop-while.html">drop-while</a> <a href="../lisp/each.html">each</a> <a href="../lisp/eduction.html">eduction</a>
+<a href="../lisp/every(qm).html">every?</a> <a href="../lisp/except.html">except</a> <a href="../lisp/fifth.html">fifth</a>
+<a href="../lisp/filter.html">filter</a> <a href="../lisp/filterv.html">filterv</a> <a href="../lisp/find.html">find</a>
+<a href="../lisp/find-subsequence-position.html">find-subsequence-position</a>
+<a href="../lisp/first.html">first</a> <a href="../lisp/flatten.html">flatten</a> <a href="../lisp/fourth.html">fourth</a>
+<a href="../lisp/group-by.html">group-by</a> <a href="../lisp/index-of.html">index-of</a>
+<a href="../lisp/interleave.html">interleave</a> <a href="../lisp/interpose.html">interpose</a>
+<a href="../lisp/intersect.html">intersect</a> <a href="../lisp/iterate.html">iterate</a> <a href="../lisp/keep.html">keep</a>
+<a href="../lisp/keep-indexed.html">keep-indexed</a> <a href="../lisp/length.html">length</a> <a href="../lisp/map.html">map</a>
+<a href="../lisp/map-indexed.html">map-indexed</a> <a href="../lisp/mapcat.html">mapcat</a> <a href="../lisp/mapv.html">mapv</a>
+<a href="../lisp/maximize.html">maximize</a> <a href="../lisp/merge.html">merge</a> <a href="../lisp/merge-by.html">merge-by</a>
+<a href="../lisp/minimize.html">minimize</a> <a href="../lisp/mismatch.html">mismatch</a>
+<a href="../lisp/not-any(qm).html">not-any?</a> <a href="../lisp/not-every(qm).html">not-every?</a>
+<a href="../lisp/nth.html">nth</a> <a href="../lisp/parallel-each.html">parallel-each</a>
+<a href="../lisp/parallel-map.html">parallel-map</a> <a href="../lisp/partition.html">partition</a>
+<a href="../lisp/partition-all.html">partition-all</a> <a href="../lisp/partition-by.html">partition-by</a>
+<a href="../lisp/range.html">range</a> <a href="../lisp/reduce.html">reduce</a> <a href="../lisp/reductions.html">reductions</a>
+<a href="../lisp/remove.html">remove</a> <a href="../lisp/repeat.html">repeat</a> <a href="../lisp/repeatedly.html">repeatedly</a>
+<a href="../lisp/reverse.html">reverse</a> <a href="../lisp/second.html">second</a> <a href="../lisp/sequence.html">sequence</a>
+<a href="../lisp/series.html">series</a> <a href="../lisp/shuffle.html">shuffle</a> <a href="../lisp/sort.html">sort</a>
+<a href="../lisp/sort-by.html">sort-by</a> <a href="../lisp/split-at.html">split-at</a>
+<a href="../lisp/split-with.html">split-with</a> <a href="../lisp/subseq.html">subseq</a> <a href="../lisp/sum.html">sum</a>
+<a href="../lisp/take.html">take</a> <a href="../lisp/take-nth.html">take-nth</a> <a href="../lisp/take-while.html">take-while</a>
+<a href="../lisp/third.html">third</a> <a href="../lisp/transduce.html">transduce</a> <a href="../lisp/union.html">union</a>
+<a href="../lisp/unzip.html">unzip</a> <a href="../lisp/zip.html">zip</a></p>
+<h1>Variables</h1>
+<p><a href="../lisp/declare.html">declare</a> <a href="../lisp/def.html">def</a> <a href="../lisp/defconstant.html">defconstant</a>
+<a href="../lisp/defonce.html">defonce</a> <a href="../lisp/defsetf.html">defsetf</a> <a href="../lisp/let.html">let</a>
+<a href="../lisp/multiple-setf.html">multiple-setf</a> <a href="../lisp/psetf.html">psetf</a> <a href="../lisp/psetq.html">psetq</a>
+<a href="../lisp/set.html">set</a> <a href="../lisp/setf.html">setf</a> <a href="../lisp/setq.html">setq</a> <a href="../lisp/var.html">var</a>
+<a href="../lisp/with-multiple-let.html">with-multiple-let</a></p>
+<h1>Exception Handling</h1>
+<p><a href="../lisp/ignore-errors.html">ignore-errors</a> <a href="../lisp/return-or-throw.html">return-or-throw</a>
+<a href="../lisp/throw.html">throw</a> <a href="../lisp/throw-error.html">throw-error</a> <a href="../lisp/try.html">try</a>
+<a href="../lisp/try-and-catch.html">try-and-catch</a> <a href="../lisp/using.html">using</a></p>
+<h1>Input/output</h1>
+<p><a href="../lisp/peek-char.html">peek-char</a> <a href="../lisp/print.html">print</a> <a href="../lisp/read.html">read</a>
+<a href="../lisp/read-all.html">read-all</a> <a href="../lisp/read-all-from-string.html">read-all-from-string</a>
+<a href="../lisp/read-char.html">read-char</a> <a href="../lisp/read-delimited-list.html">read-delimited-list</a>
+<a href="../lisp/read-from-string.html">read-from-string</a> <a href="../lisp/unread-char.html">unread-char</a>
+<a href="../lisp/with-input-from-string.html">with-input-from-string</a>
+<a href="../lisp/with-output-to-string.html">with-output-to-string</a> <a href="../lisp/write.html">write</a>
+<a href="../lisp/write-line.html">write-line</a> <a href="../lisp/write-to-string.html">write-to-string</a></p>
+
+</div></body></html>

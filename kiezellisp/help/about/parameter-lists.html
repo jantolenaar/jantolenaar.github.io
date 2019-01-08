@@ -1,0 +1,89 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/parameter-lists.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:parameter-lists</p>
+<h2>Description</h2>
+<p>The definition of a function, macro or method has a parameter list. A function
+call, macro call or method call has an argument list. The parameter list defines
+which argument lists are ok and which are not ok.</p>
+<p>The general form of a parameter list is as follows:</p>
+<pre><code>paramlist := '(' [required-arg*]
+                 ['&amp;optional' optional-positional-arg*] ')'
+
+paramlist := '(' [required-arg*]
+                 ['&amp;rest'|'&amp;body'|'&amp;params'|'&amp;vector' symbol] ')'
+
+paramlist := '(' [required-arg*]
+                 ['&amp;key' optional-named-arg*] ')'
+</code></pre>
+<p><code>required-arg</code> is different for functions, macros and methods.</p>
+<pre><code>optional-positional-arg := symbol | '(' symbol default-value ')'
+optional-named-arg := symbol | '(' symbol default-value ')'
+</code></pre>
+<p>The <code>default-value</code> is compiled when the function is defined and only executed
+when a function call value does not provide a value. It cannot refer to
+parameters on its left. The default of <code>default-value</code> is <code>null</code>.</p>
+<p><code>&amp;params</code> is like <code>&amp;rest</code>, but binds the remainder of the argument list as an
+array of objects. <code>&amp;vector</code> is like <code>&amp;rest</code>, but binds the remainder of the
+argument list as a vector. <code>&amp;body</code> is a synonym of <code>&amp;rest</code>.</p>
+<h2>Function Parameter List</h2>
+<pre><code>required-arg := symbol
+</code></pre>
+<p><a href="../lisp/defun.html">defun</a> <a href="../lisp/defun(star).html">defun*</a> <a href="../lisp/lambda.html">lambda</a>
+<a href="../lisp/lambda(star).html">lambda*</a> <a href="../lisp/letfun.html">letfun</a></p>
+<h2>Method Parameter List</h2>
+<pre><code>required-arg := symbol | '(' symbol [type] ')'
+type := type-symbol | '(' 'eql' value ')'
+</code></pre>
+<p>A <code>type-symbol</code> is the name of a type created by <code>deftype</code>.</p>
+<p><a href="../lisp/defmethod.html">defmethod</a> <a href="../lisp/defmulti.html">defmulti</a>
+<a href="../lisp/deftype.html">deftype</a></p>
+<h2>Macro Parameter List</h2>
+<pre><code>required-arg := symbol | paramlist
+</code></pre>
+<p><a href="../lisp/define-compiler-macro.html">define-compiler-macro</a> <a href="../lisp/defmacro.html">defmacro</a>
+<a href="../lisp/letmacro.html">letmacro</a></p>
+
+</div></body></html>

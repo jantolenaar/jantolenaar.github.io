@@ -1,0 +1,83 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/repl-commands.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:repl-commands</p>
+<h2>Description</h2>
+<p>Lines starting with a colon or comma are top-level commands
+which may be abbreviated. Other lines are lisp expressions.</p>
+<p>General top-level commands:</p>
+<pre><code>:clear                  Clear screen and history.
+:describe [expr]        Describe expression or last result.
+:force [expr]           Force lazy expression or last result.
+:globals [pattern]      Show global variables that contain the pattern.
+:history                Show current history (kiezellisp-gfx)
+:reset [debug-level]    Restart the interpreter (0, 1 or 2).
+:time expr              Show elapsed time (compilation+execution).
+:quit                   Quit program.
+</code></pre>
+<p>Debugger top-level commands:</p>
+<pre><code>:abort                  Abort to previous level or abort after a breakpoint.
+:backtrace              Show evaluation stack.
+:continue               Continue the program after a breakpoint.
+:eval expr [n]          Evaluate expr in the lexical environment at depth n of
+                        the evaluation stack.
+:exception              Print latest exception without DLR stuff.
+:Exception              Print latest exception.
+:modify sym expr [n]    Modify a lexical variable.
+:variables [n]          Print lexical variables at depth n of the evaluation stack.
+:$variables [n]         Print dynamic variables at depth n of the evaluation stack.
+:top                    Abort to top level.
+</code></pre>
+<p>While in the debugger, the existing lexical environments on the call stack
+are readonly, so no <code>setq</code> or <code>setf</code>. You can still fix the value of a lexical
+variable with the <code>:modify</code> command.</p>
+<p>Lisp expressions:</p>
+<p>If the line has no leading whitespace and the first term is a symbol that names
+a function, special form or macro, the line will be enclosed in parentheses and
+executed. Add a leading space to prevent this.</p>
+<h2>See also</h2>
+<p><a href="../lisp/(dollar)repl-force-it.html">$repl-force-it</a></p>
+
+</div></body></html>

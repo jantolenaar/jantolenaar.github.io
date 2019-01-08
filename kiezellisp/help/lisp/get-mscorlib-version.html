@@ -1,0 +1,115 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/get-mscorlib-version.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>get-mscorlib-version</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>get-mscorlib-version</strong>)</code><br/></p>
+<h2>Description</h2>
+<p>Returns the file version of mscorlib.dll</p>
+<pre><code>user &gt; (get-mscorlib-version)
+it: #&lt;File:             /usr/lib/mono/4.5/mscorlib.dll
+InternalName:     mscorlib.dll
+OriginalFilename: mscorlib.dll
+FileVersion:      4.6.57.0
+FileDescription:  mscorlib.dll
+Product:          Mono Common Language Infrastructure
+ProductVersion:   4.6.57.0
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language          Language Neutral
+&gt;
+user &gt; :d
+#s( :members #s( :comments &quot;mscorlib.dll&quot;
+                 :company-name &quot;Mono development team&quot;
+                 :file-build-part 57
+                 :file-description &quot;mscorlib.dll&quot;
+                 :file-major-part 4
+                 :file-minor-part 6
+                 :file-name &quot;/usr/lib/mono/4.5/mscorlib.dll&quot;
+                 :file-private-part 0
+                 :file-version &quot;4.6.57.0&quot;
+                 :internal-name &quot;mscorlib.dll&quot;
+                 :is-debug false
+                 :is-patched false
+                 :is-pre-release false
+                 :is-private-build false
+                 :is-special-build false
+                 :language &quot;Language Neutral&quot;
+                 :legal-copyright &quot;(c) Various Mono authors&quot;
+                 :legal-trademarks &quot;&quot;
+                 :original-filename &quot;mscorlib.dll&quot;
+                 :private-build &quot;&quot;
+                 :product-build-part 57
+                 :product-major-part 4
+                 :product-minor-part 6
+                 :product-name &quot;Mono Common Language Infrastructure&quot;
+                 :product-private-part 0
+                 :product-version &quot;4.6.57.0&quot;
+                 :special-build &quot;&quot; )
+    :type &quot;System.Diagnostics.FileVersionInfo&quot;
+    :value #&lt;File:             /usr/lib/mono/4.5/mscorlib.dll
+InternalName:     mscorlib.dll
+OriginalFilename: mscorlib.dll
+FileVersion:      4.6.57.0
+FileDescription:  mscorlib.dll
+Product:          Mono Common Language Infrastructure
+ProductVersion:   4.6.57.0
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language          Language Neutral
+&gt; )
+
+</code></pre>
+
+</div></body></html>

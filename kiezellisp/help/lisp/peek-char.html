@@ -1,0 +1,59 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/peek-char.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>peek-char</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>peek-char</strong> &amp;optional (<em>peek-type</em> null) (<em>stream</em> $stdin) (<em>eof-error?</em> true) (<em>eof-value</em> null))</code><br/></p>
+<p>Peeks at a character from a TextReader stream.</p>
+<p>When <code>peek-type</code> equals <code>null</code> or <code>false</code> <code>peek-char</code> is equivalent to
+<code>read-char</code> followed by <code>unread-char</code>. When <code>peek-type</code> is <code>true</code>, <code>peek-char</code>
+ends up peeking at the first non-whitespace character (by really reading the
+whitespace characters). When <code>peek-type</code> is a character, <code>peek-char</code> ends up
+peeking at that character (by really reading the characters that are not equal).</p>
+
+</div></body></html>

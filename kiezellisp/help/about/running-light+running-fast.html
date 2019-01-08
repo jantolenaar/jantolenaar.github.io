@@ -1,0 +1,72 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/running-light+running-fast.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:running-light+running-fast</p>
+<h2>Description</h2>
+<h2>Precompiled assemblies on Windows</h2>
+<p>Use <code>ngen.exe</code> to create native images of Kiezellisp and its dependencies.</p>
+<pre><code>C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe install kiezellisp-gui.exe
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe install kiezellisp-con.exe
+</code></pre>
+<h2>Precompiled assemblies on Mono/Linux</h2>
+<p>Use <code>--aot</code> to create native images of Kiezellisp and its dependencies.</p>
+<pre><code>mono --aot kiezellisp-gui.exe
+mono --aot kiezellisp-con.exe
+mono --aot kiezellisp-lib.dll
+</code></pre>
+<h2>Light Lambda</h2>
+<p>Kiezellisp no longer uses the <code>LightCompile</code> and <code>LightDynamic</code> features of
+the DLR.</p>
+<p>These features favor <em>interpretation</em> over <em>compilation</em> until a certain usage
+threshold has been reached. In some cases the interpretion gave the wrong results.</p>
+<p>Instead Kiezellisp uses a lazy compile mechanism, that postpones Linq compilation
+until a lambda is called for the first time.</p>
+<h2>Debug vs release code</h2>
+<p>The Kiezellisp compiler inserts code to improve your debugging experience. This
+depends on the debug level (which is typically 0 during init and 2 in the REPL).</p>
+<h2>See also</h2>
+<p><a href="../lisp/(dollar)debugging.html">$debugging</a> <a href="../lisp/set-debug-level.html">set-debug-level</a></p>
+
+</div></body></html>

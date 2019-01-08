@@ -1,0 +1,81 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/write.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>write</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>write</strong> <em>item</em> &amp;key <em>stream</em> <em>escape</em> <em>width</em> <em>padding</em> <em>pretty</em> <em>left</em> <em>right</em> <em>force</em> <em>base</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Writes <code>item</code> to the output stream <code>stream</code>.</p>
+<pre><code>stream := null | true | false | string | Window | TextWriter (default: $stdout)
+escape := boolean
+width := integer
+padding := value-to-be-converted-to-a-string (default: #\space)
+pretty := boolean
+left := integer
+right := integer
+force := boolean
+base := integer (default: 10)
+</code></pre>
+<p>If <code>stream</code> is null or false the output is discarded.
+If <code>stream</code> is true the output goes to $stdout which usually maps to
+<code>$stdscr</code> which is the terminal window of the REPL.
+If <code>stream</code> is a string, the output goes to the file <code>stream</code>-yyyy-MM-dd.log. This
+is thread-safe.
+If <code>stream</code> is a terminal window, output goes to the textwriter attached to the
+window.
+Otherwise <code>stream</code> must be a <code>TextWriter</code>.</p>
+<p>If <code>escape</code> is false the output is text-like otherwise the output is code-like.</p>
+<p><code>base</code> is the number base for integer numbers.</p>
+<p><code>width</code> is the exact number of characters to be printed. If <code>width</code> is to small,
+the output is truncated. If <code>width</code> is to big, numbers are padded on the left
+and strings are padded on the right.</p>
+<p><code>left</code> and <code>right</code> are column offsets. Used <code>pretty</code> is true.</p>
+<h2>See also</h2>
+<p>pprint.k</p>
+
+</div></body></html>

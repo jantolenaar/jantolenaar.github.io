@@ -1,0 +1,71 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/packages.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:packages</p>
+<h2>Description</h2>
+<p>Kiezellisp packages are almost like Common Lisp packages. The <code>import</code> of a .NET
+type creates a package that stores the members of the type.</p>
+<h2>Package Alias</h2>
+<p>The scope of a package alias is the current package.</p>
+<pre><code>(in-package &quot;aaaaaaaaaa&quot;)
+(use-package-alias &quot;cccccc&quot; &quot;c&quot;)
+    cccccc:name -&gt; ok
+    c:name      -&gt; ok
+(in-package &quot;bbbbbbbbbb&quot;)
+    cccccc:name -&gt; ok
+    c:name      -&gt; error
+</code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/(dollar)package.html">$package</a> <a href="../lisp/defpackage.html">defpackage</a>
+<a href="../lisp/delete-package.html">delete-package</a> <a href="../lisp/export-symbol.html">export-symbol</a>
+<a href="../lisp/find-package.html">find-package</a> <a href="../lisp/get-package.html">get-package</a>
+<a href="../lisp/import-symbol.html">import-symbol</a> <a href="../lisp/in-package.html">in-package</a>
+<a href="../lisp/list-all-packages.html">list-all-packages</a>
+<a href="../lisp/list-exported-symbols.html">list-exported-symbols</a>
+<a href="../lisp/make-package.html">make-package</a> <a href="../lisp/shadow-symbol.html">shadow-symbol</a>
+<a href="../user//unuse-package.html">unuse-package</a> <a href="../lisp/use-package.html">use-package</a>
+<a href="../lisp/use-package-alias.html">use-package-alias</a></p>
+
+</div></body></html>

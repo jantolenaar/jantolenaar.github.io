@@ -1,0 +1,117 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/pattern-matching.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:pattern-matching</p>
+<h2>See also</h2>
+<p><a href="../lisp/case-match.html">case-match</a> <a href="../lisp/ecase-match.html">ecase-match</a>
+<a href="../lisp/if-match.html">if-match</a> <a href="../lisp/when-match.html">when-match</a></p>
+<h2>Description</h2>
+<p>Inspired by the Common Lisp library <a href="https://github.com/m2ym/optima">optima</a>.</p>
+<p>The simplest pattern is a constant, such as a <code>number</code>, <code>string</code> or <code>'expression</code>.
+It matches anything that is <code>equal</code> to it.</p>
+<pre><code>user &gt; (if-match 123 (+ 100 23) true)
+it: true
+user &gt; (var expr '(1 2 3))
+it: expr
+user &gt; (if-match '(1 2 3) expr true)
+it: true
+</code></pre>
+<p>The <code>symbol</code> pattern is usually found as a subpattern of a structural pattern.
+The symbol names a variable that will be declared and bound when the pattern
+matches.</p>
+<pre><code>user &gt; (var expr '(1 2 3))
+it: expr
+user &gt; (if-match (list a b c) expr &quot;a=${a} b=${b} c=${c}&quot;)
+it: &quot;a=1 b=2 c=3&quot;
+user &gt; (if-match (list 1 2 c) expr &quot;c=${c}&quot;)
+it: &quot;c=3&quot;
+</code></pre>
+<p>Patterns can be combined with <code>and</code>, <code>or</code> and <code>not</code>.</p>
+<pre><code>user &gt; (if-match (and (satisfies integer?) (satisfies odd?)) &quot;a&quot; true)
+it: null
+user &gt; (if-match (and (satisfies integer?) (satisfies odd?)) 123 true)
+it: true
+user &gt; (if-match (and (satisfies integer?) (satisfies odd?) x) 123 x)
+it: 123
+</code></pre>
+<p>The <code>property</code> pattern tests one or more properties of a prototype object.</p>
+<pre><code>user &gt; (var obj (new :name &quot;teun&quot; :city &quot;leiden&quot; :country &quot;netherlands&quot;))
+it: obj
+user &gt; (if-match (property :name &quot;teun&quot; :city &quot;leiden&quot;) obj true)
+it: true
+user &gt; (if-match (property :name (type 'string)) obj true)
+it: true
+user &gt; (if-match (property :city (regex &quot;lei&quot;) name) obj name)
+it: &quot;leiden&quot;
+</code></pre>
+<h2>Patterns</h2>
+<pre><code>literal-expr
+symbol
+
+(and pattern*)
+(or pattern*)
+(not pattern)
+
+(satisfies predicate-func)
+
+(cons left-pattern right-pattern)
+(vector pattern*)
+(list pattern*)
+(sequence pattern*)
+(enumerable pattern*)
+
+(quote expr)
+(eq value)
+(eql value)
+(equal value)
+(= value)
+(equal-ci value)
+
+(type type-name)
+(regex regex-expr)
+(property property-pattern*)
+</code></pre>
+
+</div></body></html>

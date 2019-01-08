@@ -1,0 +1,70 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/prototype/new.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>prototype:new</p>
+<h2>Usage</h2>
+<p>builtin-constructor</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>prototype:new</strong> &amp;rest <em>args</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Creates a new prototype object.
+When the number of arguments is odd, the first argument must be either a type
+specifier or a list of type specifiers. A type specifier is either a prototype
+object or the name of a type created by <code>deftype</code>, <code>defclass</code>, <code>defstruct</code> or
+<code>import</code>. The other arguments are name/value pairs used to initialize the new
+object. Names can be given as strings, symbols and keywords.</p>
+<pre><code>user &gt; (let a (new :color &quot;black&quot;
+                   :model &quot;0&quot;))
+it: a
+user &gt; (new a
+            :model &quot;12&quot;)
+it: #s( :color &quot;black&quot;
+        :model &quot;12&quot; )
+</code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/new.html">new</a></p>
+
+</div></body></html>

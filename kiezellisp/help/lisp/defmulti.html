@@ -1,0 +1,94 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/defmulti.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>defmulti</p>
+<h2>Usage</h2>
+<p>special-form</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>defmulti</strong> <em>name</em> (<em>arg*</em>) <em>[doc-string]</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Defines a multi-method (same as generic function in CommonLisp).</p>
+<pre><code>user &gt; (defmulti m (a b) &quot;The m multimethod.&quot;)
+it: #&lt;Kiezel.MultiMethod&gt;
+user &gt; (defmethod m ((a (eql 'red)) (b string))
+           (print-line &quot;red string: &quot; b))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (defmethod m ((a (eql 'blue)) (b string))
+           (print-line &quot;blue string: &quot; b))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (defmethod m ((a (eql 'red)) (b number))
+           (print-line &quot;red number: &quot; b))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (defmethod m ((a (eql 'blue)) (b number))
+           (print-line &quot;blue number: &quot; b)
+           (call-next-method))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (defmethod m (a (b number))
+           (print-line &quot;a: &quot; a  &quot; number: &quot; b)
+           (call-next-method))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (defmethod m (a b)
+           (print-line &quot;a: &quot; a  &quot; b: &quot; b))
+it: #&lt;Lambda Name=&quot;m&quot;&gt;
+user &gt; (m 'red &quot;cherry&quot;)
+red string: cherry
+it: null
+user &gt; (m 'blue &quot;berry&quot;)
+blue string: berry
+it: null
+user &gt; (m 'red 123)
+red number: 123
+it: null
+user &gt; (m 'blue 456)
+blue number: 456
+a: blue number: 456
+a: blue b: 456
+it: null
+</code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/call-next-method.html">call-next-method</a> <a href="../lisp/defmethod.html">defmethod</a></p>
+
+</div></body></html>
