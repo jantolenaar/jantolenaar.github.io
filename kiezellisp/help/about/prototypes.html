@@ -1,0 +1,150 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/prototypes.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:prototypes</p>
+<h2>Description</h2>
+<p>A prototype object is a lightweight object based on <code>DynamicObject</code>. It is also
+a class, i.e. you can derive a new prototype object from an existing prototype
+object.</p>
+<p>Prototype objects can be constructed by the lisp reader as a literal or by the
+function <code>new</code> at run-time.</p>
+<p>When the literal expression or the <code>new</code> function call has an even number of
+arguments, the arguments are key-value pairs. The key can be given as a keyword,
+symbol or string. The key's string representation is the real key.</p>
+<pre><code>user &gt; (var a { :name b :city &quot;amsterdam&quot; })
+it: a
+user &gt; (var b #s( name b city &quot;amsterdam&quot; ))
+it: b
+user &gt; (.name a)
+it: b
+    true
+user &gt; (.city a)
+it: &quot;amsterdam&quot;
+    true
+user &gt; (.telephone a)
+it: null
+    false
+user &gt; (var x &quot;mies&quot;)
+it: x
+user &gt; (var c (new :name x :city &quot;amsterdam&quot; :telephone null))
+it: c
+user &gt; (.name c)
+it: &quot;mies&quot;
+    true
+user &gt; (.city c)
+it: &quot;amsterdam&quot;
+    true
+user &gt; (.telephone c)
+it: null
+    true
+</code></pre>
+<p>When the number of arguments is odd, the first argument must be either a type
+specifier or a list of type specifiers. A type specifier is either a prototype
+object or the name of a type created by <code>deftype</code>, <code>defclass</code>, <code>defstruct</code> or
+<code>import</code>.</p>
+<p>In second part of the next example every argument is a constant: <code>b</code> is the name
+of a type.</p>
+<pre><code>user &gt; (deftype b #s( :country &quot;netherlands&quot; ))
+it: #s(b :country &quot;netherlands&quot; )
+user &gt; #s(b)
+it: #s(b :country &quot;netherlands&quot; )
+user &gt; #s(b name &quot;john&quot; city &quot;amsterdam&quot; )
+it: #s(b :city &quot;amsterdam&quot;
+         :country &quot;netherlands&quot;
+         :name &quot;john&quot; )
+</code></pre>
+<p>In the second part of the next example every argument is evaluated: <code>b</code> is the
+name of a variable with a prototype value. The last two lines show that a
+prototype object can be used as a function.</p>
+<pre><code>user &gt; (def b (new :country &quot;netherlands&quot;))
+it: b
+user &gt; (def a (new b
+                   :name &quot;john&quot;
+                   :city &quot;amsterdam&quot;))
+it: a
+user &gt; a
+it: #s( :city &quot;amsterdam&quot;
+        :country &quot;netherlands&quot;
+        :name &quot;john&quot; )
+user &gt; (.name a)
+it: &quot;john&quot;
+    true
+user &gt; (.nam a)
+it: null
+    false
+user &gt; (elt a &quot;name&quot;)
+it: &quot;john&quot;
+    true
+user &gt; (elt a :name)
+it: &quot;john&quot;
+    true
+user &gt; (elt a 'name)
+it: &quot;john&quot;
+    true
+user &gt; (.city a)
+it: &quot;amsterdam&quot;
+    true
+user &gt; (.country a)
+it: &quot;netherlands&quot;
+    true
+user &gt; (prototype:keys a)
+it: (&quot;name&quot; &quot;city&quot; &quot;country&quot;)
+user &gt; (prototype:get-parents a)
+it: (#s(:country &quot;netherlands&quot;))
+user &gt; (funcall a &quot;city&quot;)
+it: &quot;amsterdam&quot;
+    true
+user &gt; (map a '(city name))
+it: &quot;amsterdam&quot;
+    true
+</code></pre>
+<p><a href="../lisp/defclass.html">defclass</a> <a href="../lisp/defstruct.html">defstruct</a>
+<a href="../lisp/deftype.html">deftype</a> <a href="../lisp/new.html">new</a>
+<a href="../prototype/get-parents.html">prototype:get-parents</a>
+<a href="../prototype/get-type-specifier.html">prototype:get-type-specifier</a>
+<a href="../prototype/has-property.html">prototype:has-property</a> <a href="../prototype/keys.html">prototype:keys</a>
+<a href="../prototype/new.html">prototype:new</a> <a href="../prototype/set-parents.html">prototype:set-parents</a></p>
+
+</div></body></html>

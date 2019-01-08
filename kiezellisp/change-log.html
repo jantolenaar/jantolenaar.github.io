@@ -1,0 +1,669 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>change-log</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id='content'><h1>Change Log</h1>
+<h3>2018/12/31</h3>
+<ul>
+<li>Removed support for chained properties as in <code>(.name.to-upper obj)</code>
+due to compilation complexity.</li>
+<li>Renamed <code>first-position</code> to <code>find</code>.</li>
+<li><code>find</code> returns a multiple value (item, index, flag).</li>
+</ul>
+<h3>2018/12/12</h3>
+<ul>
+<li>Added <code>values</code>, <code>values-list</code>, <code>multiple-value-list</code>,</li>
+<li>Modified <code>math:floor</code> and its look-alikes to use multiple values.</li>
+<li>Removed <code>divrem</code> and <code>rem</code>.</li>
+<li>Added <code>math:rem</code> and <code>math:mod</code>.</li>
+</ul>
+<h3>2018/12/1</h3>
+<ul>
+<li>Moved <code>kiezellisp-init.k</code> to application data folder.</li>
+<li>Moved history to application data folder.</li>
+<li>Save history immediately after entering a line.</li>
+<li>Checked solution to use Microsoft Visual Studio document
+formatting.</li>
+<li>Fixed recursion problem in <code>ReadDelimitedList</code>.</li>
+</ul>
+<h3>2018/11/6</h3>
+<ul>
+<li>Added source of documentation and build scripts.</li>
+<li>Restricted documentation to html.</li>
+</ul>
+<h3>2018/08/29</h3>
+<ul>
+<li>Fixed bug in <code>reduce</code>.</li>
+<li>Fixed bug in <code>min</code>, <code>max</code> , <code>minimize</code> and <code>maximize</code>.</li>
+<li>Fixed bug in <code>loop</code>.</li>
+</ul>
+<h3>2018/07/31</h3>
+<ul>
+<li>Removed DLR (lightcompile, lightdynamic) from project.</li>
+<li>Added lazy compilation of linq expressions in lambda definitions.</li>
+</ul>
+<h3>2018/07/30</h3>
+<ul>
+<li>Renamed <code>recur</code> to <code>reprog</code>.</li>
+</ul>
+<h3>2018/05/18</h3>
+<ul>
+<li>Removed <code>goto</code> and <code>label</code>.</li>
+<li>Changed <code>block</code> to special form.</li>
+<li>Added <code>redo</code> and <code>leave</code> special forms to jump in named blocks.</li>
+</ul>
+<h3>2017/12/30</h3>
+<ul>
+<li>Allow :commands and ,commands in REPL.</li>
+</ul>
+<h3>2017/12/01</h3>
+<ul>
+<li>Fixed <code>pop</code> macro.</li>
+</ul>
+<h3>2017/10/09</h3>
+<ul>
+<li>loop collecting clause now returns list instead of vector.</li>
+</ul>
+<h3>2017/08/31</h3>
+<ul>
+<li>Parse <code>a:b:c</code> as package name <code>a</code> and symbol name <code>b:c</code> to support
+things like <code>:xmlns:xlink</code> as a keyword in <code>XmlElement</code>.</li>
+<li>Improved warning about shadowing symbols.</li>
+<li>Fixed bug in generated <code>loop</code> code, present in debug version only.</li>
+<li>Fixed <code>call-next-method</code> macro.</li>
+<li>Prevent keyword-like variable names.</li>
+<li>Added <code>lftp</code> wrapper.</li>
+</ul>
+<h3>2017/08/20</h3>
+<ul>
+<li>Fixed bug in <code>keep</code> and <code>keep-indexed</code>.</li>
+</ul>
+<h3>2017/08/20</h3>
+<ul>
+<li>Added <code>mono5</code> commandline option.</li>
+</ul>
+<h3>2017/08/04</h3>
+<ul>
+<li>Kiezellisp 4.0</li>
+<li>Removed options for debug/release.</li>
+<li>Renamed <code>$debug-mode</code> to <code>$debugging</code>.</li>
+<li>Added <code>set-debug-level</code> function.</li>
+<li>Added <code>decompile</code> function (diagnostics.k).</li>
+<li>Fixed bug in compilation of <code>.a.b.c</code> and <code>?a.b.c</code> forms.</li>
+<li>Removed chaining with <code>~</code> from <code>do</code> special form.</li>
+<li>Added <code>chain</code> macro.</li>
+<li>Added <code>:eval</code> and <code>:modify</code> debugger commands.</li>
+</ul>
+<h3>2017/07/28</h3>
+<ul>
+<li>Removed <code>multiple-let</code>, <code>multiple-var</code> and <code>merging-do</code>.</li>
+<li>Added <code>with-multiple-let</code> and <code>with-multiple-var</code>.</li>
+</ul>
+<h3>2017/06/25</h3>
+<ul>
+<li>Added <code>fg</code> and <code>bg</code> commandline options.</li>
+</ul>
+<h3>2017/05/13</h3>
+<ul>
+<li>Added <code>#\single-quote</code>.</li>
+</ul>
+<h3>2017/04/17</h3>
+<ul>
+<li>Fixed conversion bug in property and indexer assigments.</li>
+<li>Added <code>xwt.k</code> (open source gtk...wrapper)</li>
+</ul>
+<h3>2017/04/09</h3>
+<ul>
+<li>Removed <code>kiezellisp-repl</code> project (text windows).</li>
+<li>Added <code>curses.k</code> (open source ncurses wrapper).</li>
+<li>Improved code-completion in <code>kiezellisp-con</code>.</li>
+</ul>
+<h3>2017/03/23</h3>
+<ul>
+<li>Added transducers a la Clojure.</li>
+<li>Added <code>transduce</code>, <code>dedupe</code>, <code>reduced</code>, <code>reduced?</code>, <code>unreduced</code>,
+<code>completing</code>, <code>eduction</code>, <code>sequence</code>, <code>cat</code>.</li>
+<li>Renamed <code>count-if</code> to <code>count</code>.</li>
+<li>Renamed <code>find-if</code> to <code>first</code>.</li>
+<li>Renamed <code>position</code> to <code>index-of</code>.</li>
+<li>Renamed <code>position-if</code> to <code>first-position</code>.</li>
+<li>Removed <code>find-in-property-list</code>.</li>
+<li>Renamed <code>collect</code> loop clause to <code>collecting</code>.</li>
+<li>Similar change of <code>count</code>, <code>sum</code>, <code>minimize</code>, <code>maximize</code>, <code>multiply</code>.</li>
+<li>Added <code>sort-by</code>, <code>merge-by</code>.</li>
+<li>Renamed <code>min</code> to <code>minimize</code>.</li>
+<li>Renamed <code>max</code> to <code>maximize</code>.</li>
+<li>Added <code>min</code>, <code>max</code> reducer functions.</li>
+</ul>
+<h3>2016/12/09</h3>
+<ul>
+<li>Using <code>nameof(...)</code> feature.</li>
+</ul>
+<h3>2016/12/01</h3>
+<ul>
+<li>Changed TextForm construction.</li>
+</ul>
+<h3>2016/11/24</h3>
+<ul>
+<li>Fixed bug: not scrolling at end of buffer.</li>
+</ul>
+<h3>2016/11/22</h3>
+<ul>
+<li>Added CTRL+K, CTRL+U and CTRL+W readline editing key codes.</li>
+</ul>
+<h3>2016/11/20</h3>
+<ul>
+<li>Refactored everything ala StyleCop.</li>
+<li>Fixed display of selection in readline editing code.</li>
+</ul>
+<h3>2016/11/17</h3>
+<ul>
+<li>Refactored readline editing code.</li>
+</ul>
+<h3>2016/11/16</h3>
+<ul>
+<li>Fixed CRLF vs LF bug on windows.</li>
+</ul>
+<h3>2016/11/15</h3>
+<ul>
+<li>Added <code>flatpak</code> feature.</li>
+<li>Added <code>set-assembly-path</code> function.</li>
+<li>Fixed code gen issues appearing in mono 4.6 and monodevelop 6.</li>
+</ul>
+<h3>2016/11/15</h3>
+<ul>
+<li>Reformatting by NArrange.</li>
+</ul>
+<h3>2016/11/14</h3>
+<ul>
+<li>Refactored <code>kiezellisp-gfx</code> into <code>kiezellisp-repl</code> and <code>kiezellisp-gui</code>.</li>
+<li>Removed <code>terminal</code> class (<code>kiezellisp-repl</code>).</li>
+<li>Changed <code>window</code> class to <code>text-window</code> (<code>kiezellisp-repl</code>).</li>
+<li>Added <code>open-log</code>.</li>
+<li>Added <code>show-log-window</code> and <code>hide-log-window</code> (<code>kiezellisp-repl</code>).</li>
+<li>Changed <code>print</code> and <code>print-line</code>.</li>
+</ul>
+<h3>2016/10/24</h3>
+<ul>
+<li>Added intellisense tab expansion to kiezellisp-con.</li>
+<li>Changed <code>help</code> from function to macro.</li>
+<li>Added <code>man</code> macro.</li>
+<li>Added <code>CTRL+C</code> to copy the REPL input line to the clipboard.</li>
+<li>Added <code>CTRL+ENTER</code> to append a LF to the REPL input line.</li>
+<li>Added <code>more</code> pager function.</li>
+</ul>
+<h3>2016/10/20</h3>
+<ul>
+<li>Added history to kiezellisp-con.</li>
+<li>Fixed omission of executables in downloadable bin archive.</li>
+<li>Added <code>interpose</code> sequence function.</li>
+</ul>
+<h3>2016/10/14</h3>
+<ul>
+<li>Refactored <code>CompilerHelpers</code> class.</li>
+</ul>
+<h3>2016/10/13</h3>
+<ul>
+<li>Renamed macro <code>tail-recursion</code> to special-form <code>prog</code>.</li>
+<li>Made LispReader invisible: use TextReader instead of LispReader with
+Kiezellisp <code>read</code> functions.</li>
+<li>Removed <code>open-lisp-reader</code>.</li>
+</ul>
+<h3>2016/10/09</h3>
+<ul>
+<li>Renamed <code>kiezellisp</code> to <code>kiezellisp-gfx</code>.</li>
+<li>Added <code>kiezellisp-con</code>.</li>
+<li>Added <code>repl</code> and <code>no-repl</code> commandline options.</li>
+</ul>
+<h3>2016/09/20</h3>
+<ul>
+<li>Refactored shell.k.</li>
+</ul>
+<h3>2016/08/27</h3>
+<ul>
+<li>Added <code>get-setf-expansion</code> and <code>define-modify-macro</code>.</li>
+<li>Added <code>#&lt;backquote&gt;</code> reader macro.</li>
+<li>Added <code>$macroexpand-hook</code>.</li>
+</ul>
+<h3>2016/07/23</h3>
+<ul>
+<li>Fixed bug: impossible to run with option <code>--release</code>.</li>
+<li>Removed <code>tailcall</code>.</li>
+<li>Added special form <code>recur</code> (tail recursion).</li>
+<li>Added macro <code>tail-recursion</code>.</li>
+<li>Added <code>&amp;rawparams</code> parameter modifier.</li>
+<li>Changed multi-arity functions from special form to macro.</li>
+<li>Refactored <code>loop</code> macro.</li>
+</ul>
+<h3>2016/07/11</h3>
+<ul>
+<li>Refactored lisp reader.</li>
+<li>Removed greek lambda.</li>
+<li>Added function <code>undef</code>.</li>
+<li>Added macros <code>psetq</code> and <code>psetf</code>.</li>
+<li>Renamed <code>recur</code> to <code>self</code>.</li>
+</ul>
+<h3>2016/06/21</h3>
+<ul>
+<li>Added special form <code>define-symbol-macro</code>.</li>
+<li>Added special form <code>let-symbol-macro</code>.</li>
+<li>Added special form <code>let-macro</code>.</li>
+<li>Added function <code>symbol-macro?</code>.</li>
+<li>Added earmuff style <code>*var*</code> to special variables.</li>
+</ul>
+<h3>2016/06/06</h3>
+<ul>
+<li>Added accidentally omitted help files.</li>
+<li>Fixed init.k script.</li>
+</ul>
+<h3>2016/05/29</h3>
+<ul>
+<li>Undid changes to CollectParameterInfo() diagnostic code.</li>
+<li>Removed all occurrences of Cons.EMPTY.</li>
+<li>Fixed bug in Prototype.Apply.</li>
+</ul>
+<h3>2016/05/24</h3>
+<ul>
+<li>Refactored prototype implementation.</li>
+</ul>
+<h3>2016/05/23</h3>
+<ul>
+<li>Fixed documentation errors.</li>
+<li>Removed prototype getter mechanism.</li>
+</ul>
+<h3>2016/05/12</h3>
+<ul>
+<li>Fixed stack overflow bug caused by recursion in prototype getters
+(lambda-valued members).</li>
+</ul>
+<h3>2016/03/23</h3>
+<ul>
+<li>Update cursor position after entering a REPL command.</li>
+</ul>
+<h3>2016/01/28</h3>
+<ul>
+<li>Changed most files due to conversion to monodevelop syntax formatter.</li>
+<li>Changed <code>case</code> and <code>ecase</code> macros to evaluate the the cases.</li>
+<li>Fixed pretty printing of <code>case</code> and <code>cond</code> forms.</li>
+<li>REPL smart parentheses feature for lines <strong>not</strong> starting with a space.</li>
+<li>Redesign of REPL.</li>
+<li>Redesign of <code>man</code> and <code>help</code> functions.</li>
+<li>Added <code>terminal</code> package with curses like window functions.</li>
+<li>Added <code>about</code> package with additional help topics.</li>
+</ul>
+<h3>2015/07/28</h3>
+<ul>
+<li>Added <code>#if</code>, <code>#elif</code>, <code>#else</code> and <code>#endif</code> conditional feature to lisp reader.</li>
+<li>Added <code>#ignore</code> to lisp reader.</li>
+</ul>
+<h3>2015/07/22</h3>
+<ul>
+<li>Fixed online help on linux/windows.</li>
+</ul>
+<h3>2015/07/15</h3>
+<ul>
+<li>Fixed bug in <code>ImportMissingSymbol</code> caused by some underscored names.</li>
+<li>Added unsigned integer support.</li>
+</ul>
+<h3>2015/07/13</h3>
+<ul>
+<li>Added <code>w</code> option to regular expression literal to support wildcard patterns.</li>
+<li>Regular expression literal is also a function.</li>
+<li>Removed double back tick string interpolation marker.</li>
+<li>Added <code>lib/pandoc.k</code> and <code>lib\commonmark.k</code>.</li>
+</ul>
+<h3>2015/07/03</h3>
+<ul>
+<li>Added <code>lisp</code> package to the use-list of the <code>csv</code> package.</li>
+</ul>
+<h3>2015/06/23</h3>
+<ul>
+<li>Refactored symbol/package lookup/creation.</li>
+</ul>
+<h3>2015/06/11</h3>
+<ul>
+<li>Moved backquote/quasiquote expansion from compiler back to reader.</li>
+<li>Added <code>$repl-force-it</code> variable.</li>
+</ul>
+<h3>2015/05/20</h3>
+<ul>
+<li>Removed <code>--listener</code> command line option.</li>
+<li>Added <code>start-listener</code> function.</li>
+<li>Undid removal of REPL smart parentheses feature.</li>
+<li>Modified Ctrl+Enter to suppress REPL smart parentheses feature.</li>
+<li>Removed function <code>unuse-package</code>.</li>
+</ul>
+<h3>2015/05/17</h3>
+<ul>
+<li>Fixed implicit conversion bug.</li>
+<li>Modified <code>describe</code> for compiler macro feature.</li>
+</ul>
+<h3>2015/05/16</h3>
+<ul>
+<li>Added <code>define-compiler-macro</code>.</li>
+<li>Removed REPL smart parentheses feature.</li>
+</ul>
+<h3>2015/05/01</h3>
+<ul>
+<li>Added warning when shadowing symbol from inherited package.</li>
+<li>Changed application of <code>UnwindException</code>.</li>
+</ul>
+<h3>2015/04/27</h3>
+<ul>
+<li>Fixed bug in <code>merging-do</code> compilation.</li>
+<li>Separated namespaces for specialforms/macros and functions/variables.</li>
+</ul>
+<h3>2015/04/26</h3>
+<ul>
+<li>Changed implementation of documentation functions.</li>
+</ul>
+<h3>2015/04/17</h3>
+<ul>
+<li>Changed <code>#&quot;...&quot;</code> regex literal to <code>#/.../</code>.</li>
+<li>Added <code>defclass</code> and <code>defstruct</code> macros.</li>
+<li>Added <code>#s(...)</code> reader macro.</li>
+<li>Added <code>#v(...)</code> reader macro.</li>
+<li>Fixed (rare) bug in <code>loop</code> macro expansion.</li>
+<li>Added <code>$print-vector-with-brackets</code>.</li>
+<li>Added <code>$print-prototype-with-braces</code>.</li>
+</ul>
+<h3>2015/03/16</h3>
+<ul>
+<li>Added <code>assoc</code> and <code>assoc-if</code> functions.</li>
+<li>Added <code>[STAThread]</code> attributes that went missing.</li>
+</ul>
+<h3>2015/03/15</h3>
+<ul>
+<li>Changed the name of <code>kiezellisp-init</code> to be a constant.</li>
+</ul>
+<h3>2015/03/12</h3>
+<ul>
+<li>Simplified <code>EmbeddedMode</code> class.</li>
+<li>Added <code>math::random</code> function.</li>
+</ul>
+<h3>2015/03/06</h3>
+<ul>
+<li>Added <code>EmbeddedMode</code> feature.</li>
+</ul>
+<h3>2015/02/21</h3>
+<ul>
+<li>Added <code>lambda*</code> and <code>defun*</code> defining multi-arity functions.</li>
+<li>Fixed <code>recur</code> bug.</li>
+</ul>
+<h3>2015/01/08</h3>
+<ul>
+<li>Better handling of numeric conversions.</li>
+<li>Fixed extension handling in <code>reference</code> function.</li>
+<li>Fixed bug in <code>shell.k</code>.</li>
+<li>Added <code>~/</code> expansion in strings.</li>
+<li>Added <code>${...}</code> expansion in strings.</li>
+</ul>
+<h3>2014/12/28</h3>
+<ul>
+<li>Changed all files to LF instead of CRLF line endings.</li>
+<li>Fixed warnings detected by mono compiler.</li>
+<li>Added <code>$home</code> and other variables to <code>shell.k</code>.</li>
+<li>Added function <code>shell:expand-path-name</code> to expand path names
+starting with a tilde.</li>
+</ul>
+<h3>2014/12/22</h3>
+<ul>
+<li>Renamed <code>:windows-nt</code> feature to <code>:windows</code>.</li>
+<li>Renamed <code>:windows-mode</code> feature to <code>:graphical-mode</code>.</li>
+<li>Fixed bug in <code>shell::enclose-in-quotes</code>.</li>
+</ul>
+<h3>2014/12/19</h3>
+<ul>
+<li>Fixed bug using PATH environment variable on unix.</li>
+<li>Changed location of DLR dlls to be in the src tree.</li>
+</ul>
+<h3>2014/12/07</h3>
+<ul>
+<li>Added <code>IApply</code> interface to <code>Symbol</code>.</li>
+<li>Pretty print extensions for Kiezellisp IDE (in progress).</li>
+<li>Moved backquote/quasiquote expansion from reader to compiler.</li>
+<li>Fixed bug in function call to <code>&gt;</code> operator with three or more arguments.</li>
+</ul>
+<h3>2014/11/21</h3>
+<ul>
+<li>Renamed <code>skip</code> to <code>drop</code>.</li>
+<li>Changed <code>map</code> to support multiple sequences.</li>
+<li>Added <code>remove</code>, <code>map-indexed</code>, <code>keep</code>, <code>keep-indexed</code>.</li>
+<li>Added <code>reductions</code>, <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>.</li>
+<li>Refactored method selection code.</li>
+<li>Changed <code>multiple-var</code> etc from special form to macro.</li>
+<li>Added <code>complement</code>.</li>
+<li>Fixed bug in code of array/indexer assignment.</li>
+</ul>
+<h3>2014/09/07</h3>
+<ul>
+<li>Added <code>multiple-var</code>.</li>
+<li>Added <code>multiple-let</code>.</li>
+<li>Added <code>multiple-setf</code>.</li>
+</ul>
+<h3>2014/08/18</h3>
+<ul>
+<li>Fixed bug: <code>any</code> sequence function.</li>
+<li>Refactored <code>loop</code> macro.</li>
+<li>Refactored pattern matching functions.</li>
+<li>Added <code>breakpoint</code> function.</li>
+<li>Fixed bug: changed reference from <code>make-reader</code> to <code>lisp-reader:new</code>.</li>
+<li>Added <code>copy-tree</code>.</li>
+<li>Renamed <code>make-environment</code> to <code>make-extended-environment</code>.</li>
+<li>Added <code>&amp;environment</code> argument modifier.</li>
+<li>Added <code>environment</code> parameter to <code>macroexpand</code> and <code>macroexpand-1</code>.</li>
+<li>Added <code>code-walk</code> and <code>code-walk-list</code>.</li>
+<li>Added <code>find-name-in-environment</code>.</li>
+<li>Added <code>make-environment</code>.</li>
+<li>Added <code>letfun</code>.</li>
+<li>Replaced keyword labels by the <code>label</code> special form.</li>
+<li>Fixed bug in <code>equal</code> function.</li>
+</ul>
+<h3>2014/06/16</h3>
+<ul>
+<li>Added <code>var</code> and <code>let</code> declarations to file scope.</li>
+<li>REPL expression does not need parentheses if first term is a function or
+a special form.</li>
+<li>Added <code>block</code>, <code>return-from</code> for named blocks.</li>
+<li>Added <code>$package-name-prefix</code> special variable.</li>
+</ul>
+<h3>2014/05/29</h3>
+<ul>
+<li>Merged <code>tagbody</code> into <code>do</code> to improve loop performance. <code>do</code> forms that
+are keywords are interpreted as labels.</li>
+<li>Removed <code>tagbody</code>.</li>
+<li>Renamed <code>go</code> to <code>goto</code>.</li>
+</ul>
+<h3>2014/05/24</h3>
+<ul>
+<li>Fixed bug in handling of function call with too few arguments.</li>
+<li>Changed <code>#(...)</code> lambda expression to be compatible with clojure's.</li>
+<li>Added sequence functions <code>repeatedly</code>, <code>iterate</code> and <code>cycle</code>.</li>
+</ul>
+<h3>2014/05/12</h3>
+<ul>
+<li>Added <code>ecase</code>, <code>etypecase</code> and <code>ecase-match</code> macros.</li>
+<li>Added <code>loop</code> clauses like <code>(for i :from a :to b)</code>.</li>
+<li>Added <code>series-enumerator</code>.</li>
+</ul>
+<h3>2014/05/08</h3>
+<ul>
+<li>Added <code>(lazy sym expr))</code>.</li>
+<li>Added <code>(future sym expr))</code>.</li>
+<li>Fixed bug: infinite loop compiling call to multi-method with <code>null</code> eql
+specifier.</li>
+</ul>
+<h3>2014/04/15</h3>
+<ul>
+<li>Removed <code>$strict</code> and <code>strict</code>.</li>
+</ul>
+<h3>2014/04/08</h3>
+<ul>
+<li>REPL expression does not need parentheses if first term is a function.</li>
+<li>Renamed <code>$quick-import</code> to <code>$lazy-import</code>.</li>
+<li>Added accessor chaining feature: <code>(.name.to-upper obj)</code></li>
+<li>Symbols generated by <code>gentemp</code> are now placed in the <code>temp</code> package.</li>
+<li>Deimplemented uninterned symbols.</li>
+<li>Fixed bug in code generated for lambda derived delegate with value type
+parameters.</li>
+<li>Rewrote parser/scanner to use readtables.</li>
+<li>Removed function <code>make-reader</code> in favor of <code>lisp-reader:new</code>.</li>
+</ul>
+<h3>2014/03/03</h3>
+<ul>
+<li>BREAKING CHANGE: changed <code>try</code> to <code>ignore-errors</code>; introduced <code>try</code> with
+<code>catch</code> and <code>finally</code> clauses.</li>
+</ul>
+<h3>2014/02/22</h3>
+<ul>
+<li>BREAKING CHANGE: using colon and double colon package-symbol separators
+instead of period and exclamation mark.</li>
+</ul>
+<h3>2014/02/02</h3>
+<ul>
+<li>Removed <code>$print-max-elements</code>.</li>
+</ul>
+<h3>2014/01/21</h3>
+<ul>
+<li>Fixed bug where <code>then</code> and <code>else</code> branch of <code>if</code> yielded different types.</li>
+<li>Fixed bug where a prototype getter function was called on the wrong object.</li>
+<li>Added <code>&amp;whole</code> parameter modifier.</li>
+<li>Added <code>--listener</code> command line option.</li>
+</ul>
+<h3>2014/01/20</h3>
+<ul>
+<li>Fixed numeric arguments conversion bugs.</li>
+</ul>
+<h3>2014/01/03</h3>
+<ul>
+<li>Added DLR restrictions for calls to multi-methods.</li>
+<li>Fixed bug in <code>reduce</code>.</li>
+<li>Added <code>mapcat</code>.</li>
+<li>Added <code>conjoin</code>.</li>
+<li>Added <code>r/map</code>, <code>r/mapcat</code>, <code>r/filter</code>, <code>r/take</code>, <code>r/take-while</code>.</li>
+<li>Added <code>$print-max-elements</code>.</li>
+<li>Changed Ctrl+ENTER action in the REPL.</li>
+</ul>
+<h3>2013/11/29</h3>
+<ul>
+<li>Renamed <code>set-package-alias</code> to <code>use-package-alias</code>.</li>
+<li>Restricted use of parameter modifiers such as <code>&amp;key</code> to just one in
+order to optimize calls to lisp functions.</li>
+<li>Removed the <code>&amp;whole</code> modifier.</li>
+<li>Extended <code>&lt;=</code> and other relational parameters to have two or more arguments.</li>
+</ul>
+<h3>2013/11/14</h3>
+<ul>
+<li>Replaced <code>#{...}</code> string interpolation markers with <code>double-back-tick...double-back-tick</code>.</li>
+</ul>
+<h3>2013/11/04</h3>
+<ul>
+<li>Fixed bug in <code>json-decode</code>.</li>
+</ul>
+<h3>2013/10/21</h3>
+<ul>
+<li>Refactored <code>console.cs</code>.</li>
+<li>Added <code>-init</code> command line option.</li>
+<li>Added <code>exit</code> function.</li>
+</ul>
+<h3>2013/10/18</h3>
+<ul>
+<li>Added variable <code>$quick-import</code>.</li>
+<li>Other optimizations.</li>
+<li>Added <code>winforms.k</code>.</li>
+</ul>
+<h3>2013/10/04</h3>
+<ul>
+<li>Added <code>(declare (ignore var))</code>.</li>
+<li><code>DataSource</code> support for prototype objects.</li>
+<li>Added <code>(as-vector seq type)</code>.</li>
+<li>Changed <code>Vector</code> type to <code>List&lt;object&gt;</code>.</li>
+<li>Fixed bug in code for constructing value types.</li>
+<li>Removed <code>add-event-handler</code>.</li>
+<li>Support for adding event handlers through <code>setf</code>.</li>
+</ul>
+<h3>2013/09/17</h3>
+<ul>
+<li>Fixed bug <code>loop</code> macro.</li>
+<li>Added delta parameter to <code>incf</code> and <code>decf</code>.</li>
+<li>Added some unit tests.</li>
+<li>Added <code>as-tuple</code>.</li>
+</ul>
+<h3>2013/09/16</h3>
+<ul>
+<li>Fixed bugs in <code>split-with</code> and <code>skip-while</code>.</li>
+<li>Fixed internal pattern matching bugs.</li>
+<li>Implemented numbered <code>~</code> variables to improve debugging experience.</li>
+<li>Replaced <code>gensym</code> by <code>gentemp</code> to improve debugging experience.</li>
+<li>Rewrote (part of) binding of lambda arguments to parameters.</li>
+<li>Added prototype and vector literals.</li>
+<li>Restricted scope of <code>set-package-alias</code> to the current package.</li>
+<li>Automatic conversion of enumerable arguments to enumerable<T> parameters.</li>
+<li>Support for generic type by adding <code>type-parameters</code> argument to
+the function <code>import</code>.</li>
+<li>Added <code>string.regex-match-all</code> and <code>string.wildcard-match</code>.</li>
+<li>Added options to <code>natural-compare</code>.</li>
+<li>Added <code>gentemp</code>.</li>
+<li>Fixed handling of explicit enumerator interfaces.</li>
+</ul>
+<h3>2013/08/19</h3>
+<ul>
+<li>Added prototype as a function feature.</li>
+<li>Changed member accessor function '.' to have string argument only.</li>
+<li>Added <code>elt</code> support for lists.</li>
+<li>Added function <code>set-read-decimal-numbers(flag)</code> for better interfacing
+with math libraries.</li>
+<li>Fixed error in codegen of index binders.</li>
+<li>Allow any key type in prototype objects.</li>
+</ul>
+<h3>2013/08/02</h3>
+<ul>
+<li>Fixed spelling of external dll names for case-sensitive OS.</li>
+<li>Fixed error in usage of <code>as-array</code> function.</li>
+</ul>
+<h3>2013/07/30</h3>
+<ul>
+<li>Initial release.</li>
+</ul>
+
+</div></body></html>

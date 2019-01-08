@@ -1,0 +1,85 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/regular-expressions.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:regular-expressions</p>
+<h2>Description</h2>
+<h3>Standard regular expression</h3>
+<pre><code>user &gt; #/aap/
+it: #/aap/
+user &gt; :d
+#s( :members #s( :match-timeout -00:00:00.0010000
+                 :options None
+                 :right-to-left false )
+    :type &quot;Kiezel.RegexPlus&quot;
+    :value #/aap/ )
+
+user &gt; (.regex-match &quot;slaap&quot; #/aap/)
+it: (&quot;aap&quot;)
+user &gt; #/(a*)(p)/i
+it: #/(a*)(p)/i
+user &gt; :d
+#s( :members #s( :match-timeout -00:00:00.0010000
+                 :options IgnoreCase
+                 :right-to-left false )
+    :type &quot;Kiezel.RegexPlus&quot;
+    :value #/(a*)(p)/i )
+
+user &gt; (.regex-match &quot;SLAAp&quot; #/(a*)(p)/i)
+it: (&quot;AAp&quot; &quot;AA&quot; &quot;p&quot;)
+</code></pre>
+<h3>Regular expression from a wildcard pattern</h3>
+<pre><code>user &gt; #/*.k/w
+it: #/^(.*?)\.k$/
+user &gt; (filter #/*.k/w '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
+it: (&quot;a.k&quot;)
+user &gt; (filter #/*.k/wi '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
+it: (&quot;a.k&quot; &quot;c.K&quot;)
+</code></pre>
+<h3>Regular expression as a function</h3>
+<pre><code>user &gt; (filter #/aap/ '(&quot;slaap&quot; &quot;jaap&quot; &quot;teun&quot; &quot;mies&quot; &quot;jaap&quot;))
+it: (&quot;slaap&quot; &quot;jaap&quot; &quot;jaap&quot;)
+</code></pre>
+
+</div></body></html>

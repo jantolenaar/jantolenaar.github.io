@@ -1,0 +1,63 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/subseq.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>subseq</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>subseq</strong> <em>seq</em> <em>start</em> &amp;key <em>end</em> <em>count</em> <em>default</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Returns a subsequence of <code>seq</code> starting at position <code>start</code> and continuing
+to position <code>end</code> or until <code>count</code> elements have been yielded. If the sequence
+is too short to yield <code>count</code> arguments and if <code>default</code> is supplied, the
+subsequence is padded by <code>default</code> elements.</p>
+<pre><code>user &gt; (subseq (series 5) 2)
+it: (3 4 5)
+user &gt; (subseq (series 5) 2 :count 7 :default 9999)
+it: (3 4 5 9999 9999 9999 9999)
+</code></pre>
+
+</div></body></html>

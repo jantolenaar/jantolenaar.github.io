@@ -1,0 +1,119 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/compile-time-vs-run-time-values.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:compile-time-vs-run-time-values</p>
+<h2>Description</h2>
+<p>A symbol can have two values: a compile-time value and a run-time value.</p>
+<p>Run-time values are functions, numbers, strings and other objects. Compile-time
+values are special forms, macros and compiler macros.</p>
+<p>When a symbol is referenced in the first position of a form, its compile-time
+value is considered before its run-time value. In any other position only the
+run-time value is considered.</p>
+<h2>Examples</h2>
+<p><code>do</code> is a special form equivalent to a <code>{...}</code> block in other languages. It has
+a compile-time value but no run-time value:</p>
+<pre><code>user &gt; (do (print-line 1) (print-line 1))
+1
+1
+it: null
+user &gt; do
+Undefined variable: lisp:do
+</code></pre>
+<p><code>+</code> is a function. It has a no compile-time value but only a run-time value:</p>
+<pre><code>user &gt; (+ 3 4)
+it: 7
+user &gt; +
+it: #&lt;Function Name=&quot;Kiezel.Runtime.Add&quot;&gt;
+user &gt; (map + '(1 2) '(3 4))
+it: (4 6)
+</code></pre>
+<p><code>or</code> is a special form and a function. It has a compile-time value and a
+run-time value:</p>
+<pre><code>user &gt; (or (number? (do (print-line 123) 123))
+           (string? (do (print-line &quot;abc&quot;) &quot;abc&quot;)))
+123
+it: true
+user &gt; or
+it: #&lt;Function Name=&quot;Kiezel.Runtime.LogicalOr&quot;&gt;
+user &gt; (map or '(true false) '(true true))
+it: (true true)
+</code></pre>
+<h2>Functions with special forms</h2>
+<p>Depending on the actual arguments, calls to the following functions can be made
+faster by some Dynamic Language Runtime trickery.</p>
+<p><a href="../lisp/attr.html">attr</a> <a href="../lisp/elt.html">elt</a> <a href="../lisp/set-attr.html">set-attr</a>
+<a href="../lisp/set-elt.html">set-elt</a></p>
+<h2>Special forms with functions</h2>
+<p>Only special forms can implement the short-circuiting behaviour of these
+functions, but the equivalent functions are nice to have.</p>
+<p><a href="../lisp/and.html">and</a> <a href="../lisp/if.html">if</a> <a href="../lisp/or.html">or</a></p>
+<h2>Compiler Macros</h2>
+<p>Kiezellisp compiler macros are similar to Common Lisp compiler macros. Use a
+compiler macro to optimize special cases of a function call.</p>
+<pre><code>user &gt; (defun ++ (&amp;rest numbers)
+           (apply + numbers))
+it: ++
+user &gt; (define-compiler-macro ++ (&amp;rest numbers &amp;whole original-form)
+           (if (and (= (length numbers) 2)
+                    (number? (second numbers))
+                    (= (second numbers) 1))
+               `(inc ,(first numbers))
+               original-form))
+it: ++
+user &gt; (macroexpand '(++ a b c))
+it: (++ a b c)
+user &gt; (macroexpand '(++ a 1))
+it: (inc a)
+</code></pre>
+<h2>Rules</h2>
+<p>The special forms <code>def</code>, <code>defun</code>, <code>defun*</code>, <code>defconstant</code>, <code>defonce</code>, <code>defmulti</code>
+and <code>defmethod</code> set a symbol's run-time value while erasing its
+compile-time value.</p>
+<p>The special forms <code>defmacro</code> and <code>define-symbol-macro</code> set a symbol's compile-time
+value while erasing its run-time value.</p>
+<p>The special form <code>define-compiler-macro</code> sets a symbol's compile-time value and
+requires its current run-time value to be a function.</p>
+
+</div></body></html>

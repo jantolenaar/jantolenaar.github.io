@@ -1,0 +1,88 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/command-line-options.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:command-line-options</p>
+<h2>Description</h2>
+<p>Kiezellisp has the following command line:</p>
+<pre><code>kiezellisp-gui file [user-args]
+kiezellisp-con [options] [file [user-args]]
+</code></pre>
+<p>con <code>options</code> are:</p>
+<pre><code>--repl                        Show REPL after running `file`.
+--fg number                   Terminal palette color index of text (1-16)
+--bg number                   Terminal palette color index of background (1-16)
+--rlwrap                      To indicate kiezellisp runs under control of rlwrap.
+</code></pre>
+<p><code>file</code> is the name of the kiezellisp source file to run and
+<code>user-args</code> are arguments to the source code file.</p>
+<p>The options <code>fg</code> and <code>bg</code> are required to enable the display of text in
+reverse colors, for example during symbol expansion by the TAB key.</p>
+<p>Starting <code>kiezellisp-con</code> without a <code>file</code> implies <code>repl</code>.
+Starting <code>kiezellisp-con</code> with a <code>file</code> implies no <code>repl</code>.
+These defaults may be changed by supplying <code>options</code>.</p>
+<h3>Example 1</h3>
+<p>If <code>file</code> is not given, <code>kiezellisp-con</code> runs a REPL.</p>
+<pre><code>kiezellisp-con
+</code></pre>
+<h3>Example 2</h3>
+<p>If <code>file</code> is given, <code>kiezellisp-con</code> runs in release mode, loads <code>file</code>,
+calls the function <code>user::main</code> when defined and finally calls
+the function <code>exit</code>.</p>
+<pre><code>kiezellisp-con my-app
+</code></pre>
+<h3>Example 3</h3>
+<p>When developing a <code>winforms</code> application:</p>
+<pre><code>mono kiezellisp-con.exe my-win-app
+</code></pre>
+<h3>Example 4</h3>
+<p>When running a <code>winforms</code> application:</p>
+<pre><code>mono kiezellisp-gui.exe my-win-app
+</code></pre>
+<h3>Example 5</h3>
+<p>Add the <code>--repl</code> option to not terminate after running <code>file</code>.</p>
+<pre><code>kiezellisp-con --repl my-app
+</code></pre>
+
+</div></body></html>

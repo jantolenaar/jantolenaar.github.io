@@ -1,0 +1,206 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style><script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js??config=TeX-AMS-MML_HTMLorMML'></script></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<p>about:lisp-reader</p>
+<h2>Description</h2>
+<p>A lisp reader is an invisible wrapper around a <code>TextReader</code>. It consists of a
+scanner and a parser.</p>
+<p>The scanner recognizes tokens such as parentheses, numbers,
+strings and other character combinations that have a special meaning.</p>
+<p>The parser creates S-expressions from the stream of tokens. Sometimes tokens are
+converted to multiple tokens.</p>
+<h2>Comments</h2>
+<p>The reader handles line comments and block comments</p>
+<pre><code>123 ; line comment
+123 #! line comment
+(+ 123 #| block comment |# 456)
+</code></pre>
+<h2>Abbreviated lambda expressions</h2>
+<pre><code>user &gt; #(+ 2 %)
+it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
+user &gt; #(* %3 %3)
+it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
+user &gt; (it 1 2 3)
+it: 9
+</code></pre>
+<h2>Accessor functions</h2>
+<pre><code>user &gt; .
+it: #&lt;Function Name=&quot;Kiezel.Runtime.MemberAccessor&quot;&gt;
+user &gt; (. &quot;to-upper&quot;)
+it: #&lt;AccessorLambda Name=&quot;to-upper&quot; Nullable=&quot;False&quot;&gt;
+user &gt; .to-upper
+it: #&lt;AccessorLambda Name=&quot;to-upper&quot; Nullable=&quot;False&quot;&gt;
+user &gt; (.to-upper &quot;hello&quot;)
+it: &quot;HELLO&quot;
+</code></pre>
+<h2>Numbers</h2>
+<pre><code>user &gt; #9r13
+it: 12
+user &gt; #b111
+it: 7
+user &gt; #o77
+it: 63
+user &gt; #x20
+it: 32
+</code></pre>
+<h2>Strings</h2>
+<pre><code>user &gt; #q{a b c}
+it: &quot;a b c&quot;
+user &gt; #q(a b c)
+it: &quot;a b c&quot;
+user &gt; #q[a b c]
+it: &quot;a b c&quot;
+user &gt; #q&lt;a b c&gt;
+it: &quot;a b c&quot;
+user &gt; #q anything really
+       een
+       twee
+       drieanything really
+it: &quot;een                          \ntwee                         \ndrie&quot;
+</code></pre>
+<h2>Regular expression literals</h2>
+<pre><code>user &gt; #/a(a)p/i
+it: #/a(a)p/i
+user &gt; :d
+#s( :members #s( :match-timeout -00:00:00.0010000
+                 :options IgnoreCase
+                 :right-to-left false )
+    :type &quot;Kiezel.RegexPlus&quot;
+    :value #/a(a)p/i )
+
+</code></pre>
+<h2>Backquote expressions</h2>
+<p>A backquote expression is a template for a piece of lisp code that must execute
+to produce output. The names <code>bq:list</code>, <code>bq:force</code>, <code>bq:quote</code> and <code>bq:append</code>
+are used to clarify the translation of the backquote expression. They behave as
+their counterparts in the <code>lisp</code> package.</p>
+<pre><code>user &gt; (quote `(a b c))
+it: (bq:list (bq:quote a) (bq:quote b) (bq:quote c))
+user &gt; `(a b c)
+it: (a b c)
+user &gt; (var b '(1 2 3))
+it: b
+user &gt; (quote `(a ,b c))
+it: (bq:list (bq:quote a) (bq:force b) (bq:quote c))
+user &gt; `(a ,b c)
+it: (a (1 2 3) c)
+user &gt; (quote `(a ,@b c))
+it: (bq:append (bq:list (bq:quote a)) (bq:force b) (bq:list (bq:quote c)))
+user &gt; `(a ,@b c)
+it: (a 1 2 3 c)
+</code></pre>
+<h2>Immediate execution expressions</h2>
+<pre><code>user &gt; '(1 (+ 2 3) 4)
+it: (1 (+ 2 3) 4)
+user &gt; (setq $read-eval true)
+it: true
+user &gt; '(1 #.(+ 2 3) 4)
+it: (1 5 4)
+</code></pre>
+<h2>(Un)conditional inclusion or exclusion  of forms</h2>
+<p>The following examples show how to include or exclude a single form. The first
+argument after <code>#+</code> and <code>#-</code> is a logical expression that refers to symbols in
+the <code>$features</code> list. The second argument is the form to include or exclude.</p>
+<pre><code>user &gt; $features
+it: (:kiezellisp :kiezellisp-con :linux :mono :repl :unix :x64)
+user &gt; '(a #; b c)
+it: (a c)
+user &gt; '(a #ignore b c)
+it: (a c)
+user &gt; '(a #+x32 b c)
+it: (a c)
+user &gt; '(a #-x32 b c)
+it: (a b c)
+user &gt; '(a #+bla b c)
+it: (a c)
+user &gt; '(a #-bla b c)
+it: (a b c)
+user &gt; '(a #+(and x32 (not bla)) b c)
+it: (a c)
+</code></pre>
+<p>We can also include/exclude more than one (usually top-level) form:</p>
+<pre><code>user &gt; '(#if unix 1 2 #elif windows 3 #else 4 5 #endif)
+it: ((compile-time-branch 1 2))
+</code></pre>
+<p>Please note that this feature is form-aware and not line-aware and that the
+forms in the choosen branch are executed as a single top-level form.</p>
+<h2>Infix notation</h2>
+<pre><code>user &gt; '#i(1+x)
+it: (+ 1 x)
+user &gt; '#i(sin(x)**(1+1)+cos(x)**2)
+it: (+ (math:pow (sin x) (+ 1 1)) (math:pow (cos x) 2))
+</code></pre>
+<h2>Structures</h2>
+<p>The <code>#s(...)</code> reader macro produces a prototype object as a literal. When the
+number of items in the list is odd, the first item must be the type name of a
+prototype which will become the parent of the constructed prototype.</p>
+<pre><code>user &gt; #s(aap 1 noot 2)
+it: #s( :aap 1
+        :noot 2 )
+user &gt; (defstruct mies aap (noot 4) (teun 5))
+it: mies
+user &gt; #s(mies aap 1 noot 2)
+it: #s(mies :aap 1
+            :noot 2
+            :teun 5 )
+user &gt; (type? it 'mies)
+it: true
+user &gt; #s(mies2 aap 1 noot 2)
+Undefined type name: user::mies2
+</code></pre>
+<h2>Read tables</h2>
+<p>Kiezellisp readtables are similar to Common Lisp readtables.</p>
+<h2>See also</h2>
+<p><a href="../lisp/(dollar)features.html">$features</a> <a href="../lisp/(dollar)read-eval.html">$read-eval</a>
+<a href="../lisp/(dollar)readtable.html">$readtable</a> <a href="../lisp/peek-char.html">peek-char</a>
+<a href="../lisp/read.html">read</a> <a href="../lisp/read-all.html">read-all</a>
+<a href="../lisp/read-all-from-string.html">read-all-from-string</a>
+<a href="../lisp/read-char.html">read-char</a> <a href="../lisp/read-delimited-list.html">read-delimited-list</a>
+<a href="../lisp/read-from-string.html">read-from-string</a>
+<a href="../lisp/set-dispatch-macro-character.html">set-dispatch-macro-character</a>
+<a href="../lisp/set-macro-character.html">set-macro-character</a> <a href="../lisp/unread-char.html">unread-char</a>
+<a href="../lisp/with-input-from-string.html">with-input-from-string</a></p>
+
+</div></body></html>

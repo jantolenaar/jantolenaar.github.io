@@ -1,0 +1,81 @@
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>getting-started-on-windows.mdk</title><style>
+pre {
+margin-left: 2em;
+}
+
+p {
+margin-left: 1em;
+}
+
+h1 { 
+font-size: 150%;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 115%;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 100%;
+font-variant: small-caps;
+}
+
+a.banner {
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+color: white;
+background-color: gray;
+}
+
+#wide-content {
+}
+
+#content {
+width:45em;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+</style></head><body><a href='index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id='content'><h1>Getting Started on Windows</h1>
+<h2>Prerequisites</h2>
+<ul>
+<li>Visual Studio</li>
+<li>git</li>
+</ul>
+<h2>Installation</h2>
+<p>Switch to your preferred source code directory (e.g. <code>c:\abc</code>) and
+execute the line:</p>
+<pre><code>git clone https://github.com/jantolenaar/kiezellisp.git
+</code></pre>
+<h2>Configuration</h2>
+<p>Make a copy of <code>c:\abc\kiezellisp\src\kiezellisp-lib\kiezellisp-init-sample.k</code>
+to <code>C:\Users\YOU\AppData\Roaming\kiezellisp\kiezellisp-init.k</code>.
+Customize the contents of the copy.</p>
+<h2>Build</h2>
+<p>Open the solution file <code>c:\abc\kiezellisp\src\kiezellisp.sln</code> and build
+the solution.</p>
+<h2>Terminal and window versions</h2>
+<p>The program <code>kiezellisp-con.exe</code> is designed to run in a terminal, has a REPL and
+allows the use of winforms, gtk# or another graphical framework that has a .NET
+binding.</p>
+<p>The program <code>kiezellisp-gui.exe</code> is designed to run outside a terminal and
+requires the use of winforms, gtk# or another graphical framework that has a .NET
+binding.</p>
+<p>During development you should use <code>kiezellisp-con.exe</code>.</p>
+<h2>Running the REPL</h2>
+<p>Start Kiezellisp by running: <code>kiezellisp-con</code></p>
+<p>You will be greeted by Kiezellisp's Read-Eval-Print-Loop:</p>
+<pre><code>Kiezellisp 4.0 (Build 6427 - 2017-08-06)
+Copyright (C) Jan Tolenaar 2009-2017
+
+user &gt;
+</code></pre>
+<p>The word <code>user</code> is the name of the current package.</p>
+
+</div></body></html>
