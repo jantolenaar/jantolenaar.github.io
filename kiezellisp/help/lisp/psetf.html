@@ -1,48 +1,4 @@
-<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/psetf.mdk</title><style>
-pre {
-margin-left: 2em;
-}
-
-p {
-margin-left: 1em;
-}
-
-h1 { 
-font-size: 150%;
-font-variant: small-caps;
-}
-
-h2 { 
-font-size: 115%;
-font-variant: small-caps;
-}
-
-h3 { 
-font-size: 100%;
-font-variant: small-caps;
-}
-
-a.banner {
-padding: 5px;
-border-radius: 10px;
-text-decoration: none;
-font-weight: bold;
-font-size: 200%;
-color: white;
-background-color: gray;
-}
-
-#wide-content {
-}
-
-#content {
-width:45em;
-}
-
-div.indexofeverything {
-column-width:18em;
-}
-</style></head><body><a href='../../index.html' class='banner'>www.<span style='color:yellow'>kiezel</span>lisp.nl</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/psetf.mdk</title><link href='../../styles.css' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>www.jantolenaar.nl/<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
 <p>psetf</p>
 <h2>Usage</h2>
 <p>macro</p>
@@ -53,10 +9,10 @@ column-width:18em;
 <p>Performs all assignments after evaluating all values.</p>
 <pre><code>user &gt; (macroexpand '(psetf v1 (inc v2) v2 (inc v1)))
 it: (do
-      (let temp:temp-421 (inc v2))
-      (let temp:temp-422 (inc v1))
-      (setf v1 temp:temp-421)
-      (setf v2 temp:temp-422))
+      (let temp:temp-1 (inc v2))
+      (let temp:temp-2 (inc v1))
+      (setf v1 temp:temp-1)
+      (setf v2 temp:temp-2))
 </code></pre>
 
 </div></body></html>
