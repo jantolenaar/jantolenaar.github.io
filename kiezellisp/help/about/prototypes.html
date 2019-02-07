@@ -1,4 +1,4 @@
-<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/prototypes.mdk</title><link href='../../styles.css' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/prototypes.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
 <p>about:prototypes</p>
 <h2>Description</h2>
 <p>A prototype object is a lightweight object based on <code>DynamicObject</code>. It is also
@@ -15,26 +15,20 @@ user &gt; (var b #s( name b city &quot;amsterdam&quot; ))
 it: b
 user &gt; (.name a)
 it: b
-    true
 user &gt; (.city a)
 it: &quot;amsterdam&quot;
-    true
 user &gt; (.telephone a)
 it: null
-    false
 user &gt; (var x &quot;mies&quot;)
 it: x
 user &gt; (var c (new :name x :city &quot;amsterdam&quot; :telephone null))
 it: c
 user &gt; (.name c)
 it: &quot;mies&quot;
-    true
 user &gt; (.city c)
 it: &quot;amsterdam&quot;
-    true
 user &gt; (.telephone c)
 it: null
-    true
 </code></pre>
 <p>When the number of arguments is odd, the first argument must be either a type
 specifier or a list of type specifiers. A type specifier is either a prototype
@@ -66,35 +60,26 @@ it: #s( :city &quot;amsterdam&quot;
         :name &quot;john&quot; )
 user &gt; (.name a)
 it: &quot;john&quot;
-    true
 user &gt; (.nam a)
 it: null
-    false
 user &gt; (elt a &quot;name&quot;)
 it: &quot;john&quot;
-    true
 user &gt; (elt a :name)
 it: &quot;john&quot;
-    true
 user &gt; (elt a 'name)
 it: &quot;john&quot;
-    true
 user &gt; (.city a)
 it: &quot;amsterdam&quot;
-    true
 user &gt; (.country a)
 it: &quot;netherlands&quot;
-    true
 user &gt; (prototype:keys a)
 it: (&quot;name&quot; &quot;city&quot; &quot;country&quot;)
 user &gt; (prototype:get-parents a)
 it: (#s(:country &quot;netherlands&quot;))
 user &gt; (funcall a &quot;city&quot;)
 it: &quot;amsterdam&quot;
-    true
 user &gt; (map a '(city name))
-it: &quot;amsterdam&quot;
-    true
+it: (&quot;amsterdam&quot; &quot;john&quot;)
 </code></pre>
 <p><a href="../lisp/defclass.html">defclass</a> <a href="../lisp/defstruct.html">defstruct</a>
 <a href="../lisp/deftype.html">deftype</a> <a href="../lisp/new.html">new</a>

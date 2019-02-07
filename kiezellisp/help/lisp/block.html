@@ -1,4 +1,4 @@
-<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/block.mdk</title><link href='../../styles.css' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>Index of Everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='no-cache' http-equiv='Pragma”'><meta content='-1' http-equiv='Expires'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/block.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
 <p>block</p>
 <h2>Usage</h2>
 <p>special-form</p>
@@ -6,7 +6,8 @@
 <p><code>
 (<strong>block</strong> <em>name</em> <em>form*</em>)</code><br/></p>
 <h2>Description</h2>
-<p>A named block is similar to a <code>do</code> block but it also supports structured jumps by the forms <code>redo</code> and <code>leave</code>.</p>
+<p>A named block is similar to a <code>do</code> block but it also supports structured
+jumps by the forms <code>redo</code> and <code>leave</code>.</p>
 <pre><code>user &gt; (block abc
            (let x 1)
            (leave abc 2)
@@ -14,6 +15,7 @@
 it: 2
 </code></pre>
 <h2>See also</h2>
-<p><a href="../lisp/leave.html">leave</a> <a href="../lisp/redo.html">redo</a></p>
+<p><a href="../lisp/do.html">do</a> <a href="../lisp/lambda.html">lambda</a> <a href="../lisp/leave.html">leave</a>
+<a href="../lisp/prog.html">prog</a> <a href="../lisp/redo.html">redo</a></p>
 
 </div></body></html>
