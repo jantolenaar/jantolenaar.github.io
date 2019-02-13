@@ -1,4 +1,4 @@
-<html lang='en'><head><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><etag>e6d901504366aab5c701cdff3557d4c8-8fdfae6c0909fd39c4f307164c433ff1</etag><title>help/lisp/parallel-foreach.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='cdb77d88b7194f1efd4890926ed787e6'><meta content='Jan Tolenaar (c) 2009-2018' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><title>help/lisp/parallel-foreach.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
 <p>parallel-foreach</p>
 <h2>Usage</h2>
 <p>macro</p>
@@ -9,21 +9,19 @@
 <p>Applies the <code>forms</code> to each element of <code>seq</code> in parallel. Uses the Task Parallel
 Library.</p>
 <pre><code>user &gt; (parallel-foreach (x (series 15)) (print-line x))
-5
 1
-8
-13
+11
+10
+2
 12
+9
+14
+3
 6
 15
-14
-10
-9
-11
-7
-3
-2
+5
 4
+8
 it: null
 </code></pre>
 
