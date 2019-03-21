@@ -1,4 +1,4 @@
-<html lang='en'><head etag='3f2b5ed3eb854e40af3ec5e9b28d291d'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><title>help/about/repl-commands.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='84596cb15461045dc3ef8a84844911c0'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><title>help/about/repl-commands.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
 <p>about:repl-commands</p>
 <h2>Description</h2>
 <p>Lines starting with a colon or comma are top-level commands
@@ -30,10 +30,11 @@ which may be abbreviated. Other lines are lisp expressions.</p>
 are readonly, so no <code>setq</code> or <code>setf</code>. You can still fix the value of a lexical
 variable with the <code>:modify</code> command.</p>
 <p>Lisp expressions:</p>
-<p>If the line has no leading whitespace and the first term is a symbol that names
-a function, special form or macro, the line will be enclosed in parentheses and
-executed. Add a leading space to prevent this.</p>
+<p>If the variable <code>$repl-optional-parentheses</code> is true and if the line has no leading
+whitespace and the first term is a symbol that names a function, special form or macro,
+then the line will be enclosed in parentheses and executed.</p>
 <h2>See also</h2>
-<p><a href="../lisp/(dollar)repl-force-it.html">$repl-force-it</a></p>
+<p><a href="../lisp/(dollar)repl-force-it.html">$repl-force-it</a>
+<a href="../lisp/(dollar)repl-optional-parentheses.html">$repl-optional-parentheses</a></p>
 
 </div></body></html>
