@@ -1,0 +1,18 @@
+<html lang='en'><head etag='d318bfa8b084248c06e0b866d700f323'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/shell/exec.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<p>shell:exec</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>shell:exec</strong> <em>input</em> <em>prog</em> &amp;rest <em>args</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Executes the program <code>prog</code> with arguments <code>args</code>.
+If the string <code>input</code> is not <code>null</code>, it is used as standard input.
+Returns the standard output as a string.</p>
+<pre><code>user &gt; (shell:exec null &quot;uname&quot; &quot;-a&quot;)
+it: &quot;Linux debian 4.9.0-8-amd64 #1 SMP Debian 4.9.144-3.1 (2019-02-19) x86_64 GNU/Linux\n&quot;
+</code></pre>
+<h2>See also</h2>
+<p><a href="../shell/exec-detached.html">shell:exec-detached</a> <a href="../shell/run.html">shell:run</a></p>
+
+</div></body></html>

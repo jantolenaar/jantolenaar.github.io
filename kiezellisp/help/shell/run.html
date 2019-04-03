@@ -1,0 +1,18 @@
+<html lang='en'><head etag='f2a619cf6365a71cbe55b3116bc9a15a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/shell/run.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<p>shell:run</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code>
+(<strong>shell:run</strong> <em>prog</em> &amp;rest <em>args</em>)</code><br/></p>
+<h2>Description</h2>
+<p>Executes the program <code>prog</code> with arguments <code>args</code>.</p>
+<pre><code>user &gt; (shell:run &quot;date&quot; &quot;-R&quot;)
+Wed, 03 Apr 2019 16:20:53 +0200
+
+it: null
+</code></pre>
+<h2>See also</h2>
+<p><a href="../shell/exec.html">shell:exec</a> <a href="../shell/exec-detached.html">shell:exec-detached</a></p>
+
+</div></body></html>
