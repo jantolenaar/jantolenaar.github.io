@@ -1,10 +1,33 @@
-<html lang='en'><head etag='01c3437d361d27cc782669ea4331e678'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/shadow-symbol.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='7f508979ba9f3453eda8fc116de2f6cb'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/shadow-symbol.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>shadow-symbol</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>shadow-symbol</strong> <em>name</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>shadow-symbol</b> <i>name</i>)</code><br/>
+<code class=syntax>
+(<b>shadow-symbols</b> &amp;rest <i>names</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Interns the string <code>name</code> in the current package to avoid it being inherited
 from a package used by the current package, usually to avoid redefining the
@@ -12,4 +35,4 @@ value of the symbol in the used package.</p>
 <h2>See also</h2>
 <p><a href="../lisp/use-package.html">use-package</a></p>
 
-</div></body></html>
+</div></div></body></html>

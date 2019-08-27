@@ -1,10 +1,31 @@
-<html lang='en'><head etag='cfef0f5a87d4f00d2a4cb8a91735eed8'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/compose.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='99d410ccf3b5021bcbd24d7da4057b46'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/compose.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>compose</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>compose</strong> <em>func1</em> &amp;rest <em>funcs</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>compose</b> <i>func1</i> &amp;rest <i>funcs</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates a new function that applies the given functions from the right to the left.</p>
 <pre><code>user &gt; (let f (compose dec .length))
@@ -13,4 +34,4 @@ user &gt; (f &quot;hello&quot;)
 it: 4
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

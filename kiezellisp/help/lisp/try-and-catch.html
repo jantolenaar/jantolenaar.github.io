@@ -1,15 +1,36 @@
-<html lang='en'><head etag='084b0a0dbf78234525c439f76ceb618e'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/try-and-catch.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='86aa0db7c2ab3f9a0c69a019cddd622e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/try-and-catch.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>try-and-catch</p>
 <h2>Usage</h2>
 <p>macro</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>try-and-catch</strong> &amp;body <em>forms</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>try-and-catch</b> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Executes <code>forms</code>. Returns an exception object if an exception is thrown.</p>
 <pre><code>user &gt; (try-and-catch
            (+ 3 hello))
-Undefined variable: user::hello
+Undefined variable: user:hello
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

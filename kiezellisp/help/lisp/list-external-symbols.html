@@ -1,0 +1,57 @@
+<html lang='en'><head etag='710534897399cf78d43a54dcc6796ad5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/list-external-symbols.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
+<p>list-external-symbols</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code class=syntax>
+(<b>list-external-symbols</b> <i>package-name</i>)</code><br/></p>
+<h2>Description</h2>
+<p>Returns a list with the exported symbols of package <code>package-name</code>.</p>
+<pre><code>user &gt; (list-external-symbols &quot;shell&quot;)
+it: (shell:$home
+      shell:$local-application-data
+      shell:$my-documents
+      shell:$roaming-application-data
+      shell:$sudo
+      shell:cd
+      shell:dir
+      shell:env
+      shell:exec
+      shell:exec-with-detach
+      shell:exec-with-io-redirect
+      shell:expand-path-name
+      shell:get-special-folder
+      shell:here
+      shell:path
+      shell:pwd
+      shell:robocopy-mirror
+      shell:run
+      shell:sudo
+      shell:with-directory)
+</code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/list-internal-symbols.html">list-internal-symbols</a>
+<a href="../lisp/list-symbols.html">list-symbols</a></p>
+
+</div></div></body></html>

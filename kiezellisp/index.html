@@ -1,9 +1,32 @@
-<html lang='en'><head etag='73890b1772141447703a446d9dee6709'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>index.mdk</title><link href='styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id='content'><h1>Kiezellisp</h1>
+<html lang='en'><head etag='584e2b0a6e78334c08f634ccfdc0e8a3'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>index.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h1>Kiezellisp</h1>
 <p><strong>Kiezellisp</strong> is a lisp compiler/interpreter that runs on .NET Framework
-and Mono.</p>
-<p>For now, there is no release for .NET Core due to insufficient
-console support.</p>
-<p>Web site generated on: 2019-04-03</p>
+and on .NET Core.</p>
+<p>Web site generated on: 2019-08-27</p>
+<h2>Important notice</h2>
+<p>Kiezellisp's REPL on .NET Core 1 or 2 on Linux requires a <strong>fast</strong> terminal
+program such as <code>urxvt</code> or <code>xterm</code>. Anything that is <code>libvte</code> based is too slow.
+.NET Core 3 is ok.</p>
 <h2>Features</h2>
 <ul>
 <li>A reasonable startup time of 0.340s on an Intel i7-4790 (mono)</li>
@@ -16,12 +39,7 @@ console support.</p>
 <li>Named and anonymous functions</li>
 <li>Parallel expressions</li>
 <li>Object model based on prototypes</li>
-<li>REPL
-<ul>
-<li>has history and code completion</li>
-<li>uses <code>System.Console</code></li>
-</ul>
-</li>
+<li>REPL has history and code completion</li>
 <li>Symbols and packages</li>
 <li>Transducers</li>
 </ul>
@@ -35,7 +53,7 @@ console support.</p>
 <li><a href="help/index.html">Index of Everything</a></li>
 </ul>
 <h2>Get Kiezellisp</h2>
-<p>Current development version: Kiezellisp 4.0.7032 (.Net Framework Release Build 2019-04-03)</p>
+<p>Current development version: Kiezellisp 4.0.7161 (.NET Core Release Build 2019-08-10)</p>
 <p>This version can be built with Visual Studio on Windows and with MonoDevelop
 on linux.</p>
 <ul>
@@ -49,4 +67,4 @@ of features with other lisps. Functions and packages are similar to Common
 Lisp's functions and packages. Lazy sequences and transducers are similar
 to to Clojure's lazy sequences and transducers.</p>
 
-</div></body></html>
+</div></div></body></html>

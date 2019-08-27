@@ -1,12 +1,33 @@
-<html lang='en'><head etag='207b37ea19302a6910a9b56e5c825113'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/macroexpand-all.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='1e69d502a233ca56a89cd186c9ec9d26'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/macroexpand-all.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>macroexpand-all</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>macroexpand-all</strong> <em>form</em>)</code><br/>
-<code>
-(<strong>macroexpand-all</strong> <em>form</em> <em>env</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>macroexpand-all</b> <i>form</i>)</code><br/>
+<code class=syntax>
+(<b>macroexpand-all</b> <i>form</i> <i>env</i>)</code><br/></p>
 <p>Recursively expands all macros in <code>form</code>.</p>
 <pre><code>user &gt; (macroexpand-all '(do (var x 1) (while (test x) (incf x))))
 it: (do
@@ -17,9 +38,9 @@ it: (do
             (if (not (test x))
               (leave LOOP))
             (do
-              (let temp:new-1 (inc x))
-              (setq x temp:new-1)))
+              (let temp::new-1 (inc x))
+              (setq x temp::new-1)))
           (redo TESTS))))
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

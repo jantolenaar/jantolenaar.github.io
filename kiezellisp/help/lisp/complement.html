@@ -1,10 +1,31 @@
-<html lang='en'><head etag='885a3d126796a68c5b23e6a295521911'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/complement.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='3351093f48f320906c4a39fec57c285a'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/complement.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>complement</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>complement</strong> <em>func</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>complement</b> <i>func</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a function that applies <code>not</code> to the result of <code>func</code>.</p>
 <pre><code>user &gt; (mapv odd? (series 5))
@@ -13,4 +34,4 @@ user &gt; (mapv (complement odd?) (series 5))
 it: #v(false true false true false)
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

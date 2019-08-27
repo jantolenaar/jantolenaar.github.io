@@ -1,10 +1,31 @@
-<html lang='en'><head etag='b4a7496c432b66dd1f354e61768cf6e3'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/try.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='573b2ab91d77040314b573a4268dd09d'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/try.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>try</p>
 <h2>Usage</h2>
 <p>special-form</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>try</strong> &amp;body <em>forms</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>try</b> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Exception handling.</p>
 <pre><code>user &gt; (try
@@ -12,9 +33,9 @@
            (catch (ex)
                (print-line ex))
            (finally (print-line 111)))
-#&lt;LispException Message=&quot;Undefined variable: user::hello&quot;&gt;
+#&lt;LispException Message=&quot;Undefined variable: user:hello&quot;&gt;
 111
-it: null
+
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

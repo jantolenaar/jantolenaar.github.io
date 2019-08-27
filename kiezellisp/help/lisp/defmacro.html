@@ -1,10 +1,31 @@
-<html lang='en'><head etag='f478fecf31af6b4ae74f55725b35ef3a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/defmacro.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='dba89d4a3ab9ebb9cff149d6adcb845a'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/defmacro.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>defmacro</p>
 <h2>Usage</h2>
 <p>special-form</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>defmacro</strong> <em>name</em> (<em>arg*</em>) <em>[doc-string]</em> <em>form*</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>defmacro</b> <i>name</i> (<i>arg*</i>) <i>[doc-string]</i> <i>form*</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Macros are functions that do not evaluate their arguments but use them as given
 in order to construct and return lisp code which is then compiled and executed.</p>
@@ -24,10 +45,10 @@ it: my-trace
 <pre><code>user &gt; (macroexpand '(my-trace (setq x (blabla))))
 it: (if $tracing
       (do?
-        (var temp:temp-1 (setq x (blabla)))
+        (var temp::temp-1 (setq x (blabla)))
         (write-line (string &quot;(setq x (blabla))&quot;
                              &quot; =&gt; &quot;
-                             (write-to-string temp:temp-1 :escape true))
+                             (write-to-string temp::temp-1 :escape true))
                     :stream
                     $stdlog)))
 </code></pre>
@@ -39,4 +60,4 @@ it: (if $tracing
 <a href="../lisp/letmacro.html">letmacro</a> <a href="../lisp/macroexpand.html">macroexpand</a>
 <a href="../lisp/macroexpand-1.html">macroexpand-1</a> <a href="../lisp/macroexpand-all.html">macroexpand-all</a></p>
 
-</div></body></html>
+</div></div></body></html>

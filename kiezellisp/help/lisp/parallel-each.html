@@ -1,29 +1,41 @@
-<html lang='en'><head etag='c04170441b248355120bc04d3628ffec'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/parallel-each.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='70cc8872f1c5c8856723fdd54ce58c6c'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/parallel-each.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>parallel-each</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>parallel-each</strong> <em>action</em> <em>seq</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>parallel-each</b> <i>action</i> <i>seq</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Applies the function <code>action</code> to each element of <code>seq</code>. Uses the Task Parallel
 Library.</p>
-<pre><code>user &gt; (parallel-each print-line (series 15))
-3
-6
-10
-11
+<pre><code>user &gt; (parallel-each print-line (series 6))
 1
-7
 2
-13
-12
-14
-15
+5
+6
+3
 4
-8
-9
-it: null
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

@@ -1,16 +1,37 @@
-<html lang='en'><head etag='164375d6ddd3bc8a4cb3e7c2fb8f2bca'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/transduce.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='9af93a4ba0eb8276b83d11dc7daabc72'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/transduce.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>transduce</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>transduce</strong> <em>xform</em> <em>reducer</em> <em>seq</em>)</code><br/>
-<code>
-(<strong>transduce</strong> <em>xform</em> <em>seed</em> <em>reducer</em> <em>seq</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>transduce</b> <i>xform</i> <i>reducer</i> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>transduce</b> <i>xform</i> <i>seed</i> <i>reducer</i> <i>seq</i>)</code><br/></p>
 <h2>Description</h2>
 <p>The first form is equivalent to <code>(reduce (xform reducer) seq)</code>.
 The second form is equivalent to <code>(reduce (xform reducer) seed seq)</code>.</p>
 <h2>See also</h2>
 <p><a href="../lisp/eduction.html">eduction</a> <a href="../lisp/reduce.html">reduce</a> <a href="../lisp/sequence.html">sequence</a></p>
 
-</div></body></html>
+</div></div></body></html>

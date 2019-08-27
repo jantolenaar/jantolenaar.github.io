@@ -1,4 +1,25 @@
-<html lang='en'><head etag='416f12edd56612b94ee5c6c538bd8c3c'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/symbols.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='0e37ee554cea2cae876b56bfd6388b40'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/symbols.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>about:symbols</p>
 <h2>Description</h2>
 <p>If something in a lisp program is not a number, string or parenthesis, then it
@@ -7,11 +28,12 @@ unlike a namespace). Symbols may have a global value and/or a lexical value or
 even no value at all. The value may be a simple value like a number or a string,
 or a more complex value like a function.</p>
 <pre><code>user &gt; (undef 'z)
-it: null
+
 user &gt; 'z
 it: z
 user &gt; :d
-#s( :name &quot;z&quot;
+#s( :exported true
+    :name &quot;z&quot;
     :package &quot;user&quot;
     :symbol z
     :usage undefined )
@@ -22,4 +44,4 @@ user &gt; z
 it: 123
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

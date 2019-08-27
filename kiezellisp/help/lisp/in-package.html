@@ -1,17 +1,40 @@
-<html lang='en'><head etag='f8162c45a860b8e2318ed7255c77dc08'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/in-package.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='ed0e009f768575b8ac1adc7f0a83e8ea'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/in-package.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>in-package</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>in-package</strong> <em>name</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>in-package</b> <i>name</i>)</code><br/></p>
 <h2>Description</h2>
-<p>Sets the current package. The special variable <code>$package</code> holds the value of the
-current package.</p>
-<pre><code>user &gt; (in-package &quot;user&quot;)
+<p>Sets the current package. The special variable <code>$package</code> holds the
+value of the current package.</p>
+<pre><code>user &gt; (in-package &quot;test-not-found&quot;)
+Undefined package: test-not-found
+user 1 &gt; (in-package &quot;user&quot;)
 it: &lt;Package Name=&quot;user&quot;&gt;
-user &gt; (in-package :example)
-it: &lt;Package Name=&quot;example&quot;&gt;
 </code></pre>
+<h2>See also</h2>
+<p>make-package package</p>
 
-</div></body></html>
+</div></div></body></html>

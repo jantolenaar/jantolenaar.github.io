@@ -1,12 +1,33 @@
-<html lang='en'><head etag='3ee711719b9fa957cc9a0eb05fac370d'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/sort.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='73f875c933093de86a6f3be1d01db5cc'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/sort.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>sort</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>sort</strong> <em>seq</em>)</code><br/>
-<code>
-(<strong>sort</strong> <em>comparer</em> <em>seq</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>sort</b> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>sort</b> <i>comparer</i> <i>seq</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Sorts <code>seq</code>. The default comparer is the inbuilt function <code>compare</code>.</p>
 <pre><code>user &gt; (sort &quot;hello, world&quot;)
@@ -15,4 +36,4 @@ user &gt; (sort '(&quot;hello&quot; &quot;goodbye&quot; &quot;doei&quot; &quot;f
 it: (&quot;doei&quot; &quot;farewell&quot; &quot;goodbye&quot; &quot;hello&quot;)
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

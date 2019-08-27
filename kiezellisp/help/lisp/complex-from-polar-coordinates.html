@@ -1,16 +1,37 @@
-<html lang='en'><head etag='ee91609362bb5f6fcd9d108b39fb5cd9'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/complex-from-polar-coordinates.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='c46ab4b5dec51f7613397ae78f222ec8'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/complex-from-polar-coordinates.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>complex-from-polar-coordinates</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>complex-from-polar-coordinates</strong> <em>m</em> <em>ph</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>complex-from-polar-coordinates</b> <i>m</i> <i>ph</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a complex number with magnitude <code>m</code> and phase <code>ph</code>.</p>
 <pre><code>user &gt; (let a (complex-from-polar-coordinates 1 (/ math:PI 4)))
 it: a
 user &gt; (* a a)
-it: #c(2.22044604925031E-16 1)
+it: #c(2.220446049250313E-16 1)
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

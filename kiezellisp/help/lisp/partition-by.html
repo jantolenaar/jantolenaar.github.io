@@ -1,12 +1,33 @@
-<html lang='en'><head etag='bee3497edd9407215826f897d20cbcdb'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/partition-by.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='6be2bbb2b5265932191523ff968fc886'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/partition-by.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>partition-by</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>partition-by</strong> <em>key</em> <em>seq</em>)</code><br/>
-<code>
-(<strong>partition-by</strong> <em>key</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>partition-by</b> <i>key</i> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>partition-by</b> <i>key</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a list of subsequences of <code>seq</code>. A new subsequence is started every time
 the function <code>key</code> has a different value for two adjacent elements of <code>seq</code>.
@@ -15,4 +36,4 @@ The second form returns a transducer.</p>
 it: (#v(1) #v(2) #v(3 3) #v(4 2) #v(5) #v(6 6))
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

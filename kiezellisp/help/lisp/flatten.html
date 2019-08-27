@@ -1,10 +1,31 @@
-<html lang='en'><head etag='2676293ddad40eea7481142da154b5c7'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/flatten.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='c187a778f43f551f70c3f423051cbcc5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/flatten.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>flatten</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>flatten</strong> <em>seq</em> &amp;optional (<em>depth</em> int32:MAX-VALUE))</code><br/></p>
+<p><code class=syntax>
+(<b>flatten</b> <i>seq</i> &amp;optional (<i>depth</i> int32:MAX-VALUE))</code><br/></p>
 <h2>Description</h2>
 <p>Returns a lazy sequence with subsequences replaced by their elements up to a
 certain depth.</p>
@@ -14,4 +35,4 @@ user &gt; (flatten '(a (b c (d e) f)) 1)
 it: (a b c (d e) f)
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

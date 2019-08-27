@@ -1,10 +1,31 @@
-<html lang='en'><head etag='022984d365cc9611eb40beacc9946abf'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/read-from-string.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='58364044fec78981213f76637719241c'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/read-from-string.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>read-from-string</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>read-from-string</strong> <em>text</em> &amp;optional (<em>eof-error?</em> true) (<em>eof-value</em> null))</code><br/></p>
+<p><code class=syntax>
+(<b>read-from-string</b> <i>text</i> &amp;optional (<i>eof-error?</i> true) (<i>eof-value</i> null))</code><br/></p>
 <h2>Description</h2>
 <p>Reads an expression from the string <code>text</code>.</p>
 <pre><code>user &gt; (read-from-string &quot;(+ 3 4)&quot;)
@@ -17,4 +38,4 @@ user 1 &gt; (read-from-string &quot;&quot; false 42)
 it: 42
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

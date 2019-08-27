@@ -1,10 +1,31 @@
-<html lang='en'><head etag='045bc427ae1fd02b4c3e12f22cd36b97'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/write.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='b5c6c38f744935a3c7f2a0e941dd6770'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/write.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>write</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>write</strong> <em>item</em> &amp;key <em>stream</em> <em>escape</em> <em>width</em> <em>padding</em> <em>pretty</em> <em>left</em> <em>right</em> <em>force</em> <em>base</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>write</b> <i>item</i> &amp;key <i>stream</i> <i>escape</i> <i>width</i> <i>padding</i> <i>pretty</i> <i>left</i> <i>right</i> <i>force</i> <i>base</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Writes <code>item</code> to the output stream <code>stream</code>.</p>
 <pre><code>stream := null | true | false | string | Window | TextWriter (default: $stdout)
@@ -34,4 +55,4 @@ and strings are padded on the right.</p>
 <h2>See also</h2>
 <p>pprint.k</p>
 
-</div></body></html>
+</div></div></body></html>

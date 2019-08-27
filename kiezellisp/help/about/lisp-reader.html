@@ -1,4 +1,25 @@
-<html lang='en'><head etag='27cc7de18fbc124e821c22d5070cbbf8'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='0d4a32f5073128d8047925bfdaea2515'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>about:lisp-reader</p>
 <h2>Description</h2>
 <p>A lisp reader is an invisible wrapper around a <code>TextReader</code>. It consists of a
@@ -73,17 +94,17 @@ to produce output. The names <code>bq:list</code>, <code>bq:force</code>, <code>
 are used to clarify the translation of the backquote expression. They behave as
 their counterparts in the <code>lisp</code> package.</p>
 <pre><code>user &gt; (quote `(a b c))
-it: (bq:list (bq:quote a) (bq:quote b) (bq:quote c))
+it: (list 'a 'b 'c)
 user &gt; `(a b c)
 it: (a b c)
 user &gt; (var b '(1 2 3))
 it: b
 user &gt; (quote `(a ,b c))
-it: (bq:list (bq:quote a) (bq:force b) (bq:quote c))
+it: (list 'a (force b) 'c)
 user &gt; `(a ,b c)
 it: (a (1 2 3) c)
 user &gt; (quote `(a ,@b c))
-it: (bq:append (bq:list (bq:quote a)) (bq:force b) (bq:list (bq:quote c)))
+it: (append (list 'a) (force b) (list 'c))
 user &gt; `(a ,@b c)
 it: (a 1 2 3 c)
 </code></pre>
@@ -100,7 +121,13 @@ it: (1 5 4)
 argument after <code>#+</code> and <code>#-</code> is a logical expression that refers to symbols in
 the <code>$features</code> list. The second argument is the form to include or exclude.</p>
 <pre><code>user &gt; $features
-it: (:ansi-terminal :kiezellisp :kiezellisp-con :linux :mono :repl :unix :x64)
+it: (:ansi-terminal :kiezellisp
+                    :kiezellisp-con
+                    :linux
+                    :netcore
+                    :repl
+                    :unix
+                    :x64)
 user &gt; '(a #; b c)
 it: (a c)
 user &gt; '(a #ignore b c)
@@ -125,8 +152,8 @@ forms in the choosen branch are executed as a single top-level form.</p>
 <h2>Infix notation</h2>
 <pre><code>user &gt; '#i(1+x)
 it: (+ 1 x)
-user &gt; '#i(sin(x)**(1+1)+cos(x)**2)
-it: (+ (math:pow (sin x) (+ 1 1)) (math:pow (cos x) 2))
+user &gt; '#i(math:sin(x)**(1+1)+math:cos(x)**2)
+it: (+ (math:pow (math:sin x) (+ 1 1)) (math:pow (math:cos x) 2))
 </code></pre>
 <h2>Structures</h2>
 <p>The <code>#s(...)</code> reader macro produces a prototype object as a literal. When the
@@ -144,7 +171,7 @@ it: #s(mies :aap 1
 user &gt; (type? it 'mies)
 it: true
 user &gt; #s(mies2 aap 1 noot 2)
-Undefined type name: user::mies2
+Undefined type name: user:mies2
 </code></pre>
 <h2>Read tables</h2>
 <p>Kiezellisp readtables are similar to Common Lisp readtables.</p>
@@ -159,4 +186,4 @@ Undefined type name: user::mies2
 <a href="../lisp/set-macro-character.html">set-macro-character</a> <a href="../lisp/unread-char.html">unread-char</a>
 <a href="../lisp/with-input-from-string.html">with-input-from-string</a></p>
 
-</div></body></html>
+</div></div></body></html>

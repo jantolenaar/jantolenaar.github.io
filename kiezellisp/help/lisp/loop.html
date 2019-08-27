@@ -1,10 +1,31 @@
-<html lang='en'><head etag='ca1707736b066397a2ab5713f2beae22'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/loop.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='0bffbaf8fd5c3b6724bd6347fe3a3597'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/loop.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>loop</p>
 <h2>Usage</h2>
 <p>macro</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>loop</strong> &amp;body <em>forms</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>loop</b> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates a loop. The <code>loop</code> macro is based on the Common Lisp <code>iterate</code> macro
 by Jonathan Amsterdam.</p>
@@ -88,86 +109,86 @@ it: 1275
 it: (1275 30414093201713378043612608166064768844377641568960512000000000000)
 </code></pre>
 <h3>Toplevel loop clauses</h3>
-<p><code>
-(<strong>initially</strong> <em>form*</em>)</code><br/>
-<code>
-(<strong>finally</strong> <em>form*</em>)</code><br/>
-<code>
-(<strong>with</strong> <em>sym</em> <strong>initially</strong> <em>expr1</em> <strong>then</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>expr</em> <strong>times</strong>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>to</strong> <em>expr2</em> <strong>by</strong> <em>expr3</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>to</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>downto</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>above</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>below</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>from</strong> <em>expr1</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>in</strong> <em>seq</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>in-list</strong> <em>lst</em> <strong>by</strong> <em>sym2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>in-list</strong> <em>lst</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>on-list</strong> <em>lst</em> <strong>by</strong> <em>sym2</em>)</code><br/>
-<code>
-(<strong>for</strong> <em>sym</em> <strong>on-list</strong> <em>lst</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>expr</em> <strong>times</strong>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>to</strong> <em>expr2</em> <strong>by</strong> <em>expr3</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>to</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>downto</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>above</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em> <strong>below</strong> <em>expr2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>from</strong> <em>expr1</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>in</strong> <em>seq</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>in-list</strong> <em>lst</em> <strong>by</strong> <em>sym2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>in-list</strong> <em>lst</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>on-list</strong> <em>lst</em> <strong>by</strong> <em>sym2</em>)</code><br/>
-<code>
-(<strong>generate</strong> <em>sym</em> <strong>on-list</strong> <em>lst</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>initially</b> <i>form*</i>)</code><br/>
+<code class=syntax>
+(<b>finally</b> <i>form*</i>)</code><br/>
+<code class=syntax>
+(<b>with</b> <i>sym</i> <b>initially</b> <i>expr1</i> <b>then</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>expr</i> <b>times</b>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>to</b> <i>expr2</i> <b>by</b> <i>expr3</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>to</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>downto</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>above</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>below</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>from</b> <i>expr1</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>in</b> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>in-list</b> <i>lst</i> <b>by</b> <i>sym2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>in-list</b> <i>lst</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>on-list</b> <i>lst</i> <b>by</b> <i>sym2</i>)</code><br/>
+<code class=syntax>
+(<b>for</b> <i>sym</i> <b>on-list</b> <i>lst</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>expr</i> <b>times</b>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>to</b> <i>expr2</i> <b>by</b> <i>expr3</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>to</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>downto</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>above</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i> <b>below</b> <i>expr2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>from</b> <i>expr1</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>in</b> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>in-list</b> <i>lst</i> <b>by</b> <i>sym2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>in-list</b> <i>lst</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>on-list</b> <i>lst</i> <b>by</b> <i>sym2</i>)</code><br/>
+<code class=syntax>
+(<b>generate</b> <i>sym</i> <b>on-list</b> <i>lst</i>)</code><br/></p>
 <h3>Other loop clauses</h3>
-<p><code>
-(<strong>next</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>collecting</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>collecting</strong> <em>expr</em>)</code><br/>
-<code>
-(<strong>counting</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>counting</strong> <em>expr</em>)</code><br/>
-<code>
-(<strong>summing</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>summing</strong> <em>expr</em>)</code><br/>
-<code>
-(<strong>multiplying</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>multiplying</strong> <em>expr</em>)</code><br/>
-<code>
-(<strong>maximizing</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>maximizing</strong> <em>expr</em>)</code><br/>
-<code>
-(<strong>minimizing</strong> <em>expr</em> <strong>into</strong> <em>sym</em>)</code><br/>
-<code>
-(<strong>minimizing</strong> <em>expr</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>next</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>collecting</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>collecting</b> <i>expr</i>)</code><br/>
+<code class=syntax>
+(<b>counting</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>counting</b> <i>expr</i>)</code><br/>
+<code class=syntax>
+(<b>summing</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>summing</b> <i>expr</i>)</code><br/>
+<code class=syntax>
+(<b>multiplying</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>multiplying</b> <i>expr</i>)</code><br/>
+<code class=syntax>
+(<b>maximizing</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>maximizing</b> <i>expr</i>)</code><br/>
+<code class=syntax>
+(<b>minimizing</b> <i>expr</i> <b>into</b> <i>sym</i>)</code><br/>
+<code class=syntax>
+(<b>minimizing</b> <i>expr</i>)</code><br/></p>
 
-</div></body></html>
+</div></div></body></html>

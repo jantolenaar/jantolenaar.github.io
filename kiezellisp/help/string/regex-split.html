@@ -1,13 +1,34 @@
-<html lang='en'><head etag='25d6945a833ddee2fa4293c74263e7c0'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/string/regex-split.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='216b6ab595afedb55911b1f366bb7be8'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/string/regex-split.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>string:regex-split</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>string:regex-split</strong> <em>str</em> <em>pattern</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>string:regex-split</b> <i>str</i> <i>pattern</i>)</code><br/></p>
 <p>Like <code>string:split</code> but with separators defined by the regular expression <code>pattern</code>.</p>
 <pre><code>user &gt; (.regex-split &quot;een1twee22drie333vier&quot; #/\d/)
 it: [&quot;een&quot; &quot;twee&quot; &quot;&quot; &quot;drie&quot; &quot;&quot; &quot;&quot; &quot;vier&quot;]
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

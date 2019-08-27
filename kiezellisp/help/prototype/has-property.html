@@ -1,10 +1,31 @@
-<html lang='en'><head etag='6145f97687d15d4f8bf1bde1f77414b1'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/prototype/has-property.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='9d5342cc0251d083048fec72cec78c0d'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/prototype/has-property.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>prototype:has-property</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>prototype:has-property</strong> <em>object</em> <em>ident</em> &amp;key (<em>inherited</em> true))</code><br/></p>
+<p><code class=syntax>
+(<b>prototype:has-property</b> <i>object</i> <i>ident</i> &amp;key (<i>inherited</i> true))</code><br/></p>
 <pre><code>user &gt; (let z (new &quot;name&quot; &quot;Piet&quot;))
 it: z
 user &gt; (prototype:has-property z :name)
@@ -13,4 +34,4 @@ user &gt; (prototype:has-property z :address)
 it: false
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

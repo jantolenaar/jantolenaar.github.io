@@ -1,16 +1,37 @@
-<html lang='en'><head etag='45a01261d78fa65aae66b3fe73c49a7a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/dedupe.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='625ff7986de8bb57ba9ee39c7280740e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/dedupe.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>dedupe</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>dedupe</strong> <em>seq</em>)</code><br/>
-<code>
-(<strong>dedupe</strong> <em>test</em> <em>seq</em>)</code><br/>
-<code>
-(<strong>dedupe</strong>)</code><br/>
-<code>
-(<strong>dedupe</strong> <em>test</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>dedupe</b> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>dedupe</b> <i>test</i> <i>seq</i>)</code><br/>
+<code class=syntax>
+(<b>dedupe</b>)</code><br/>
+<code class=syntax>
+(<b>dedupe</b> <i>test</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a lazy sequence without consecutive duplicates.
 The third and fourth forms return a transducer.
@@ -22,4 +43,4 @@ it: (1 2 3 4 5)
 <p><a href="../lisp/distinct.html">distinct</a> <a href="../lisp/except.html">except</a> <a href="../lisp/index-of.html">index-of</a>
 <a href="../lisp/intersect.html">intersect</a> <a href="../lisp/union.html">union</a></p>
 
-</div></body></html>
+</div></div></body></html>

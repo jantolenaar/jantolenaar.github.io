@@ -1,0 +1,38 @@
+<html lang='en'><head etag='624c0ea3f0c2bad4898aa01554669f2e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/shell/exec-with-io-redirect.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
+<p>shell:exec-with-io-redirect</p>
+<h2>Usage</h2>
+<p>builtin-function</p>
+<h2>Syntax</h2>
+<p><code class=syntax>
+(<b>shell:exec-with-io-redirect</b> <i>input</i> <i>prog</i> &amp;rest <i>args</i>)</code><br/></p>
+<h2>Description</h2>
+<p>Executes the program <code>prog</code> with arguments <code>args</code>. The string <code>input</code> is
+used as standard input. Returns the standard output as a string.</p>
+<pre><code>user &gt; (shell:exec-with-io-redirect null &quot;uname&quot; &quot;-a&quot;)
+it: &quot;Linux debian 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5+deb10u2 (2019-08-08) x86_64 GNU/Linux\n&quot;
+</code></pre>
+<h2>See also</h2>
+<p><a href="../shell/exec.html">shell:exec</a> <a href="../shell/exec-with-detach.html">shell:exec-with-detach</a></p>
+
+</div></div></body></html>

@@ -1,13 +1,36 @@
-<html lang='en'><head etag='c04e450f9d2a54132b1d1a392e327314'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/import-symbol.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='801885ddf1393ac2875397d48a174b8f'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/import-symbol.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>import-symbol</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>import-symbol</strong> <em>name</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>import-symbol</b> <i>name</i>)</code><br/>
+<code class=syntax>
+(<b>import-symbols</b> &amp;rest <i>names</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Adds the symbol referenced by the string <code>name</code> to the current package.
 <code>name</code> must specify a package name and a symbol name,
-e.g. <code>(import-symbol &quot;csv.read-grid-from-string&quot;)</code></p>
+e.g. <code>(import-symbol &quot;csv:read-grid-from-string&quot;)</code></p>
 
-</div></body></html>
+</div></div></body></html>

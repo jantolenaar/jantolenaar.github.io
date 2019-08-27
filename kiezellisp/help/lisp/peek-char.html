@@ -1,10 +1,31 @@
-<html lang='en'><head etag='c8e8bae1e56fe8afebd0c8963d1dbe82'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/peek-char.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='669c0a578a218c98a5af8fbddf6a1467'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/peek-char.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>peek-char</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>peek-char</strong> &amp;optional (<em>peek-type</em> null) (<em>stream</em> $stdin) (<em>eof-error?</em> true) (<em>eof-value</em> null))</code><br/></p>
+<p><code class=syntax>
+(<b>peek-char</b> &amp;optional (<i>peek-type</i> null) (<i>stream</i> $stdin) (<i>eof-error?</i> true) (<i>eof-value</i> null))</code><br/></p>
 <p>Peeks at a character from a TextReader stream.</p>
 <p>When <code>peek-type</code> equals <code>null</code> or <code>false</code> <code>peek-char</code> is equivalent to
 <code>read-char</code> followed by <code>unread-char</code>. When <code>peek-type</code> is <code>true</code>, <code>peek-char</code>
@@ -12,4 +33,4 @@ ends up peeking at the first non-whitespace character (by really reading the
 whitespace characters). When <code>peek-type</code> is a character, <code>peek-char</code> ends up
 peeking at that character (by really reading the characters that are not equal).</p>
 
-</div></body></html>
+</div></div></body></html>

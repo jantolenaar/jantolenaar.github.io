@@ -1,10 +1,31 @@
-<html lang='en'><head etag='96ea33745e51803ec1537fdee7fb8183'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/string/try-parse-number.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='8a6edabebc0cccba3de5e90d1b924cc4'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/string/try-parse-number.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>string:try-parse-number</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>string:try-parse-number</strong> <em>str</em> &amp;key (<em>base</em> 10) (<em>decimal-point-is-comma</em> false) <em>culture</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>string:try-parse-number</b> <i>str</i> &amp;key (<i>base</i> 10) (<i>decimal-point-is-comma</i> false) <i>culture</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Converts a string to a number. The parameters <code>base</code> and <code>decimal-point-is-comma</code>
 have precedence over <code>culture</code>.</p>
@@ -18,4 +39,4 @@ user &gt; (.try-parse-number &quot;123a&quot; :base 16 )
 it: 4666
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

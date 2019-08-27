@@ -1,0 +1,83 @@
+
+:root {
+    --text-color: #586e75;
+    --background-color: #fdf6e3;
+    --banner-text-color: var(--background-color);
+    --banner-background-color: gray;
+    --code-background-color: #e9e9e0;
+    --max-width: 50rem;
+    --index-column-width: 14rem;
+}
+
+html {
+font-size: 100%;
+}
+
+body {
+padding: 1.5rem;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+
+div.narrow {
+max-width: var(--max-width);
+margin: auto;
+}
+
+div.wide {
+
+}
+
+pre {
+background-color: var(--code-background-color);
+margin-left: 1em;
+padding-left: 0.1em;
+white-space: pre-wrap;
+max-width: var(--max-width);
+}
+
+code {
+background-color: var(--code-background-color);
+}
+
+code.syntax {
+background-color: var(--background-color);
+}
+
+p {
+margin-left: 1em;
+max-width: var(--max-width);
+}
+
+h1 { 
+font-size: 1.5rem;
+font-variant: small-caps;
+}
+
+h2 { 
+font-size: 1.15rem;
+font-variant: small-caps;
+}
+
+h3 { 
+font-size: 1rem;
+font-variant: small-caps;
+}
+
+a.banner {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+padding-left: 1rem;
+padding-right: 1rem;
+border-radius: 1rem;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.5rem;
+background-color: var(--banner-background-color);
+color: var(--banner-text-color);
+}
+
+div.indexofeverything {
+column-width: var(--index-column-width);
+font-size: 0.9rem;
+}

@@ -1,10 +1,31 @@
-<html lang='en'><head etag='4f6c5631dfa658d7c939089992eeaf0a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/iterate.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='c7c6a3538cd64961c90592078b33710e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/iterate.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>iterate</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>iterate</strong> <em>func</em> <em>initial-value</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>iterate</b> <i>func</i> <i>initial-value</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns an infinite sequence with <code>initial-value</code> as its first element. The next
 element is the result of calling <code>func</code> with the previous element as the argument.</p>
@@ -14,4 +35,4 @@ user &gt; (take 10 (iterate - 1))
 it: (1 -1 1 -1 1 -1 1 -1 1 -1)
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

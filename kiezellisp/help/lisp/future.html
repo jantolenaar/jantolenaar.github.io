@@ -1,13 +1,34 @@
-<html lang='en'><head etag='b1479f0935e49d0bed87ad005a4b050a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/future.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='822bcacf472e530bad2cd48355c29e63'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/future.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>future</p>
 <h2>Usage</h2>
 <p>special-form</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>future</strong> <em>sym</em> <em>expr</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>future</b> <i>sym</i> <i>expr</i>)</code><br/></p>
 <h2>Description</h2>
 <p>The form <code>(future a expr)</code> compiles to <code>(let a (system:create-task (lambda () expr)))</code>.
 The task is started immediately. Reading references to <code>a</code> are compiled
 as <code>(system:get-task-result a)</code>.</p>
 
-</div></body></html>
+</div></div></body></html>

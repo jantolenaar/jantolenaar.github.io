@@ -1,10 +1,31 @@
-<html lang='en'><head etag='46b2f3c9efc1a30e36c7f84b090f34ee'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/not-every(qm).mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='947dc84be90b624a5b196431f5bd0c24'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/not-every(qm).mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>not-every?</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>not-every?</strong> <em>predicate</em> <em>seq</em>)</code><br/></p>
+<p><code class=syntax>
+(<b>not-every?</b> <i>predicate</i> <i>seq</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns true if at least one element of <code>seq</code> fails the function <code>predicate</code>.</p>
 <pre><code>user &gt; (not-every? odd? '(1 2 3 4))
@@ -15,4 +36,4 @@ user &gt; (not-every? odd? '(1 3))
 it: false
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>

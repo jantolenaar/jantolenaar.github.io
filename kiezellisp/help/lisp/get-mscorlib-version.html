@@ -1,71 +1,92 @@
-<html lang='en'><head etag='c65c3b7c2e220a0b65642b577599feee'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/get-mscorlib-version.mdk</title><link href='../../styles.css?v=601761069' type='text/css' rel='StyleSheet'></head><body><a href='../../index.html' class='banner'>jan&nbsp;tolenaar&nbsp;/&nbsp;<span style='color:yellow'>kiezel</span>lisp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../help/index.html' class='banner'>index of everything</a><div id='content'><h2>Name</h2>
+<html lang='en'><head etag='77694c98eecc0fcf7e6f8be9354c5779'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/get-mscorlib-version.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>get-mscorlib-version</p>
 <h2>Usage</h2>
 <p>builtin-function</p>
 <h2>Syntax</h2>
-<p><code>
-(<strong>get-mscorlib-version</strong>)</code><br/></p>
+<p><code class=syntax>
+(<b>get-mscorlib-version</b>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns the file version of mscorlib.dll</p>
 <pre><code>user &gt; (get-mscorlib-version)
-it: #&lt;File:             /usr/lib/mono/4.5/mscorlib.dll
-InternalName:     mscorlib.dll
-OriginalFilename: mscorlib.dll
-FileVersion:      4.6.57.0
-FileDescription:  mscorlib.dll
-Product:          Mono Common Language Infrastructure
-ProductVersion:   4.6.57.0
+it: #&lt;File:             /opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll
+InternalName:     System.Private.CoreLib.dll
+OriginalFilename: System.Private.CoreLib.dll
+FileVersion:      4.700.19.32702
+FileDescription:  System.Private.CoreLib
+Product:          Microsoft® .NET Core
+ProductVersion:   3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26
 Debug:            False
 Patched:          False
 PreRelease:       False
 PrivateBuild:     False
 SpecialBuild:     False
-Language          Language Neutral
+Language:         Language Neutral
 &gt;
 user &gt; :d
-#s( :members #s( :comments &quot;mscorlib.dll&quot;
-                 :company-name &quot;Mono development team&quot;
-                 :file-build-part 57
-                 :file-description &quot;mscorlib.dll&quot;
+#s( :members #s( :comments &quot;System.Private.CoreLib&quot;
+                 :company-name &quot;Microsoft Corporation&quot;
+                 :file-build-part 19
+                 :file-description &quot;System.Private.CoreLib&quot;
                  :file-major-part 4
-                 :file-minor-part 6
-                 :file-name &quot;/usr/lib/mono/4.5/mscorlib.dll&quot;
-                 :file-private-part 0
-                 :file-version &quot;4.6.57.0&quot;
-                 :internal-name &quot;mscorlib.dll&quot;
+                 :file-minor-part 700
+                 :file-name &quot;/opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll&quot;
+                 :file-private-part 32702
+                 :file-version &quot;4.700.19.32702&quot;
+                 :internal-name &quot;System.Private.CoreLib.dll&quot;
                  :is-debug false
                  :is-patched false
                  :is-pre-release false
                  :is-private-build false
                  :is-special-build false
                  :language &quot;Language Neutral&quot;
-                 :legal-copyright &quot;(c) Various Mono authors&quot;
+                 :legal-copyright &quot;© Microsoft Corporation. All rights reserved.&quot;
                  :legal-trademarks &quot;&quot;
-                 :original-filename &quot;mscorlib.dll&quot;
+                 :original-filename &quot;System.Private.CoreLib.dll&quot;
                  :private-build &quot;&quot;
-                 :product-build-part 57
-                 :product-major-part 4
-                 :product-minor-part 6
-                 :product-name &quot;Mono Common Language Infrastructure&quot;
+                 :product-build-part 0
+                 :product-major-part 0
+                 :product-minor-part 0
+                 :product-name &quot;Microsoft® .NET Core&quot;
                  :product-private-part 0
-                 :product-version &quot;4.6.57.0&quot;
+                 :product-version &quot;3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26&quot;
                  :special-build &quot;&quot; )
     :type &quot;System.Diagnostics.FileVersionInfo&quot;
-    :value #&lt;File:             /usr/lib/mono/4.5/mscorlib.dll
-InternalName:     mscorlib.dll
-OriginalFilename: mscorlib.dll
-FileVersion:      4.6.57.0
-FileDescription:  mscorlib.dll
-Product:          Mono Common Language Infrastructure
-ProductVersion:   4.6.57.0
+    :value #&lt;File:             /opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll
+InternalName:     System.Private.CoreLib.dll
+OriginalFilename: System.Private.CoreLib.dll
+FileVersion:      4.700.19.32702
+FileDescription:  System.Private.CoreLib
+Product:          Microsoft® .NET Core
+ProductVersion:   3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26
 Debug:            False
 Patched:          False
 PreRelease:       False
 PrivateBuild:     False
 SpecialBuild:     False
-Language          Language Neutral
+Language:         Language Neutral
 &gt; )
 
 </code></pre>
 
-</div></body></html>
+</div></div></body></html>
