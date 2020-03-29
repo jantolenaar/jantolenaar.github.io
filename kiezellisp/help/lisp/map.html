@@ -1,4 +1,4 @@
-<html lang='en'><head etag='5422771ce9827e12d40869d0359f8a79'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/map.mdk</title><style>
+<html lang='en'><head etag='9838f7b756aa8529bff06ff5ef034dcf'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/map.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -34,13 +34,13 @@ function <code>func</code>. The first sequence supplies the first argument of <c
 the second sequence supplies the second argument of <code>func</code>, etc. The operation
 stops when one of the sequences runs out. Returns a transducer if no <code>seqs</code> are
 supplied.</p>
-<pre><code>user &gt; (map length (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
+<pre><code>make-html &gt; (map length (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
 it: (3 4 4)
-user &gt; (map + '(1 2 3) '(4 5))
+make-html &gt; (map + '(1 2 3) '(4 5))
 it: (5 7)
-user &gt; (map #(odd? (length %1)) (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
+make-html &gt; (map #(odd? (length %1)) (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
 it: (true false false)
-user &gt; (as-list (eduction (map inc) '(1 2 3)))
+make-html &gt; (as-list (eduction (map inc) '(1 2 3)))
 it: (2 3 4)
 </code></pre>
 

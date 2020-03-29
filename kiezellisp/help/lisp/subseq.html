@@ -1,4 +1,4 @@
-<html lang='en'><head etag='374a5e730c1f478fea8f6fd6c0b48bda'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/subseq.mdk</title><style>
+<html lang='en'><head etag='514ac215279109bd8e356cc330ef2ce2'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/subseq.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -31,9 +31,9 @@ margin-left: 1em;
 to position <code>end</code> or until <code>count</code> elements have been yielded. If the sequence
 is too short to yield <code>count</code> arguments and if <code>default</code> is supplied, the
 subsequence is padded by <code>default</code> elements.</p>
-<pre><code>user &gt; (subseq (series 5) 2)
+<pre><code>make-html &gt; (subseq (series 5) 2)
 it: (3 4 5)
-user &gt; (subseq (series 5) 2 :count 7 :default 9999)
+make-html &gt; (subseq (series 5) 2 :count 7 :default 9999)
 it: (3 4 5 9999 9999 9999 9999)
 </code></pre>
 

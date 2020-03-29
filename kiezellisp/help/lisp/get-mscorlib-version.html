@@ -1,4 +1,4 @@
-<html lang='en'><head etag='77694c98eecc0fcf7e6f8be9354c5779'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/get-mscorlib-version.mdk</title><style>
+<html lang='en'><head etag='e67a350debcc21e5a3fe2bba5506691f'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/get-mscorlib-version.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,14 +28,14 @@ margin-left: 1em;
 (<b>get-mscorlib-version</b>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns the file version of mscorlib.dll</p>
-<pre><code>user &gt; (get-mscorlib-version)
-it: #&lt;File:             /opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll
+<pre><code>make-html &gt; (get-mscorlib-version)
+it: #&lt;File:             /usr/share/dotnet/shared/Microsoft.NETCore.App/3.1.3/System.Private.CoreLib.dll
 InternalName:     System.Private.CoreLib.dll
 OriginalFilename: System.Private.CoreLib.dll
-FileVersion:      4.700.19.32702
+FileVersion:      4.700.20.11803
 FileDescription:  System.Private.CoreLib
 Product:          Microsoft® .NET Core
-ProductVersion:   3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26
+ProductVersion:   3.1.3-servicing.20118.3+c5d3d752260383fbed72ba2b4d86d82fea673c76
 Debug:            False
 Patched:          False
 PreRelease:       False
@@ -43,16 +43,16 @@ PrivateBuild:     False
 SpecialBuild:     False
 Language:         Language Neutral
 &gt;
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :comments &quot;System.Private.CoreLib&quot;
                  :company-name &quot;Microsoft Corporation&quot;
-                 :file-build-part 19
+                 :file-build-part 20
                  :file-description &quot;System.Private.CoreLib&quot;
                  :file-major-part 4
                  :file-minor-part 700
-                 :file-name &quot;/opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll&quot;
-                 :file-private-part 32702
-                 :file-version &quot;4.700.19.32702&quot;
+                 :file-name &quot;/usr/share/dotnet/shared/Microsoft.NETCore.App/3.1.3/System.Private.CoreLib.dll&quot;
+                 :file-private-part 11803
+                 :file-version &quot;4.700.20.11803&quot;
                  :internal-name &quot;System.Private.CoreLib.dll&quot;
                  :is-debug false
                  :is-patched false
@@ -69,16 +69,16 @@ user &gt; :d
                  :product-minor-part 0
                  :product-name &quot;Microsoft® .NET Core&quot;
                  :product-private-part 0
-                 :product-version &quot;3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26&quot;
+                 :product-version &quot;3.1.3-servicing.20118.3+c5d3d752260383fbed72ba2b4d86d82fea673c76&quot;
                  :special-build &quot;&quot; )
     :type &quot;System.Diagnostics.FileVersionInfo&quot;
-    :value #&lt;File:             /opt/dotnet3/shared/Microsoft.NETCore.App/3.0.0-preview7-27912-14/System.Private.CoreLib.dll
+    :value #&lt;File:             /usr/share/dotnet/shared/Microsoft.NETCore.App/3.1.3/System.Private.CoreLib.dll
 InternalName:     System.Private.CoreLib.dll
 OriginalFilename: System.Private.CoreLib.dll
-FileVersion:      4.700.19.32702
+FileVersion:      4.700.20.11803
 FileDescription:  System.Private.CoreLib
 Product:          Microsoft® .NET Core
-ProductVersion:   3.0.0-preview7.19327.2+ac4ab6c990d5ebee49dc03397a2e199241021f26
+ProductVersion:   3.1.3-servicing.20118.3+c5d3d752260383fbed72ba2b4d86d82fea673c76
 Debug:            False
 Patched:          False
 PreRelease:       False

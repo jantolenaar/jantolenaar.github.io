@@ -1,4 +1,4 @@
-<html lang='en'><head etag='983a3e65246c1d0b1998b073b55eb0d2'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/adjoin.mdk</title><style>
+<html lang='en'><head etag='75b16ab6516f6678593ff13e9ac2ce1b'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/adjoin.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,11 +29,11 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Returns <code>seq</code> if <code>seq</code> contains <code>item</code>, otherwise returns a new list
 with <code>item</code> as its new (first or last) element.</p>
-<pre><code>user &gt; (adjoin 2 (list 1 2 3))
+<pre><code>make-html &gt; (adjoin 2 (list 1 2 3))
 it: (1 2 3)
-user &gt; (adjoin 2 (list 1 3))
+make-html &gt; (adjoin 2 (list 1 3))
 it: (2 1 3)
-user &gt; (adjoin 2 (vector 1 3))
+make-html &gt; (adjoin 2 (vector 1 3))
 it: (2 1 3)
 </code></pre>
 

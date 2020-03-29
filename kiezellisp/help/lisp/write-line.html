@@ -1,4 +1,4 @@
-<html lang='en'><head etag='26cddbdf8be00f3207f753f75efdc8b7'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/write-line.mdk</title><style>
+<html lang='en'><head etag='a3d53c4f06b75a753e4b7374bfd436e1'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/write-line.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,19 +28,19 @@ margin-left: 1em;
 (<b>write-line</b> <i>item</i> &amp;key <i>stream</i> <i>escape</i> <i>width</i> <i>padding</i> <i>pretty</i> <i>left</i> <i>right</i> <i>force</i> <i>base</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Same as <code>write</code> but also writes a line feed.</p>
-<pre><code>user &gt; (write-line 123 :width 8 :padding 0)
+<pre><code>make-html &gt; (write-line 123 :width 8 :padding 0)
 00000123
 
-user &gt; (write-line 123 :base 7 :escape false)
+make-html &gt; (write-line 123 :base 7 :escape false)
 234
 
-user &gt; (write-line 123 :base 7 :escape true)
+make-html &gt; (write-line 123 :base 7 :escape true)
 #7r234
 
-user &gt; (write-line &quot;123&quot; :escape false)
+make-html &gt; (write-line &quot;123&quot; :escape false)
 123
 
-user &gt; (write-line &quot;123&quot; :escape true)
+make-html &gt; (write-line &quot;123&quot; :escape true)
 &quot;123&quot;
 
 </code></pre>

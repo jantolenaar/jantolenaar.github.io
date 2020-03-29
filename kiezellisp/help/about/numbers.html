@@ -1,4 +1,4 @@
-<html lang='en'><head etag='f9527417d9153999716c6d24ac6f6086'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/numbers.mdk</title><style>
+<html lang='en'><head etag='0bf2f860d459c2116036ffac3133a7f8'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/numbers.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -26,21 +26,21 @@ margin-left: 1em;
 numbers.</p>
 <h2>Integers</h2>
 <p>The standard integer types <code>System.Int32</code> etc and <code>System.Numerics.BigInteger</code>.</p>
-<pre><code>user &gt; 1111111111
+<pre><code>make-html &gt; 1111111111
 it: 1111111111
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;System.Int32&quot;
     :value 1111111111 )
 
-user &gt; (* it it)
+make-html &gt; (* it it)
 it: 1234567900987654321
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;System.Int64&quot;
     :value 1234567900987654321 )
 
-user &gt; (* it it)
+make-html &gt; (* it it)
 it: 1524157902149062642981252857789971041
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :is-even false
                  :is-one false
                  :is-power-of-two false
@@ -52,18 +52,18 @@ user &gt; :d
 </code></pre>
 <h2>Rationals</h2>
 <p>The type <code>BigRational</code>.</p>
-<pre><code>user &gt; 3/4
+<pre><code>make-html &gt; 3/4
 it: 3/4
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :denominator 4
                  :numerator 3
                  :sign 1 )
     :type &quot;Numerics.BigRational&quot;
     :value 3/4 )
 
-user &gt; (* 4 it)
+make-html &gt; (* 4 it)
 it: 3
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;System.Int32&quot;
     :value 3 )
 
@@ -71,17 +71,17 @@ user &gt; :d
 <h2>Floating point</h2>
 <p>The types <code>System.Float</code>, <code>System.Double</code> and <code>System.Decimal</code>. The latter
 is the preferred type.</p>
-<pre><code>user &gt; 2.10
+<pre><code>make-html &gt; 2.10
 it: 2.10
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;System.Decimal&quot;
     :value 2.10 )
 
 </code></pre>
 <h2>Complex</h2>
-<pre><code>user &gt; #c(3 4)
+<pre><code>make-html &gt; #c(3 4)
 it: #c(3 4)
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :imaginary 4
                  :magnitude 5
                  :phase 0.9272952180016122

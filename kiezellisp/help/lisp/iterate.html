@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c7c6a3538cd64961c90592078b33710e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/iterate.mdk</title><style>
+<html lang='en'><head etag='ea425f81c5346ec150d269d5b80d7c3b'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/iterate.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,9 +29,9 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Returns an infinite sequence with <code>initial-value</code> as its first element. The next
 element is the result of calling <code>func</code> with the previous element as the argument.</p>
-<pre><code>user &gt; (take 10 (iterate inc 1))
+<pre><code>make-html &gt; (take 10 (iterate inc 1))
 it: (1 2 3 4 5 6 7 8 9 10)
-user &gt; (take 10 (iterate - 1))
+make-html &gt; (take 10 (iterate - 1))
 it: (1 -1 1 -1 1 -1 1 -1 1 -1)
 </code></pre>
 

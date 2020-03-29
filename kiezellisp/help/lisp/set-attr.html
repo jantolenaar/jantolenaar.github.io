@@ -1,4 +1,4 @@
-<html lang='en'><head etag='4d261db0d0a6c54c2965283d25fad981'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-attr.mdk</title><style>
+<html lang='en'><head etag='561de20cc929a10adcf0d7f012738e21'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-attr.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,15 +28,15 @@ margin-left: 1em;
 (<b>set-attr</b> <i>object</i> <i>property</i> <i>value</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Assigns <code>value</code> to <code>property</code> of <code>object</code>.</p>
-<pre><code>user &gt; (let obj (new null))
+<pre><code>make-html &gt; (let obj (new null))
 it: obj
-user &gt; (set-attr obj 'name &quot;mies&quot;)
+make-html &gt; (set-attr obj 'name &quot;mies&quot;)
 it: &quot;mies&quot;
-user &gt; (attr obj 'name)
+make-html &gt; (attr obj 'name)
 it: &quot;mies&quot;
-user &gt; (.name obj)
+make-html &gt; (.name obj)
 it: &quot;mies&quot;
-user &gt; (macroexpand '(setf (.name obj) &quot;mies&quot;))
+make-html &gt; (macroexpand '(setf (.name obj) &quot;mies&quot;))
 it: (set-attr obj &quot;name&quot; &quot;mies&quot;)
 </code></pre>
 

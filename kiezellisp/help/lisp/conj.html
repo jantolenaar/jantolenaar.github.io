@@ -1,4 +1,4 @@
-<html lang='en'><head etag='a6b363039e22c1d6d4b758d109fb2d31'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/conj.mdk</title><style>
+<html lang='en'><head etag='49c94011eb4eb37d4dd775cf95ee6d04'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/conj.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,22 +28,22 @@ margin-left: 1em;
 (<b>conj</b> <i>seq</i> &amp;rest <i>items</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Adds each <code>item</code> to the begin or end of <code>seq</code> which must be a list or a vector.</p>
-<pre><code>user &gt; (def a (list 1 2 3))
+<pre><code>make-html &gt; (def a (list 1 2 3))
 it: a
-user &gt; a
+make-html &gt; a
 it: (1 2 3)
-user &gt; (conj a 4)
+make-html &gt; (conj a 4)
 it: (4 1 2 3)
-user &gt; a
+make-html &gt; a
 it: (1 2 3)
 </code></pre>
-<pre><code>user &gt; (def a (vector 1 2 3))
+<pre><code>make-html &gt; (def a (vector 1 2 3))
 it: a
-user &gt; a
+make-html &gt; a
 it: #v(1 2 3)
-user &gt; (conj a 4 5)
+make-html &gt; (conj a 4 5)
 it: #v(1 2 3 4 5)
-user &gt; a
+make-html &gt; a
 it: #v(1 2 3 4 5)
 </code></pre>
 

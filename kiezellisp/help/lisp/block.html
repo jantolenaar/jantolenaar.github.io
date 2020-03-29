@@ -1,4 +1,4 @@
-<html lang='en'><head etag='ab63926a6f0f254770525b2176044703'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/block.mdk</title><style>
+<html lang='en'><head etag='20adb5f422433baa3dbb86fdcff9c127'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/block.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,10 +29,10 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>A named block is similar to a <code>do</code> block but it also supports structured
 jumps by the forms <code>redo</code> and <code>leave</code>.</p>
-<pre><code>user &gt; (block abc
-           (let x 1)
-           (leave abc 2)
-           x)
+<pre><code>make-html &gt; (block abc
+                (let x 1)
+                (leave abc 2)
+                x)
 it: 2
 </code></pre>
 <h2>See also</h2>

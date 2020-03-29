@@ -1,4 +1,4 @@
-<html lang='en'><head etag='264e38588e2929c579a98ffea527b119'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/strings.mdk</title><style>
+<html lang='en'><head etag='83e0e8c3f35f02d3c2d09784d0438caa'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/strings.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -22,40 +22,40 @@ margin-left: 1em;
     </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>about:strings</p>
 <h2>Description</h2>
-<pre><code>user &gt; &quot;hello, world&quot;
+<pre><code>make-html &gt; &quot;hello, world&quot;
 it: &quot;hello, world&quot;
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :length 12 )
     :type &quot;System.String&quot;
     :value &quot;hello, world&quot; )
 
-user &gt; &quot;hello, \&quot;world\&quot;&quot;
+make-html &gt; &quot;hello, \&quot;world\&quot;&quot;
 it: &quot;hello, \&quot;world\&quot;&quot;
-user &gt; @&quot;hello, &quot;&quot;world&quot;&quot;&quot;
+make-html &gt; @&quot;hello, &quot;&quot;world&quot;&quot;&quot;
 it: &quot;hello, \&quot;world\&quot;&quot;
-user &gt; &quot;&quot;&quot;hello, &quot;world&quot; &quot;&quot;&quot;
+make-html &gt; &quot;&quot;&quot;hello, &quot;world&quot; &quot;&quot;&quot;
 it: &quot;hello, \&quot;world\&quot; &quot;
-user &gt; #q{hello, &quot;world&quot;}
+make-html &gt; #q{hello, &quot;world&quot;}
 it: &quot;hello, \&quot;world\&quot;&quot;
-user &gt; #q(hello, &quot;world&quot;)
+make-html &gt; #q(hello, &quot;world&quot;)
 it: &quot;hello, \&quot;world\&quot;&quot;
-user &gt; #q[hello, &quot;world&quot;]
+make-html &gt; #q[hello, &quot;world&quot;]
 it: &quot;hello, \&quot;world\&quot;&quot;
-user &gt; #q&lt;hello, &quot;world&quot;&gt;
+make-html &gt; #q&lt;hello, &quot;world&quot;&gt;
 it: &quot;hello, \&quot;world\&quot;&quot;
 </code></pre>
 <p>Strings with real quotes can have interpolation markers:</p>
-<pre><code>user &gt; (var s &quot;wo&quot;)
+<pre><code>make-html &gt; (var s &quot;wo&quot;)
 it: s
-user &gt; &quot;hello, ${s}rld&quot;
+make-html &gt; &quot;hello, ${s}rld&quot;
 it: &quot;hello, world&quot;
-user &gt; &quot;hello, &lt;%=s%&gt;rld&quot;
+make-html &gt; &quot;hello, &lt;%=s%&gt;rld&quot;
 it: &quot;hello, world&quot;
-user &gt; @&quot;hello, &lt;%(print #\w)(print #\o)%&gt;rld&quot;
+make-html &gt; @&quot;hello, &lt;%(print #\w)(print #\o)%&gt;rld&quot;
 it: &quot;hello, world&quot;
 </code></pre>
 <p>Strings with interpolation markers are not literals but code:</p>
-<pre><code>user &gt; (quote &quot;hello, ${s}rld&quot;)
+<pre><code>make-html &gt; (quote &quot;hello, ${s}rld&quot;)
 it: (string &quot;hello, &quot; s &quot;rld&quot;)
 </code></pre>
 

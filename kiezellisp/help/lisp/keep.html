@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0cbf94f00c11e4d72bdc704555a2fc4b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/keep.mdk</title><style>
+<html lang='en'><head etag='be2b7b9ab6fab85edaeb142b1e96d117'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/keep.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -32,7 +32,7 @@ margin-left: 1em;
 <p>Returns a lazy list containing the non-null values of <code>func</code> applied to elements
 of <code>seq</code>.
 The second form returns a transducer.</p>
-<pre><code>user &gt; (keep #(if (string? %1) (length %1)) '(&quot;aap&quot; &quot;noot&quot; 3 4 5 &quot;mies&quot;))
+<pre><code>make-html &gt; (keep #(if (string? %1) (length %1)) '(&quot;aap&quot; &quot;noot&quot; 3 4 5 &quot;mies&quot;))
 it: (3 4 4)
 </code></pre>
 

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c185222a6d9798320ade99b3185f6e79'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/lambda.mdk</title><style>
+<html lang='en'><head etag='9bd95d4c3ebfd9adbe971d90f2024895'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/lambda.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,19 +29,19 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>The special form <code>lambda</code> and the reader macro #(...) define anonymous
 functions.</p>
-<pre><code>user &gt; (lambda (x y) (+ x y))
+<pre><code>make-html &gt; (lambda (x y) (+ x y))
 it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
-user &gt; (it 21 34)
+make-html &gt; (it 21 34)
 it: 55
-user &gt; #(+ %1 %2)
+make-html &gt; #(+ %1 %2)
 it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
-user &gt; (it 21 34)
+make-html &gt; (it 21 34)
 it: 55
-user &gt; (defun adder (n) #(+ n %1))
+make-html &gt; (defun adder (n) #(+ n %1))
 it: adder
-user &gt; (def g (adder 2))
+make-html &gt; (def g (adder 2))
 it: g
-user &gt; (g 3)
+make-html &gt; (g 3)
 it: 5
 </code></pre>
 <p>The code of a <code>lambda</code> is contained within a <code>block lambda</code>. Therefore

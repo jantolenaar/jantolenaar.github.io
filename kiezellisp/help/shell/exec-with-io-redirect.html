@@ -1,4 +1,4 @@
-<html lang='en'><head etag='624c0ea3f0c2bad4898aa01554669f2e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/shell/exec-with-io-redirect.mdk</title><style>
+<html lang='en'><head etag='80475cbf5064a56838f7d5b32858d38d'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/shell/exec-with-io-redirect.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,8 +29,8 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Executes the program <code>prog</code> with arguments <code>args</code>. The string <code>input</code> is
 used as standard input. Returns the standard output as a string.</p>
-<pre><code>user &gt; (shell:exec-with-io-redirect null &quot;uname&quot; &quot;-a&quot;)
-it: &quot;Linux debian 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5+deb10u2 (2019-08-08) x86_64 GNU/Linux\n&quot;
+<pre><code>make-html &gt; (shell:exec-with-io-redirect null &quot;uname&quot; &quot;-a&quot;)
+it: &quot;Linux pc 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64 GNU/Linux\n&quot;
 </code></pre>
 <h2>See also</h2>
 <p><a href="../shell/exec.html">shell:exec</a> <a href="../shell/exec-with-detach.html">shell:exec-with-detach</a></p>

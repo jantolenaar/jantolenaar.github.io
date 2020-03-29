@@ -1,4 +1,4 @@
-<html lang='en'><head etag='364763c7f5251b14f258339e2dd9a617'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/import.mdk</title><style>
+<html lang='en'><head etag='cfd8edae67868d970584be27d16c3e0c'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/import.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -38,56 +38,56 @@ imports the public fields, properties, events, methods and constructors of the
 CLR type <code>type-name</code> into the package <code>package-name</code>.</p>
 <p><code>package-name</code> defaults to the concatenation of the string <code>package-name-prefix</code>
 and the rightmost name part of <code>type-name</code>.</p>
-<pre><code>user &gt; (import &quot;System.String&quot;)
+<pre><code>make-html &gt; (import &quot;System.String&quot;)
 it: &lt;Package Name=&quot;string&quot;&gt;
-user &gt; (import &quot;Kiezel.StringExtensions&quot; :extends-package-name &quot;string&quot;)
+make-html &gt; (import &quot;Kiezel.StringExtensions&quot; :extends-package-name &quot;string&quot;)
 it: &lt;Package Name=&quot;string&quot;&gt;
-user &gt; (import &quot;System.Net.WebRequestMethods+Ftp&quot; :package-name :ftp-methods)
+make-html &gt; (import &quot;System.Net.WebRequestMethods+Ftp&quot; :package-name :ftp-methods)
 it: &lt;Package Name=&quot;ftp-methods&quot;&gt;
-user &gt; (import &quot;System.Collections.Generic.List&quot; :type-parameters '(int))
+make-html &gt; (import &quot;System.Collections.Generic.List&quot; :type-parameters '(int))
 it: &lt;Package Name=&quot;list^1&quot;&gt;
 </code></pre>
 <h3>Static methods</h3>
-<pre><code>user &gt; (path:get-extension &quot;readme.txt&quot;)
+<pre><code>make-html &gt; (path:get-extension &quot;readme.txt&quot;)
 it: &quot;.txt&quot;
 </code></pre>
 <h3>Instance methods</h3>
-<pre><code>user &gt; (string:to-upper &quot;hello&quot;)
+<pre><code>make-html &gt; (string:to-upper &quot;hello&quot;)
 it: &quot;HELLO&quot;
-user &gt; (.to-upper &quot;hello&quot;)
+make-html &gt; (.to-upper &quot;hello&quot;)
 it: &quot;HELLO&quot;
 </code></pre>
 <p>The expression <code>.to-upper</code> is discussed in more detail below.</p>
 <h3>Instance properties</h3>
-<pre><code>user &gt; (string:length &quot;hello&quot;)
+<pre><code>make-html &gt; (string:length &quot;hello&quot;)
 it: 5
-user &gt; (.length &quot;hello&quot;)
+make-html &gt; (.length &quot;hello&quot;)
 it: 5
 </code></pre>
 <h3>Literal and static readonly fields</h3>
 <p>The name is converted to upper case instead of lower case.</p>
-<pre><code>user &gt; int32:MAX-VALUE
+<pre><code>make-html &gt; int32:MAX-VALUE
 it: 2147483647
 </code></pre>
 <h3>Static properties</h3>
-<pre><code>user &gt; (encoding:ascii)
+<pre><code>make-html &gt; (encoding:ascii)
 it: #&lt;System.Text.ASCIIEncoding+ASCIIEncodingSealed&gt;
 </code></pre>
 <h3>.members and ?members notation</h3>
 <p>Instance properties may be accessed by using <em>getter</em> and <em>setter</em> functions but
 this requires that the class is <code>import</code>ed. A convenient alternative is to use
 <code>accessor</code> expressions. This also applies to methods.</p>
-<pre><code>user &gt; .length
+<pre><code>make-html &gt; .length
 it: #&lt;AccessorLambda Name=&quot;length&quot; Nullable=&quot;False&quot;&gt;
-user &gt; (.length &quot;hello&quot;)
+make-html &gt; (.length &quot;hello&quot;)
 it: 5
-user &gt; (map .length '(&quot;ada&quot; &quot;ruby&quot; &quot;python&quot;))
+make-html &gt; (map .length '(&quot;ada&quot; &quot;ruby&quot; &quot;python&quot;))
 it: (3 4 6)
-user &gt; (def obj (new :city &quot;leiden&quot;))
+make-html &gt; (def obj (new :city &quot;leiden&quot;))
 it: obj
-user &gt; (.city obj)
+make-html &gt; (.city obj)
 it: &quot;leiden&quot;
-user &gt; (.country obj)
+make-html &gt; (.country obj)
 it: null
 </code></pre>
 <p><code>.length</code> is a reader macro that expands to <code>(. &quot;length&quot;)</code>, which
@@ -95,11 +95,11 @@ evaluates to a generic function that retrieves the <code>length</code> property 
 object.</p>
 <p>Nullable accessors handle <code>null</code> references by returning <code>null</code> instead of
 throwing a <code>NullReference</code> exception:</p>
-<pre><code>user &gt; ?length
+<pre><code>make-html &gt; ?length
 it: #&lt;AccessorLambda Name=&quot;length&quot; Nullable=&quot;True&quot;&gt;
-user &gt; (?length &quot;hello&quot;)
+make-html &gt; (?length &quot;hello&quot;)
 it: 5
-user &gt; (?length null)
+make-html &gt; (?length null)
 it: null
 </code></pre>
 <h2>See also</h2>

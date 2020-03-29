@@ -1,4 +1,4 @@
-<html lang='en'><head etag='99d410ccf3b5021bcbd24d7da4057b46'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/compose.mdk</title><style>
+<html lang='en'><head etag='138f1be7e15a7768902bae350f252839'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/compose.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,9 +28,9 @@ margin-left: 1em;
 (<b>compose</b> <i>func1</i> &amp;rest <i>funcs</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates a new function that applies the given functions from the right to the left.</p>
-<pre><code>user &gt; (let f (compose dec .length))
+<pre><code>make-html &gt; (let f (compose dec .length))
 it: f
-user &gt; (f &quot;hello&quot;)
+make-html &gt; (f &quot;hello&quot;)
 it: 4
 </code></pre>
 

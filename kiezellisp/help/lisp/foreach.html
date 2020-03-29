@@ -1,4 +1,4 @@
-<html lang='en'><head etag='8b3c0da7bec1b4374a5d211b0dfd01eb'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/foreach.mdk</title><style>
+<html lang='en'><head etag='3d39995bc9a2fa771b8523f058a29061'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/foreach.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,11 +28,11 @@ margin-left: 1em;
 (<b>foreach</b> (<i>sym</i> seq) &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Executes <code>forms</code> repeatedly. Uses <code>loop</code>.</p>
-<pre><code>user &gt; (foreach (x (series 1 5)) (collecting (+ x x)))
+<pre><code>make-html &gt; (foreach (x (series 1 5)) (collecting (+ x x)))
 it: (2 4 6 8 10)
-user &gt; (macroexpand-1 '(foreach (x y) a b c))
+make-html &gt; (macroexpand-1 '(foreach (x y) a b c))
 it: ((loop (for x :in y) a b c) true)
-user &gt; (macroexpand '(foreach (x y) a b c))
+make-html &gt; (macroexpand '(foreach (x y) a b c))
 it: (block LOOP
       (let %range-x (system:get-safe-enumerator y))
       (var x null)

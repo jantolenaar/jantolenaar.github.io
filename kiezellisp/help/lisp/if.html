@@ -1,4 +1,4 @@
-<html lang='en'><head etag='6f02a806a7474a3da4a282cfbdb6f854'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/if.mdk</title><style>
+<html lang='en'><head etag='7ca3945d7e1702cf602f5eb4410649c9'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/if.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,20 +29,20 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>If <code>test</code> is true, returns the result of <code>then-form</code>, else returns the result of
 <code>else-form</code> or <code>null</code>. Truth is defined by the function <code>boolean</code>.</p>
-<pre><code>user &gt; (if (zero? 0)
-             1
-           2)
+<pre><code>make-html &gt; (if (zero? 0)
+                  1
+                2)
 it: 1
-user &gt; (if (zero? 1)
-             1
-           2)
+make-html &gt; (if (zero? 1)
+                  1
+                2)
 it: 2
-user &gt; (if (zero? 1)
-           1)
+make-html &gt; (if (zero? 1)
+                1)
 it: null
-user &gt; (map if '(true false true) '(1 2 3) '(a b c))
+make-html &gt; (map if '(true false true) '(1 2 3) '(a b c))
 it: (1 b 3)
-user &gt; (map if '(true false true) '(1 2 3))
+make-html &gt; (map if '(true false true) '(1 2 3))
 it: (1 null 3)
 </code></pre>
 

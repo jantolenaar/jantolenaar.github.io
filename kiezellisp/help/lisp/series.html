@@ -1,4 +1,4 @@
-<html lang='en'><head etag='79f23b90aa7822938da97cc663b59664'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/series.mdk</title><style>
+<html lang='en'><head etag='3d79912aceb7f7b1cac0bce0206000ef'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/series.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -35,13 +35,13 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Returns a lazy list of integer numbers. By default a series starts at 1.
 The upper bound is inclusive and defaults to <code>int32:MAX-VALUE</code>.</p>
-<pre><code>user &gt; (series 3 10 2)
+<pre><code>make-html &gt; (series 3 10 2)
 it: (3 5 7 9 11)
-user &gt; (series 3 10)
+make-html &gt; (series 3 10)
 it: (3 4 5 6 7 8 9 10)
-user &gt; (series 10)
+make-html &gt; (series 10)
 it: (1 2 3 4 5 6 7 8 9 10)
-user &gt; (series 10 3 -1)
+make-html &gt; (series 10 3 -1)
 it: (10 9 8 7 6 5 4 3)
 </code></pre>
 

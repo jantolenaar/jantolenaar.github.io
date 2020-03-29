@@ -1,4 +1,4 @@
-<html lang='en'><head etag='8a6edabebc0cccba3de5e90d1b924cc4'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/string/try-parse-number.mdk</title><style>
+<html lang='en'><head etag='478486ce6f821b92d2c62fb94785c18d'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/string/try-parse-number.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,13 +29,13 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Converts a string to a number. The parameters <code>base</code> and <code>decimal-point-is-comma</code>
 have precedence over <code>culture</code>.</p>
-<pre><code>user &gt; (.try-parse-number &quot;123.4&quot; )
+<pre><code>make-html &gt; (.try-parse-number &quot;123.4&quot; )
 it: 123.4
-user &gt; (.try-parse-number &quot;123,4&quot; :decimal-point-is-comma true)
+make-html &gt; (.try-parse-number &quot;123,4&quot; :decimal-point-is-comma true)
 it: 123.4
-user &gt; (.try-parse-number &quot;123a&quot; )
+make-html &gt; (.try-parse-number &quot;123a&quot; )
 it: null
-user &gt; (.try-parse-number &quot;123a&quot; :base 16 )
+make-html &gt; (.try-parse-number &quot;123a&quot; :base 16 )
 it: 4666
 </code></pre>
 

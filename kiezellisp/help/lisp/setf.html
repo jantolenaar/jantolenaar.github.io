@@ -1,4 +1,4 @@
-<html lang='en'><head etag='dee71f21754afc97f79a11ad7cd9b188'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/setf.mdk</title><style>
+<html lang='en'><head etag='4cdad0abb7d3dcaff6053f82f84b7091'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/setf.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,13 +29,13 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Assigns <code>value</code> to <code>place</code>. <code>place</code> may be transformed by (symbol) macro
 expansion. See the file core/setf.</p>
-<pre><code>user &gt; (var a '(1 2 3))
+<pre><code>make-html &gt; (var a '(1 2 3))
 it: a
-user &gt; (setf (second a) 'two)
+make-html &gt; (setf (second a) 'two)
 it: two
-user &gt; a
+make-html &gt; a
 it: (1 two 3)
-user &gt; (macroexpand '(setf (second a) 'two))
+make-html &gt; (macroexpand '(setf (second a) 'two))
 it: (set-second a 'two)
 </code></pre>
 

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='48138ba50e6c27b0031752acea909c8b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/get-type-specifier.mdk</title><style>
+<html lang='en'><head etag='5ee01d737f059ecd7182023378241875'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/get-type-specifier.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,22 +28,22 @@ margin-left: 1em;
 (<b>prototype:get-type-specifier</b> <i>obj</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a type name or a list of the type names of the prototype object <code>obj</code>.</p>
-<pre><code>user &gt; (deftype a1 (new :city &quot;leiden&quot;))
+<pre><code>make-html &gt; (deftype a1 (new :city &quot;leiden&quot;))
 it: #s(a1 :city &quot;leiden&quot; )
-user &gt; (deftype a2 (new :country &quot;netherlands&quot;))
+make-html &gt; (deftype a2 (new :country &quot;netherlands&quot;))
 it: #s(a2 :country &quot;netherlands&quot; )
-user &gt; (def b (new 'a1))
+make-html &gt; (def b (new 'a1))
 it: b
-user &gt; (prototype:get-type-specifier b)
+make-html &gt; (prototype:get-type-specifier b)
 it: a1
-user &gt; (def c (new '(a1 a2)
-                   :name &quot;mies&quot;))
+make-html &gt; (def c (new '(a1 a2)
+                        :name &quot;mies&quot;))
 it: c
-user &gt; c
+make-html &gt; c
 it: #s((a1 a2) :city &quot;leiden&quot;
                :country &quot;netherlands&quot;
                :name &quot;mies&quot; )
-user &gt; (prototype:get-type-specifier c)
+make-html &gt; (prototype:get-type-specifier c)
 it: (a1 a2)
 </code></pre>
 

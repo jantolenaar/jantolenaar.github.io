@@ -1,4 +1,4 @@
-<html lang='en'><head etag='af534eff87822ed8dfd2b6f508086097'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/parallel-map.mdk</title><style>
+<html lang='en'><head etag='b48daae7778387928edfd51412767f78'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/parallel-map.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,9 +29,9 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Returns a lazy sequence where each element of <code>seq</code> is transformed by the
 function <code>func</code>. Uses the Task Parallel Library.</p>
-<pre><code>user &gt; (parallel-map length (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
+<pre><code>make-html &gt; (parallel-map length (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
 it: (3 4 4)
-user &gt; (parallel-map #(odd? (length %1)) (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
+make-html &gt; (parallel-map #(odd? (length %1)) (vector &quot;aap&quot; &quot;noot&quot; &quot;mies&quot;))
 it: (true false false)
 </code></pre>
 

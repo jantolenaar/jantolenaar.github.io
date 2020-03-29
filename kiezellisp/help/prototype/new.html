@@ -1,4 +1,4 @@
-<html lang='en'><head etag='933aec6db4510f677019df8f80019c92'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/new.mdk</title><style>
+<html lang='en'><head etag='2461696207170a9ed1df91bcb94dca17'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/new.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -33,11 +33,11 @@ specifier or a list of type specifiers. A type specifier is either a prototype
 object or the name of a type created by <code>deftype</code>, <code>defclass</code>, <code>defstruct</code> or
 <code>import</code>. The other arguments are name/value pairs used to initialize the new
 object. Names can be given as strings, symbols and keywords.</p>
-<pre><code>user &gt; (let a (new :color &quot;black&quot;
-                   :model &quot;0&quot;))
+<pre><code>make-html &gt; (let a (new :color &quot;black&quot;
+                        :model &quot;0&quot;))
 it: a
-user &gt; (new a
-            :model &quot;12&quot;)
+make-html &gt; (new a
+                 :model &quot;12&quot;)
 it: #s( :color &quot;black&quot;
         :model &quot;12&quot; )
 </code></pre>

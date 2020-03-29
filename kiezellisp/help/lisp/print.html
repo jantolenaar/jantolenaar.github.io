@@ -1,4 +1,4 @@
-<html lang='en'><head etag='7be72641b5459f1cd89c7192d2e28da9'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/print.mdk</title><style>
+<html lang='en'><head etag='2bdd4699d562ae5285bb4d094400a936'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/print.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -31,13 +31,13 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Writes each item unescaped to standard output or the given <code>TextWriter</code>.
 When printing a list or vector, the elements are separated by spaces.</p>
-<pre><code>user &gt; (print &quot;Hello&quot; &quot;,&quot; &quot;World&quot;)
+<pre><code>make-html &gt; (print &quot;Hello&quot; &quot;,&quot; &quot;World&quot;)
 Hello,World
-user &gt; (print $stdout '(1 2 3))
+make-html &gt; (print $stdout '(1 2 3))
 1 2 3
-user &gt; (write &quot;Hello&quot; :escape false)
+make-html &gt; (write &quot;Hello&quot; :escape false)
 Hello
-user &gt; (write &quot;Hello&quot; :escape true)
+make-html &gt; (write &quot;Hello&quot; :escape true)
 &quot;Hello&quot;
 </code></pre>
 <h2>See also</h2>

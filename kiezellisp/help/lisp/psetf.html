@@ -1,4 +1,4 @@
-<html lang='en'><head etag='765b49dd5ddaa14463ba11a61ad14844'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/psetf.mdk</title><style>
+<html lang='en'><head etag='fd0a0b8e72ee025e4f82784e53db8fe2'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/psetf.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,7 +28,7 @@ margin-left: 1em;
 (<b>psetf</b> <i>sym1</i> <i>value1</i> <i>sym2</i> <i>value2...</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Performs all assignments after evaluating all values.</p>
-<pre><code>user &gt; (macroexpand '(psetf v1 (inc v2) v2 (inc v1)))
+<pre><code>make-html &gt; (macroexpand '(psetf v1 (inc v2) v2 (inc v1)))
 it: (do
       (let temp::temp-1 (inc v2))
       (let temp::temp-2 (inc v1))

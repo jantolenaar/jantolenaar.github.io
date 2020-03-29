@@ -1,4 +1,4 @@
-<html lang='en'><head etag='2df17334f4922d0c36ab10826b0330b3'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/apply.mdk</title><style>
+<html lang='en'><head etag='379d04630c62c92f15887d75d5d72e2a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/apply.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -32,13 +32,13 @@ margin-left: 1em;
 <p>The first form calls <code>func</code> with an argument list created by the function <code>list*</code>.
 The second form returns a function with one argument of type sequence that applies the
 argument to <code>func</code>.</p>
-<pre><code>user &gt; (apply + 1 2 '(3 4))
+<pre><code>make-html &gt; (apply + 1 2 '(3 4))
 it: 10
-user &gt; (apply + '(1 2 3 4))
+make-html &gt; (apply + '(1 2 3 4))
 it: 10
-user &gt; (let f (apply +))
+make-html &gt; (let f (apply +))
 it: f
-user &gt; (f '(1 2 3 4))
+make-html &gt; (f '(1 2 3 4))
 it: 10
 </code></pre>
 

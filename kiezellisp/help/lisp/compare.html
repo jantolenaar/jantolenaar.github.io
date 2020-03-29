@@ -1,4 +1,4 @@
-<html lang='en'><head etag='1e25e2dea4196a5c40b7fd4629f32e74'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/compare.mdk</title><style>
+<html lang='en'><head etag='e34f7598f6720eaf46814b1a30ea549b'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/compare.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,15 +28,15 @@ margin-left: 1em;
 (<b>compare</b> <i>a1</i> <i>a2</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Compares two numbers, characters, strings, symbols, dates and timespans.</p>
-<pre><code>user &gt; (compare 3 5)
+<pre><code>make-html &gt; (compare 3 5)
 it: -1
-user &gt; (compare 3 null)
+make-html &gt; (compare 3 null)
 Cannot compare 3 and null
-user 1 &gt; (compare &quot;een&quot; &quot;twee&quot;)
+make-html 1 &gt; (compare &quot;een&quot; &quot;twee&quot;)
 it: -15
-user 1 &gt; (compare #\a &quot;a&quot;)
+make-html 1 &gt; (compare #\a &quot;a&quot;)
 Cannot compare #\a and &quot;a&quot;
-user 2 &gt; (compare (date-time:today) (.add-years (date-time:today) 1))
+make-html 2 &gt; (compare (date-time:today) (.add-years (date-time:today) 1))
 it: -1
 </code></pre>
 

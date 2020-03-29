@@ -1,4 +1,4 @@
-<html lang='en'><head etag='e3787f65cf69d9ef7ac655c9541894a6'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-symbol-value.mdk</title><style>
+<html lang='en'><head etag='9dc876c1822111564cc50b4a19c4fcfd'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-symbol-value.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,13 +28,13 @@ margin-left: 1em;
 (<b>set-symbol-value</b> <i>sym</i> <i>value</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Assigns <code>value</code> to the global variable <code>sym</code>.</p>
-<pre><code>user &gt; (def z 0)
+<pre><code>make-html &gt; (def z 0)
 it: z
-user &gt; (set-symbol-value 'z 1)
+make-html &gt; (set-symbol-value 'z 1)
 it: 1
-user &gt; (setq z 2)
+make-html &gt; (setq z 2)
 it: 2
-user &gt; (macroexpand '(setf (symbol-value 'z) 1))
+make-html &gt; (macroexpand '(setf (symbol-value 'z) 1))
 it: (set-symbol-value 'z 1)
 </code></pre>
 

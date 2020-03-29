@@ -1,4 +1,4 @@
-<html lang='en'><head etag='51b45bf045fa302930598d27182f730b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partition-all.mdk</title><style>
+<html lang='en'><head etag='b9648741a37bf7387dc2d279ba6e9956'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partition-all.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -34,11 +34,11 @@ margin-left: 1em;
 <p>Divides <code>seq</code> into subsequences of length <code>size</code>. Default <code>step</code> equals <code>size</code>.
 The last subsequence may contain less elements.
 The third form returns a transducer.</p>
-<pre><code>user &gt; (partition-all 3 (series 10))
+<pre><code>make-html &gt; (partition-all 3 (series 10))
 it: ((1 2 3) (4 5 6) (7 8 9) (10))
-user &gt; (partition-all 3 2 (series 10))
+make-html &gt; (partition-all 3 2 (series 10))
 it: ((1 2 3) (3 4 5) (5 6 7) (7 8 9) (9 10))
-user &gt; (partition-all 3 4 (series 10))
+make-html &gt; (partition-all 3 4 (series 10))
 it: ((1 2 3) (5 6 7) (9 10))
 </code></pre>
 

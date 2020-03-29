@@ -1,4 +1,4 @@
-<html lang='en'><head etag='de944b4c8967be9c6acfeb23f200a46f'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>change-log</title><style>
+<html lang='en'><head etag='908048f323204daca4233fb2c312832d'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>change-log</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -20,13 +20,30 @@ margin-left: 1em;
 }
 
     </style></head><body><div class='narrow'><big><b><span><a href='../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h1>Change Log</h1>
+<h3>2020/03/25</h3>
+<ul>
+<li>Added Nuget package Dynamic Language Runtime 1.2.3-rc1</li>
+<li>Fixed bug: <code>Expression.Goto</code> usage by <code>leave</code> and <code>redo</code> incompatible
+with DLR interpreter.</li>
+<li>Moved from .NET Framework/Core to .NET Core only.</li>
+</ul>
+<h3>2020/02/16</h3>
+<ul>
+<li>Removed <code>$repl-optional-parentheses</code> setting.</li>
+<li>Added <code>F12</code> to wrap form in parentheses and then execute.</li>
+<li>Added regex options <code>n</code> and <code>x</code>.</li>
+</ul>
+<h3>2019/08/31</h3>
+<ul>
+<li>Fixed <code>as-multiple-elements</code> function: initialize tail with <code>nulls</code>.</li>
+</ul>
 <h3>2019/08/27</h3>
 <ul>
 <li>Documentation changes mostly related to .NET Core.</li>
 </ul>
 <h3>2019/04/20</h3>
 <ul>
-<li>Added <code>&quot;\e&quot;</code> and <code>\#escape</code> character.</li>
+<li>Added <code>&quot;\e&quot;</code> and <code>#\escape</code> character.</li>
 <li>Refactored autocomplete to work as bash autocomplete.</li>
 </ul>
 <h3>2019/04/13</h3>

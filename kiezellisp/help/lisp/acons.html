@@ -1,4 +1,4 @@
-<html lang='en'><head etag='b0f839fd1f9104ba9b08fcb5870cc3e9'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/acons.mdk</title><style>
+<html lang='en'><head etag='33b907b7669a0522427f526a9e9ff94a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/acons.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,17 +28,17 @@ margin-left: 1em;
 (<b>acons</b> <i>key</i> <i>value</i> <i>alist</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Adds a key/value to an association list.</p>
-<pre><code>user &gt; (def seq (acons 'a 1 null))
+<pre><code>make-html &gt; (def seq (acons 'a 1 null))
 it: seq
-user &gt; seq
+make-html &gt; seq
 it: ((a 1))
-user &gt; (setf seq (acons 'b 2 seq))
+make-html &gt; (setf seq (acons 'b 2 seq))
 it: ((b 2) (a 1))
-user &gt; (assoc 'a seq)
+make-html &gt; (assoc 'a seq)
 it: (a 1)
-user &gt; (assoc 'b seq)
+make-html &gt; (assoc 'b seq)
 it: (b 2)
-user &gt; (assoc 'c seq)
+make-html &gt; (assoc 'c seq)
 it: null
 </code></pre>
 <h2>See also</h2>

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='62215657c2d50c33fcc3939cef6243d6'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-cdr.mdk</title><style>
+<html lang='en'><head etag='4dacf2d84a2d5e6547486e347db5793c'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-cdr.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,13 +28,13 @@ margin-left: 1em;
 (<b>set-cdr</b> <i>list</i> <i>item</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Assigns the list <code>item</code> to the rest or cdr of <code>list</code>.</p>
-<pre><code>user &gt; (let z '(1 111))
+<pre><code>make-html &gt; (let z '(1 111))
 it: z
-user &gt; (set-cdr z '(111))
+make-html &gt; (set-cdr z '(111))
 it: (111)
-user &gt; z
+make-html &gt; z
 it: (1 111)
-user &gt; (macroexpand '(setf (cdr z) '(111)))
+make-html &gt; (macroexpand '(setf (cdr z) '(111)))
 it: (set-cdr z '(111))
 </code></pre>
 

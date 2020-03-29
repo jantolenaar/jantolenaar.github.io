@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c31b581bea931f33f4da120664409bfa'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partially-apply.mdk</title><style>
+<html lang='en'><head etag='03f2d32965154f3ff3bc46ed99ba72c6'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partially-apply.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,9 +28,9 @@ margin-left: 1em;
 (<b>partially-apply</b> <i>func</i> &amp;rest <i>head-args</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates a new function by partially applying arguments to the given function.</p>
-<pre><code>user &gt; (def f (partially-apply string &quot;de &quot;))
+<pre><code>make-html &gt; (def f (partially-apply string &quot;de &quot;))
 it: f
-user &gt; (map f '(aap noot hond))
+make-html &gt; (map f '(aap noot hond))
 it: (&quot;de aap&quot; &quot;de noot&quot; &quot;de hond&quot;)
 </code></pre>
 

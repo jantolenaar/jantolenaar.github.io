@@ -1,4 +1,4 @@
-<html lang='en'><head etag='09085bee99db2cf8ebd1bfabd0263cec'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/trace.mdk</title><style>
+<html lang='en'><head etag='33489494e681056dca592b7a394bd3c8'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/trace.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,9 +30,9 @@ margin-left: 1em;
 <p>Conditionally writes the source code of <code>expr</code> and its value to <code>$stdlog</code>, depending
 on the value of <code>$tracing</code>. <code>expr</code> must not have side effects. Trace code is compiled
 away when running in production mode.</p>
-<pre><code>user &gt; (do
-           (let $tracing true)
-           (trace (+ 1 2)))
+<pre><code>make-html &gt; (do
+                (let $tracing true)
+                (trace (+ 1 2)))
 (+ 1 2) =&gt; 3
 
 </code></pre>

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='9e971b0b9efc463b8fac88301c6f2a68'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/string/split.mdk</title><style>
+<html lang='en'><head etag='2d62e8d172b78a73ed8fa08c02a0f808'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/string/split.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -38,9 +38,9 @@ white space and always remove empty substrings. In the third and fourth forms
 <code>separators</code> is a string or another sequence (IEnumerable other than string).
 In case of a string, the function splits on the individual characters of the
 string.</p>
-<pre><code>user &gt; (.split &quot;aap noot mies&quot; 2)
+<pre><code>make-html &gt; (.split &quot;aap noot mies&quot; 2)
 it: [&quot;aap&quot; &quot;noot mies&quot;]
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :is-fixed-size true
                  :is-read-only false
                  :is-synchronized false
@@ -51,9 +51,9 @@ user &gt; :d
     :type &quot;System.String[]&quot;
     :value [&quot;aap&quot; &quot;noot mies&quot;] )
 
-user &gt; (.split &quot;hello, world&quot; &quot;lw&quot;)
+make-html &gt; (.split &quot;hello, world&quot; &quot;lw&quot;)
 it: [&quot;he&quot; &quot;&quot; &quot;o, &quot; &quot;or&quot; &quot;d&quot;]
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :is-fixed-size true
                  :is-read-only false
                  :is-synchronized false

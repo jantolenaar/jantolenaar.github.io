@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c7ed9f121962c2a334de3dc44a091e71'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/macroexpand.mdk</title><style>
+<html lang='en'><head etag='2ef05cfe573fda7d74f046577dff8646'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/macroexpand.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,9 +28,9 @@ margin-left: 1em;
 (<b>macroexpand</b> <i>expr</i> &amp;optional <i>environment</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns the macro expansion of <code>expr</code> by repeatedly calling <code>macroexpand-1</code>.</p>
-<pre><code>user &gt; (macroexpand '(setf (car x) 123))
+<pre><code>make-html &gt; (macroexpand '(setf (car x) 123))
 it: (set-car x 123)
-user &gt; (macroexpand '(while a b))
+make-html &gt; (macroexpand '(while a b))
 it: (block LOOP
       (block TESTS
         (block MAIN

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='a567cd1b55d2f75fcdd5a1bc5149bb44'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defun(star).mdk</title><style>
+<html lang='en'><head etag='3f41caf6a89e57cdddc59bb0f90561d7'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defun(star).mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,16 +28,16 @@ margin-left: 1em;
 (<b>defun*</b> <i>name</i> (<i>arg*</i> [doc-string] form*) (<i>.</i> &quot;..&quot;))</code><br/></p>
 <h2>Description</h2>
 <p>Defines a multi-arity function.</p>
-<pre><code>user &gt; (defun* f
-           (() (self 0))
-           ((x) (self x x))
-           ((x y) (+ x y)))
+<pre><code>make-html &gt; (defun* f
+                (() (self 0))
+                ((x) (self x x))
+                ((x y) (+ x y)))
 it: f
-user &gt; (f)
+make-html &gt; (f)
 it: 0
-user &gt; (f 3)
+make-html &gt; (f 3)
 it: 6
-user &gt; (f 3 4)
+make-html &gt; (f 3 4)
 it: 7
 </code></pre>
 <h2>See also</h2>

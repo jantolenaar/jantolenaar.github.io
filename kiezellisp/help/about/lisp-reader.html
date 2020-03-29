@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0d4a32f5073128d8047925bfdaea2515'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/lisp-reader.mdk</title><style>
+<html lang='en'><head etag='e3206c18507a1af86cdaca2ce3a8c1c4'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/lisp-reader.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -35,52 +35,52 @@ converted to multiple tokens.</p>
 (+ 123 #| block comment |# 456)
 </code></pre>
 <h2>Abbreviated lambda expressions</h2>
-<pre><code>user &gt; #(+ 2 %)
+<pre><code>make-html &gt; #(+ 2 %)
 it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
-user &gt; #(* %3 %3)
+make-html &gt; #(* %3 %3)
 it: #&lt;Lambda Name=&quot;anonymous&quot;&gt;
-user &gt; (it 1 2 3)
+make-html &gt; (it 1 2 3)
 it: 9
 </code></pre>
 <h2>Accessor functions</h2>
-<pre><code>user &gt; .
+<pre><code>make-html &gt; .
 it: #&lt;Function Name=&quot;Kiezel.Runtime.MemberAccessor&quot;&gt;
-user &gt; (. &quot;to-upper&quot;)
+make-html &gt; (. &quot;to-upper&quot;)
 it: #&lt;AccessorLambda Name=&quot;to-upper&quot; Nullable=&quot;False&quot;&gt;
-user &gt; .to-upper
+make-html &gt; .to-upper
 it: #&lt;AccessorLambda Name=&quot;to-upper&quot; Nullable=&quot;False&quot;&gt;
-user &gt; (.to-upper &quot;hello&quot;)
+make-html &gt; (.to-upper &quot;hello&quot;)
 it: &quot;HELLO&quot;
 </code></pre>
 <h2>Numbers</h2>
-<pre><code>user &gt; #9r13
+<pre><code>make-html &gt; #9r13
 it: 12
-user &gt; #b111
+make-html &gt; #b111
 it: 7
-user &gt; #o77
+make-html &gt; #o77
 it: 63
-user &gt; #x20
+make-html &gt; #x20
 it: 32
 </code></pre>
 <h2>Strings</h2>
-<pre><code>user &gt; #q{a b c}
+<pre><code>make-html &gt; #q{a b c}
 it: &quot;a b c&quot;
-user &gt; #q(a b c)
+make-html &gt; #q(a b c)
 it: &quot;a b c&quot;
-user &gt; #q[a b c]
+make-html &gt; #q[a b c]
 it: &quot;a b c&quot;
-user &gt; #q&lt;a b c&gt;
+make-html &gt; #q&lt;a b c&gt;
 it: &quot;a b c&quot;
-user &gt; #q anything really
-       een
-       twee
-       drieanything really
+make-html &gt; #q anything really
+            een
+            twee
+            drieanything really
 it: &quot;een                          \ntwee                         \ndrie&quot;
 </code></pre>
 <h2>Regular expression literals</h2>
-<pre><code>user &gt; #/a(a)p/i
+<pre><code>make-html &gt; #/a(a)p/i
 it: #/a(a)p/i
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :match-timeout -00:00:00.0010000
                  :options IgnoreCase
                  :right-to-left false )
@@ -93,85 +93,79 @@ user &gt; :d
 to produce output. The names <code>bq:list</code>, <code>bq:force</code>, <code>bq:quote</code> and <code>bq:append</code>
 are used to clarify the translation of the backquote expression. They behave as
 their counterparts in the <code>lisp</code> package.</p>
-<pre><code>user &gt; (quote `(a b c))
+<pre><code>make-html &gt; (quote `(a b c))
 it: (list 'a 'b 'c)
-user &gt; `(a b c)
+make-html &gt; `(a b c)
 it: (a b c)
-user &gt; (var b '(1 2 3))
+make-html &gt; (var b '(1 2 3))
 it: b
-user &gt; (quote `(a ,b c))
+make-html &gt; (quote `(a ,b c))
 it: (list 'a (force b) 'c)
-user &gt; `(a ,b c)
+make-html &gt; `(a ,b c)
 it: (a (1 2 3) c)
-user &gt; (quote `(a ,@b c))
+make-html &gt; (quote `(a ,@b c))
 it: (append (list 'a) (force b) (list 'c))
-user &gt; `(a ,@b c)
+make-html &gt; `(a ,@b c)
 it: (a 1 2 3 c)
 </code></pre>
 <h2>Immediate execution expressions</h2>
-<pre><code>user &gt; '(1 (+ 2 3) 4)
+<pre><code>make-html &gt; '(1 (+ 2 3) 4)
 it: (1 (+ 2 3) 4)
-user &gt; (setq $read-eval true)
+make-html &gt; (setq $read-eval true)
 it: true
-user &gt; '(1 #.(+ 2 3) 4)
+make-html &gt; '(1 #.(+ 2 3) 4)
 it: (1 5 4)
 </code></pre>
 <h2>(Un)conditional inclusion or exclusion  of forms</h2>
 <p>The following examples show how to include or exclude a single form. The first
 argument after <code>#+</code> and <code>#-</code> is a logical expression that refers to symbols in
 the <code>$features</code> list. The second argument is the form to include or exclude.</p>
-<pre><code>user &gt; $features
-it: (:ansi-terminal :kiezellisp
-                    :kiezellisp-con
-                    :linux
-                    :netcore
-                    :repl
-                    :unix
-                    :x64)
-user &gt; '(a #; b c)
+<pre><code>make-html &gt; $features
+it: (:ansi-terminal :kiezellisp :linux :netcore :repl :unix :x64)
+make-html &gt; '(a #; b c)
 it: (a c)
-user &gt; '(a #ignore b c)
+make-html &gt; '(a #ignore b c)
 it: (a c)
-user &gt; '(a #+x32 b c)
+make-html &gt; '(a #+x32 b c)
 it: (a c)
-user &gt; '(a #-x32 b c)
+make-html &gt; '(a #-x32 b c)
 it: (a b c)
-user &gt; '(a #+bla b c)
+make-html &gt; '(a #+bla b c)
 it: (a c)
-user &gt; '(a #-bla b c)
+make-html &gt; '(a #-bla b c)
 it: (a b c)
-user &gt; '(a #+(and x32 (not bla)) b c)
+make-html &gt; '(a #+(and x32 (not bla)) b c)
 it: (a c)
 </code></pre>
 <p>We can also include/exclude more than one (usually top-level) form:</p>
-<pre><code>user &gt; '(#if unix 1 2 #elif windows 3 #else 4 5 #endif)
+<pre><code>make-html &gt; '(#if unix 1 2 #elif windows 3 #else 4 5 #endif)
 it: ((compile-time-branch 1 2))
 </code></pre>
 <p>Please note that this feature is form-aware and not line-aware and that the
 forms in the choosen branch are executed as a single top-level form.</p>
 <h2>Infix notation</h2>
-<pre><code>user &gt; '#i(1+x)
+<pre><code>make-html &gt; '#i(1+x)
 it: (+ 1 x)
-user &gt; '#i(math:sin(x)**(1+1)+math:cos(x)**2)
+make-html &gt; '#i(math:sin(x)**(1+1)+math:cos(x)**2)
 it: (+ (math:pow (math:sin x) (+ 1 1)) (math:pow (math:cos x) 2))
 </code></pre>
 <h2>Structures</h2>
 <p>The <code>#s(...)</code> reader macro produces a prototype object as a literal. When the
 number of items in the list is odd, the first item must be the type name of a
 prototype which will become the parent of the constructed prototype.</p>
-<pre><code>user &gt; #s(aap 1 noot 2)
+<pre><code>make-html &gt; #s(aap 1 noot 2)
 it: #s( :aap 1
         :noot 2 )
-user &gt; (defstruct mies aap (noot 4) (teun 5))
+make-html &gt; (defstruct mies aap (noot 4) (teun 5))
 it: mies
-user &gt; #s(mies aap 1 noot 2)
+make-html &gt; #s(mies aap 1 noot 2)
 it: #s(mies :aap 1
             :noot 2
             :teun 5 )
-user &gt; (type? it 'mies)
+make-html &gt; (type? it 'mies)
 it: true
-user &gt; #s(mies2 aap 1 noot 2)
-Undefined type name: user:mies2
+make-html &gt; #s(mies2 aap 1 noot 2)
+Undefined type name: make-html::mies2
 </code></pre>
 <h2>Read tables</h2>
 <p>Kiezellisp readtables are similar to Common Lisp readtables.</p>

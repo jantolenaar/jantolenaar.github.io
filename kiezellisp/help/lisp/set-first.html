@@ -1,4 +1,4 @@
-<html lang='en'><head etag='3e4930e50b159ca18700365fa3c37505'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-first.mdk</title><style>
+<html lang='en'><head etag='e2be6840a3a80f4efa760e5f4aa15ab7'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-first.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,11 +28,11 @@ margin-left: 1em;
 (<b>set-first</b> <i>seq</i> <i>item</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Sets the first element of <code>seq</code> to <code>item</code>.</p>
-<pre><code>user &gt; (let seq '(a 2 3 4))
+<pre><code>make-html &gt; (let seq '(a 2 3 4))
 it: seq
-user &gt; (set-first seq 'a)
+make-html &gt; (set-first seq 'a)
 it: a
-user &gt; (macroexpand '(setf (first seq) 'a))
+make-html &gt; (macroexpand '(setf (first seq) 'a))
 it: (set-first seq 'a)
 </code></pre>
 

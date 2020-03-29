@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0e37ee554cea2cae876b56bfd6388b40'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/symbols.mdk</title><style>
+<html lang='en'><head etag='9d24f50aacfb6253eb615358dd4b953a'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/symbols.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -27,20 +27,20 @@ probably is a symbol. It is just a name in a package (which is not entirely
 unlike a namespace). Symbols may have a global value and/or a lexical value or
 even no value at all. The value may be a simple value like a number or a string,
 or a more complex value like a function.</p>
-<pre><code>user &gt; (undef 'z)
+<pre><code>make-html &gt; (undef 'z)
 
-user &gt; 'z
+make-html &gt; 'z
 it: z
-user &gt; :d
-#s( :exported true
+make-html &gt; :d
+#s( :exported false
     :name &quot;z&quot;
-    :package &quot;user&quot;
+    :package &quot;make-html&quot;
     :symbol z
     :usage undefined )
 
-user &gt; (var z 123)
+make-html &gt; (var z 123)
 it: z
-user &gt; z
+make-html &gt; z
 it: 123
 </code></pre>
 

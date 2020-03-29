@@ -1,4 +1,4 @@
-<html lang='en'><head etag='55c4eff12d838db9ff5a808ad93337c4'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/generator.mdk</title><style>
+<html lang='en'><head etag='8c26604ae3107997565fb5add09c9a59'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/generator.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,11 +30,11 @@ margin-left: 1em;
 <p>Returns an <code>IEnumerable</code> that returns a value for each <code>yield</code> statement in <code>forms</code>.
 The <code>yield</code> statements may be issued by functions called by <code>forms</code>. Generators are
 implemented as native threads.</p>
-<pre><code>user &gt; (generator (yield 1) (yield 2) (yield 3))
+<pre><code>make-html &gt; (generator (yield 1) (yield 2) (yield 3))
 it: #&lt;Kiezel.GeneratorThreadContext&gt;
-user &gt; (as-vector it)
+make-html &gt; (as-vector it)
 it: #v(1 2 3)
-user &gt; (macroexpand '(generator (yield 1) (yield 2) (yield 3)))
+make-html &gt; (macroexpand '(generator (yield 1) (yield 2) (yield 3)))
 it: (system:create-generator (lambda null (yield 1) (yield 2) (yield 3)))
 </code></pre>
 

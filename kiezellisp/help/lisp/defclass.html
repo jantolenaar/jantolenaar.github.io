@@ -1,4 +1,4 @@
-<html lang='en'><head etag='e076abb17f5dc62b384677af30c2075f'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defclass.mdk</title><style>
+<html lang='en'><head etag='702941a113d091d4ea55555a75455762'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defclass.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,7 +28,7 @@ margin-left: 1em;
 (<b>defclass</b> <i>name</i> <i>[doc-string]</i> <i>prototype-object</i>)</code><br/></p>
 <p>Creates predicate, constructor and accessor functions for the given prototype
 object.</p>
-<pre><code>user &gt; (macroexpand '(defclass person #s(name &quot;&quot; address &quot;&quot; city &quot;&quot;)))
+<pre><code>make-html &gt; (macroexpand '(defclass person #s(name &quot;&quot; address &quot;&quot; city &quot;&quot;)))
 it: (do
       (deftype person #s(:address &quot;&quot; :city &quot;&quot; :name &quot;&quot;))
       (defun person? (obj)

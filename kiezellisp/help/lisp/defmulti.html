@@ -1,4 +1,4 @@
-<html lang='en'><head etag='7a4f2dfb5c6c8151a8abb9c6a8aeef57'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defmulti.mdk</title><style>
+<html lang='en'><head etag='e903009e9e1928fad567e7b07c95b232'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defmulti.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,38 +28,38 @@ margin-left: 1em;
 (<b>defmulti</b> <i>name</i> (<i>arg*</i>) <i>[doc-string]</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Defines a multi-method (same as generic function in CommonLisp).</p>
-<pre><code>user &gt; (defmulti m (a b) &quot;The m multimethod.&quot;)
+<pre><code>make-html &gt; (defmulti m (a b) &quot;The m multimethod.&quot;)
 it: #&lt;Kiezel.MultiMethod&gt;
-user &gt; (defmethod m ((a (eql 'red)) (b string))
-           (print-line &quot;red string: &quot; b))
+make-html &gt; (defmethod m ((a (eql 'red)) (b string))
+                (print-line &quot;red string: &quot; b))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (defmethod m ((a (eql 'blue)) (b string))
-           (print-line &quot;blue string: &quot; b))
+make-html &gt; (defmethod m ((a (eql 'blue)) (b string))
+                (print-line &quot;blue string: &quot; b))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (defmethod m ((a (eql 'red)) (b number))
-           (print-line &quot;red number: &quot; b))
+make-html &gt; (defmethod m ((a (eql 'red)) (b number))
+                (print-line &quot;red number: &quot; b))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (defmethod m ((a (eql 'blue)) (b number))
-           (print-line &quot;blue number: &quot; b)
-           (call-next-method))
+make-html &gt; (defmethod m ((a (eql 'blue)) (b number))
+                (print-line &quot;blue number: &quot; b)
+                (call-next-method))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (defmethod m (a (b number))
-           (print-line &quot;a: &quot; a  &quot; number: &quot; b)
-           (call-next-method))
+make-html &gt; (defmethod m (a (b number))
+                (print-line &quot;a: &quot; a  &quot; number: &quot; b)
+                (call-next-method))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (defmethod m (a b)
-           (print-line &quot;a: &quot; a  &quot; b: &quot; b))
+make-html &gt; (defmethod m (a b)
+                (print-line &quot;a: &quot; a  &quot; b: &quot; b))
 it: #&lt;Lambda Name=&quot;m&quot;&gt;
-user &gt; (m 'red &quot;cherry&quot;)
+make-html &gt; (m 'red &quot;cherry&quot;)
 red string: cherry
 
-user &gt; (m 'blue &quot;berry&quot;)
+make-html &gt; (m 'blue &quot;berry&quot;)
 blue string: berry
 
-user &gt; (m 'red 123)
+make-html &gt; (m 'red 123)
 red number: 123
 
-user &gt; (m 'blue 456)
+make-html &gt; (m 'blue 456)
 blue number: 456
 a: blue number: 456
 a: blue b: 456

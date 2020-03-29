@@ -1,0 +1,73 @@
+<html lang='en'><head etag='e21496b1d065555e4423bbb27365904b'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>getting-started.mdk</title><style>
+
+div.narrow {
+max-width: 50em;
+margin: auto;
+}
+
+div.indexofeverything {
+column-width:18em;
+}
+
+pre {
+margin-left: 2em;
+white-space: pre-wrap;
+}
+
+p {
+max-width: 50em;
+margin-left: 1em;
+}
+
+    </style></head><body><div class='narrow'><big><b><span><a href='../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h1>Getting Started</h1>
+<p>This is written for Linux, but most things apply to windows as well.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>.net core.</li>
+<li>monodevelop and/or vscode.</li>
+<li>git</li>
+</ul>
+<h2>Installation</h2>
+<p>Switch to your preferred source code directory (e.g. <code>~/abc</code>) and
+execute the line:</p>
+<pre><code>git clone https://github.com/jantolenaar/kiezellisp.git
+</code></pre>
+<h2>Configuration</h2>
+<p>Make a copy of <code>~/abc/kiezellisp/src/kiezellisp-lib/kiezellisp-init-sample.k</code>
+to <code>~/.config/kiezellisp/kiezellisp-init.k</code>.
+Customize the contents of the copy.</p>
+<h2>Build</h2>
+<p>The solution file <code>kiezellisp.sln</code> contains projects to build Kiezellisp
+for .NET Core. The solution files are compatible with Visual Studio, Monodevelop and VSCode.</p>
+<p>Open the solution file <code>~/abc/kiezellisp/src/kiezellisp.sln</code> and build
+the solution.</p>
+<h2>Terminal and window versions</h2>
+<p>The project <code>kiezellisp-con</code> creates an executable <code>kiezellisp</code>. The program is designed
+to run in a terminal, has a REPL and allows the use of winforms, gtk# or another
+graphical framework that has a .NET binding.</p>
+<p>For Windows only: the folder <code>kiezellisp-gui</code> contains the source files to create a
+program without a console window and thus without a REPL.</p>
+<h2>Installation</h2>
+<p>One of the following methods may be convenient to you:</p>
+<ul>
+<li>
+<p>Copy the executable to your bin folder.</p>
+</li>
+<li>
+<p>Make a symbolic link from bin folder to the executable.</p>
+</li>
+<li>
+<p>Make an executable script.</p>
+</li>
+</ul>
+<h2>Running the REPL in a terminal</h2>
+<p>Start Kiezellisp by running your script: <code>kiezellisp</code></p>
+<p>You will be greeted by Kiezellisp's Read-Eval-Print-Loop:</p>
+<pre><code>Kiezellisp 5.0.7390 (.NET Core Release Build 2020-03-26)
+Copyright © Jan Tolenaar 2009-2020
+
+user &gt;
+</code></pre>
+<p>The word <code>user</code> is the name of the current package.</p>
+
+</div></div></body></html>

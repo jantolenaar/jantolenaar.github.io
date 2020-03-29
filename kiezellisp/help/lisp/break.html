@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c32eaf95007e875c2c0b76e51f8748a5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/break.mdk</title><style>
+<html lang='en'><head etag='bbcb0add8aee9acb2e9dd88c86cb76ac'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/break.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,11 +30,11 @@ margin-left: 1em;
 <p>Breaks out of the current <code>loop</code>, <code>while</code> or <code>foreach</code> loop skipping the
 <code>finally</code> clause and returning the value of <code>val</code> instead of any accumulated
 values.</p>
-<pre><code>user &gt; (loop
-           (break null))
+<pre><code>make-html &gt; (loop
+                (break null))
 it: null
-user &gt; (loop
-           (break 123))
+make-html &gt; (loop
+                (break 123))
 it: 123
 </code></pre>
 

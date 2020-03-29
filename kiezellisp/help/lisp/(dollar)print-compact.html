@@ -1,4 +1,4 @@
-<html lang='en'><head etag='856b981466f342192ccb018270133591'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(dollar)print-compact.mdk</title><style>
+<html lang='en'><head etag='7d85882c740a25f3c2c2bb446224f6d0'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(dollar)print-compact.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -25,14 +25,14 @@ margin-left: 1em;
 <p>special-variable</p>
 <h2>Description</h2>
 <p>Used by <code>write</code>.</p>
-<pre><code>user &gt; (do
-           (let $print-compact false)
-           (write-line '(.to-upper &quot;abc&quot;)))
+<pre><code>make-html &gt; (do
+                (let $print-compact false)
+                (write-line '(.to-upper &quot;abc&quot;)))
 ((. &quot;to-upper&quot;) &quot;abc&quot;)
 
-user &gt; (do
-           (let $print-compact true)
-           (write-line '(.to-upper &quot;abc&quot;)))
+make-html &gt; (do
+                (let $print-compact true)
+                (write-line '(.to-upper &quot;abc&quot;)))
 (.to-upper &quot;abc&quot;)
 
 </code></pre>

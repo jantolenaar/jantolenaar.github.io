@@ -1,4 +1,4 @@
-<html lang='en'><head etag='ba48f84e7634d1101d5af3311093b9a0'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/prog.mdk</title><style>
+<html lang='en'><head etag='8c1fb96e13027284cfdee9352e5dd0a5'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/prog.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -34,13 +34,13 @@ Common Lisp's <code>prog</code>.</p>
 <p>The code of a <code>prog</code> is contained in a <code>block prog</code>, Therefore
 <code>leave prog</code> returns from the directly enclosing <code>prog</code>. The special
 form <code>reprog</code> is implemented with <code>redo prog</code>.</p>
-<pre><code>user &gt; (defun fac (n)
-           (prog ((n n) (a 1))
-               (if (plus? n)
-                     (reprog (dec n) (* a n))
-                   a)))
+<pre><code>make-html &gt; (defun fac (n)
+                (prog ((n n) (a 1))
+                    (if (plus? n)
+                          (reprog (dec n) (* a n))
+                        a)))
 it: fac
-user &gt; (fac 30)
+make-html &gt; (fac 30)
 it: 265252859812191058636308480000000
 </code></pre>
 <h2>See also</h2>

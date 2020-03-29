@@ -1,4 +1,4 @@
-<html lang='en'><head etag='1f1b8a8096a1d47ec612d2ef7d98a435'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/as-prototype.mdk</title><style>
+<html lang='en'><head etag='61ca35702f41829628471bee9917fd03'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/as-prototype.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,22 +29,22 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Adds the contents of a hashtable, the values of static properties of a type
 or the instance properties of an object to a prototype hashtable.</p>
-<pre><code>user &gt; (as-prototype 3/4)
+<pre><code>make-html &gt; (as-prototype 3/4)
 it: #s( :denominator 4
         :numerator 3
         :sign 1 )
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;Kiezel.Prototype&quot;
     :type-specifier null
     :value #s( :denominator 4
                :numerator 3
                :sign 1 ) )
 
-user &gt; (as-prototype #/a3/i)
+make-html &gt; (as-prototype #/a3/i)
 it: #s( :match-timeout -00:00:00.0010000
         :options IgnoreCase
         :right-to-left false )
-user &gt; :d
+make-html &gt; :d
 #s( :type &quot;Kiezel.Prototype&quot;
     :type-specifier null
     :value #s( :match-timeout -00:00:00.0010000

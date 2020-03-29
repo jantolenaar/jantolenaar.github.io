@@ -1,4 +1,4 @@
-<html lang='en'><head etag='58364044fec78981213f76637719241c'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/read-from-string.mdk</title><style>
+<html lang='en'><head etag='02f5fceff2d8bea912b27962aed95d46'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/read-from-string.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,13 +28,13 @@ margin-left: 1em;
 (<b>read-from-string</b> <i>text</i> &amp;optional (<i>eof-error?</i> true) (<i>eof-value</i> null))</code><br/></p>
 <h2>Description</h2>
 <p>Reads an expression from the string <code>text</code>.</p>
-<pre><code>user &gt; (read-from-string &quot;(+ 3 4)&quot;)
+<pre><code>make-html &gt; (read-from-string &quot;(+ 3 4)&quot;)
 it: (+ 3 4)
-user &gt; (read-from-string &quot;&quot;)
+make-html &gt; (read-from-string &quot;&quot;)
 read-from-string: unexpected EOF
-user 1 &gt; (read-from-string &quot;&quot; false)
+make-html 1 &gt; (read-from-string &quot;&quot; false)
 it: null
-user 1 &gt; (read-from-string &quot;&quot; false 42)
+make-html 1 &gt; (read-from-string &quot;&quot; false 42)
 it: 42
 </code></pre>
 

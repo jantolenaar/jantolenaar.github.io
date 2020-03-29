@@ -1,4 +1,4 @@
-<html lang='en'><head etag='f296df03231570ac9b415b95b8aee7a5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/create-array.mdk</title><style>
+<html lang='en'><head etag='f185104087d3798578b23e1d19f52884'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/create-array.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,10 +28,10 @@ margin-left: 1em;
 (<b>create-array</b> <i>type</i> <i>size</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates an array.</p>
-<pre><code>user &gt; (let a (create-array 'int64 4))
+<pre><code>make-html &gt; (let a (create-array 'int64 4))
 it: a
-user &gt; :d
-#s( :exported true
+make-html &gt; :d
+#s( :exported false
     :members #s( :is-fixed-size true
                  :is-read-only false
                  :is-synchronized false
@@ -40,7 +40,7 @@ user &gt; :d
                  :rank 1
                  :sync-root [0 0 0 0] )
     :name &quot;a&quot;
-    :package &quot;user&quot;
+    :package &quot;make-html&quot;
     :symbol a
     :type &quot;System.Int64[]&quot;
     :usage variable

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0b317cb833bf4637a75a8ae5092e5e47'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/mapcat.mdk</title><style>
+<html lang='en'><head etag='0ee862845339eef2cdcf605672e9155f'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/mapcat.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -32,11 +32,11 @@ margin-left: 1em;
 <p>Applies <code>func</code> to <code>seqs</code> as in <code>map</code> and concatenates the return values
 which must be sequences.
 Returns a transducer if no <code>seqs</code> are supplied.</p>
-<pre><code>user &gt; (map #(list %1 %1) (series 5))
+<pre><code>make-html &gt; (map #(list %1 %1) (series 5))
 it: ((1 1) (2 2) (3 3) (4 4) (5 5))
-user &gt; (mapcat  #(list %1 %1) (series 5))
+make-html &gt; (mapcat  #(list %1 %1) (series 5))
 it: (1 1 2 2 3 3 4 4 5 5)
-user &gt; (as-list (eduction (map #(list %1 %1)) (series 5)))
+make-html &gt; (as-list (eduction (map #(list %1 %1)) (series 5)))
 it: ((1 1) (2 2) (3 3) (4 4) (5 5))
 </code></pre>
 

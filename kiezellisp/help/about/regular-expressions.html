@@ -1,4 +1,4 @@
-<html lang='en'><head etag='3475e03fa3fedc7fd931bfbf45655313'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/regular-expressions.mdk</title><style>
+<html lang='en'><head etag='c5cfb0f29236971cacb49b6ae2ccb1fc'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/regular-expressions.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -23,39 +23,47 @@ margin-left: 1em;
 <p>about:regular-expressions</p>
 <h2>Description</h2>
 <h3>Standard regular expression</h3>
-<pre><code>user &gt; #/aap/
+<pre><code>make-html &gt; #/aap/
 it: #/aap/
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :match-timeout -00:00:00.0010000
                  :options None
                  :right-to-left false )
     :type &quot;Kiezel.RegexPlus&quot;
     :value #/aap/ )
 
-user &gt; (.regex-match &quot;slaap&quot; #/aap/)
+make-html &gt; (.regex-match &quot;slaap&quot; #/aap/)
 it: (&quot;aap&quot;)
-user &gt; #/(a*)(p)/i
+make-html &gt; #/(a*)(p)/i
 it: #/(a*)(p)/i
-user &gt; :d
+make-html &gt; :d
 #s( :members #s( :match-timeout -00:00:00.0010000
                  :options IgnoreCase
                  :right-to-left false )
     :type &quot;Kiezel.RegexPlus&quot;
     :value #/(a*)(p)/i )
 
-user &gt; (.regex-match &quot;SLAAp&quot; #/(a*)(p)/i)
+make-html &gt; (.regex-match &quot;SLAAp&quot; #/(a*)(p)/i)
 it: (&quot;AAp&quot; &quot;AA&quot; &quot;p&quot;)
 </code></pre>
+<h3>Regular expression options</h3>
+<pre><code>i   RegexOptions.IgnoreCase
+m   RegexOptions.Multiline
+s   RegexOptions.Singleline
+n   RegexOptions.ExplicitCapture
+x   RegexOptions.IgnorePatternWhitespace
+w   wildcard pattern
+</code></pre>
 <h3>Regular expression from a wildcard pattern</h3>
-<pre><code>user &gt; #/*.k/w
+<pre><code>make-html &gt; #/*.k/w
 it: #/^(.*?)\.k$/
-user &gt; (filter #/*.k/w '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
+make-html &gt; (filter #/*.k/w '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
 it: (&quot;a.k&quot;)
-user &gt; (filter #/*.k/wi '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
+make-html &gt; (filter #/*.k/wi '(&quot;a.k&quot; &quot;b.cs&quot; &quot;c.K&quot;))
 it: (&quot;a.k&quot; &quot;c.K&quot;)
 </code></pre>
 <h3>Regular expression as a function</h3>
-<pre><code>user &gt; (filter #/aap/ '(&quot;slaap&quot; &quot;jaap&quot; &quot;teun&quot; &quot;mies&quot; &quot;jaap&quot;))
+<pre><code>make-html &gt; (filter #/aap/ '(&quot;slaap&quot; &quot;jaap&quot; &quot;teun&quot; &quot;mies&quot; &quot;jaap&quot;))
 it: (&quot;slaap&quot; &quot;jaap&quot; &quot;jaap&quot;)
 </code></pre>
 

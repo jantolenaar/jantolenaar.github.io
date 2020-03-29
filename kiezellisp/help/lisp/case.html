@@ -1,4 +1,4 @@
-<html lang='en'><head etag='d7fa506a89bb3ed7f07943d5856f47a5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/case.mdk</title><style>
+<html lang='en'><head etag='c356519af0b1a72fcdbeb8d8d2a46ff9'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/case.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -35,15 +35,15 @@ test-form := form | '(' form* ')'
 or <code>=</code> to one of the items. The value of the <code>clause</code> is the value of the implicit
 <code>do</code> block consisting of the <code>rest</code> of the <code>clauses</code>. The non-list items <code>true</code>
 and <code>otherwise</code> indicate that the <code>clause</code> matches anything.</p>
-<pre><code>user &gt; (let s 'aap)
+<pre><code>make-html &gt; (let s 'aap)
 it: s
-user &gt; (case s
-           (('teun 'mies)
-                (print-line 1))
-           ('aap
-                (print-line 2))
-           (otherwise
-                (print-line 3)))
+make-html &gt; (case s
+                (('teun 'mies)
+                     (print-line 1))
+                ('aap
+                     (print-line 2))
+                (otherwise
+                     (print-line 3)))
 2
 
 </code></pre>

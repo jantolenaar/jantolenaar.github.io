@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c73243073cf1c88a193c6f096d9542e7'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-elt.mdk</title><style>
+<html lang='en'><head etag='b0d827db0916e2a956dedc3349d3e3eb'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-elt.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,15 +29,15 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Assigns <code>value</code> to the place <code>index...</code> of <code>obj</code>. A multi-dimensional array uses
 more than one index.</p>
-<pre><code>user &gt; (let obj (new null))
+<pre><code>make-html &gt; (let obj (new null))
 it: obj
-user &gt; (set-elt obj &quot;name&quot; &quot;mies&quot;)
+make-html &gt; (set-elt obj &quot;name&quot; &quot;mies&quot;)
 it: &quot;mies&quot;
-user &gt; (elt obj &quot;name&quot;)
+make-html &gt; (elt obj &quot;name&quot;)
 it: &quot;mies&quot;
-user &gt; (attr obj 'name)
+make-html &gt; (attr obj 'name)
 it: &quot;mies&quot;
-user &gt; (macroexpand '(setf (elt obj &quot;name&quot;) &quot;mies&quot;))
+make-html &gt; (macroexpand '(setf (elt obj &quot;name&quot;) &quot;mies&quot;))
 it: (set-elt obj &quot;name&quot; &quot;mies&quot;)
 </code></pre>
 

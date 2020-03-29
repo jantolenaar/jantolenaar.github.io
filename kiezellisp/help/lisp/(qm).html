@@ -1,4 +1,4 @@
-<html lang='en'><head etag='1c1efff3bad051e96b9c116f5183c4db'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(qm).mdk</title><style>
+<html lang='en'><head etag='227b3340423ac66e343079d42609e268'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(qm).mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,16 +30,16 @@ margin-left: 1em;
 <p>Returns a function to access a member of an arbitrary object allowing for
 null reference, e.g. <code>(? &quot;to-upper&quot;)</code>. This is usually written as <code>?to-upper</code>
 and expanded by the lisp reader to the former expression.</p>
-<pre><code>user &gt; (?to-upper &quot;hello&quot;)
+<pre><code>make-html &gt; (?to-upper &quot;hello&quot;)
 it: &quot;HELLO&quot;
-user &gt; (let obj (new :name &quot;piet&quot;))
+make-html &gt; (let obj (new :name &quot;piet&quot;))
 it: obj
-user &gt; (?to-upper (.name obj))
+make-html &gt; (?to-upper (.name obj))
 it: &quot;PIET&quot;
-user &gt; (?to-upper (.city obj))
+make-html &gt; (?to-upper (.city obj))
 it: null
-user &gt; (.to-upper (.city obj))
-Cannot invoke a method on a null reference: System.Object.ToUpper(null)
+make-html &gt; (.to-upper (.city obj))
+Cannot invoke a method on a null reference: System.Object.ToUpper(System.Object:null)
 </code></pre>
 
 </div></div></body></html>

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='4fa95eb6739100e2e0a3bf87ac1971ae'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/while.mdk</title><style>
+<html lang='en'><head etag='968f465c6a4e1a33f898c5abe03f8b93'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/while.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,7 +28,7 @@ margin-left: 1em;
 (<b>while</b> <i>test</i> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Specialized form of <code>loop</code>.</p>
-<pre><code>user &gt; (macroexpand-1 '(while test a b c))
+<pre><code>make-html &gt; (macroexpand-1 '(while test a b c))
 it: ((loop (break-if (not test)) a b c) true)
 </code></pre>
 

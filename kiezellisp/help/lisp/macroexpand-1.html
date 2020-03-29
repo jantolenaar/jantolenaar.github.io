@@ -1,4 +1,4 @@
-<html lang='en'><head etag='e14d2466c7c5deb903137b23515b51b5'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/macroexpand-1.mdk</title><style>
+<html lang='en'><head etag='6bac48a2c05b91d31c4e787eed858871'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/macroexpand-1.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,11 +29,11 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Returns a list with the macro expansion of <code>expr</code> and a flag indicating that
 expansion actually occurred.</p>
-<pre><code>user &gt; (macroexpand-1 '(setf (car x) 123))
+<pre><code>make-html &gt; (macroexpand-1 '(setf (car x) 123))
 it: ((set-car x 123) true)
-user &gt; (macroexpand-1 '(while a b))
+make-html &gt; (macroexpand-1 '(while a b))
 it: ((loop (break-if (not a)) b) true)
-user &gt; (macroexpand-1 '(if a b))
+make-html &gt; (macroexpand-1 '(if a b))
 it: ((if a b) false)
 </code></pre>
 

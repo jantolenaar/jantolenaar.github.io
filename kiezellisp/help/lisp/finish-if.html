@@ -1,4 +1,4 @@
-<html lang='en'><head etag='b3ad1f3a46778ab2676214c255439028'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/finish-if.mdk</title><style>
+<html lang='en'><head etag='bfa8b56f7381b37a9c98709bf41caa7b'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/finish-if.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,11 +29,11 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>When used within the main body of a <code>loop</code>, transfers control to the <code>finally</code>
 clause of that <code>loop</code> if <code>test</code> is true.</p>
-<pre><code>user &gt; (loop
-           (for i in '(1 2 3 a 5 6))
-           (finish-if (symbol? i))
-           (collecting i)
-           (finally (collecting 999)))
+<pre><code>make-html &gt; (loop
+                (for i in '(1 2 3 a 5 6))
+                (finish-if (symbol? i))
+                (collecting i)
+                (finally (collecting 999)))
 it: (1 2 3 999)
 </code></pre>
 

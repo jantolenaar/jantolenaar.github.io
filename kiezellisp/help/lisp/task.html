@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c3c08d8754c1550013b1f61a0228cf24'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/task.mdk</title><style>
+<html lang='en'><head etag='95610dd180a92daad7688f73fc9ee227'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/task.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,11 +30,11 @@ margin-left: 1em;
 <p>Creates a task that runs <code>forms</code>. The return value of <code>task</code> is a ThreadContext
 object that exposes the method <code>GetResult</code> and the property <code>IsCompleted</code>.
 <code>GetResult</code> blocks until <code>IsCompleted</code> is true.</p>
-<pre><code>user &gt; (let a (task (* 1 2 3 4 5)))
+<pre><code>make-html &gt; (let a (task (* 1 2 3 4 5)))
 it: a
-user &gt; (.get-result a)
+make-html &gt; (.get-result a)
 it: 120
-user &gt; (.is-completed a)
+make-html &gt; (.is-completed a)
 it: true
 </code></pre>
 

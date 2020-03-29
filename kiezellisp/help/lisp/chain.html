@@ -1,4 +1,4 @@
-<html lang='en'><head etag='7ef3a6c343685d75fefc29a4cab4bcd4'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/chain.mdk</title><style>
+<html lang='en'><head etag='40bbc8fb76fb1e62f1698aa955b740a1'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/chain.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,13 +30,13 @@ margin-left: 1em;
 <p>Evaluates the forms and returns the value of the last form. The
 value of each form is stored in the variable <code>~</code> which can be
 referenced by the next form.</p>
-<pre><code>user &gt; (chain (~)
-           &quot;een twee drie vier vijf zes zeven&quot;
-           (.split ~)
-           (map .length ~)
-           (sum ~))
+<pre><code>make-html &gt; (chain (~)
+                &quot;een twee drie vier vijf zes zeven&quot;
+                (.split ~)
+                (map .length ~)
+                (sum ~))
 it: 27
-user &gt; (sum (map .length (.split &quot;een twee drie vier vijf zes zeven&quot;)))
+make-html &gt; (sum (map .length (.split &quot;een twee drie vier vijf zes zeven&quot;)))
 it: 27
 </code></pre>
 

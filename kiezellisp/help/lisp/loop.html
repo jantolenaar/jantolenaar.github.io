@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0bffbaf8fd5c3b6724bd6347fe3a3597'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/loop.mdk</title><style>
+<html lang='en'><head etag='0e4560334444b685507b3367be71fae4'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/loop.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -46,7 +46,7 @@ directly to lambda definitions within the loop.</p>
 <pre><code>(loop
      (print-line &quot;Hello, world&quot;))
 </code></pre>
-<pre><code>user &gt; (macroexpand '(loop (print-line &quot;Hello, world&quot;)))
+<pre><code>make-html &gt; (macroexpand '(loop (print-line &quot;Hello, world&quot;)))
 it: (block LOOP
       (block TESTS
         (block MAIN
@@ -54,58 +54,58 @@ it: (block LOOP
         (redo TESTS)))
 </code></pre>
 <h3>Loop with a counter</h3>
-<pre><code>user &gt; (loop (with i initially 2 then (inc i)) (finish-if (= i 5)) (print-line i))
+<pre><code>make-html &gt; (loop (with i initially 2 then (inc i)) (finish-if (= i 5)) (print-line i))
 2
 3
 4
 it: null
 </code></pre>
 <h3>Loop with a range</h3>
-<pre><code>user &gt; (loop (for i in (range 2 5)) (print-line i))
+<pre><code>make-html &gt; (loop (for i in (range 2 5)) (print-line i))
 2
 3
 4
 it: null
-user &gt; (loop (for i from 2 below 5) (print-line i))
+make-html &gt; (loop (for i from 2 below 5) (print-line i))
 2
 3
 4
 it: null
 </code></pre>
 <h3>Loop over a list</h3>
-<pre><code>user &gt; (loop (for i in-list '(a b c d e) by cddr) (print-line i))
+<pre><code>make-html &gt; (loop (for i in-list '(a b c d e) by cddr) (print-line i))
 a
 c
 e
 it: null
-user &gt; (loop (for i on-list '(a b c d e) by cddr) (print-line i))
+make-html &gt; (loop (for i on-list '(a b c d e) by cddr) (print-line i))
 a b c d e
 c d e
 e
 it: null
 </code></pre>
 <h3>Generate and next clauses</h3>
-<pre><code>user &gt; (loop (for x in '(a b null c))
-             (generate i from 1)
-             (if x (collecting (list x (next i)))))
+<pre><code>make-html &gt; (loop (for x in '(a b null c))
+                  (generate i from 1)
+                  (if x (collecting (list x (next i)))))
 it: ((a 1) (b 2) (c 3))
 </code></pre>
 <h3>Loop with an explicit return value</h3>
-<pre><code>user &gt; (loop (for x in '(a b c d))
-           (break-if (= x 'b) 123))
+<pre><code>make-html &gt; (loop (for x in '(a b c d))
+                (break-if (= x 'b) 123))
 it: 123
 </code></pre>
 <h3>Loop with an unnamed accumulated value</h3>
-<pre><code>user &gt; (loop (for x in (series 1 50))
-           (summing x))
+<pre><code>make-html &gt; (loop (for x in (series 1 50))
+                (summing x))
 it: 1275
 </code></pre>
 <h3>Loop with a named accumulated value</h3>
-<pre><code>user &gt; (loop (for x in (series 1 50))
-           (summing x into the-sum)
-           (multiplying x into the-product)
-           (finally
-               (list the-sum the-product)))
+<pre><code>make-html &gt; (loop (for x in (series 1 50))
+                (summing x into the-sum)
+                (multiplying x into the-product)
+                (finally
+                    (list the-sum the-product)))
 it: (1275 30414093201713378043612608166064768844377641568960512000000000000)
 </code></pre>
 <h3>Toplevel loop clauses</h3>

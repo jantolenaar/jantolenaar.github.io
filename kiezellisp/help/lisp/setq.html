@@ -1,4 +1,4 @@
-<html lang='en'><head etag='da6c461bde95701b1882d6344e6d9147'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/setq.mdk</title><style>
+<html lang='en'><head etag='c564376938b23093307c417d92fb6099'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/setq.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,23 +30,23 @@ margin-left: 1em;
 <p>Sets the value of a lexical, dynamic or global variable. If symbol macro
 expansion changes <code>sym</code> to something else, the compiler changes <code>setq</code> to
 <code>setf</code> before continuing the compilation.</p>
-<pre><code>user &gt; (do
-           (var x 1)
-           (setq x 3)
-           x)
+<pre><code>make-html &gt; (do
+                (var x 1)
+                (setq x 3)
+                x)
 it: 3
-user &gt; (do
-           (let x 1)
-           (setq x 3)
-           x)
+make-html &gt; (do
+                (let x 1)
+                (setq x 3)
+                x)
 Cannot assign to a constant, future or lazy variable: x
-user 1 &gt; (var numbers '(1 2 3))
+make-html 1 &gt; (var numbers '(1 2 3))
 it: numbers
-user 1 &gt; (do
-            (let-symbol-macro argh (car numbers))
-            (setq argh 4))
+make-html 1 &gt; (do
+                (let-symbol-macro argh (car numbers))
+                (setq argh 4))
 it: 4
-user 1 &gt; numbers
+make-html 1 &gt; numbers
 it: (4 2 3)
 </code></pre>
 

@@ -1,4 +1,4 @@
-<html lang='en'><head etag='21d04155226c2449a6c1d5423343231b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-car.mdk</title><style>
+<html lang='en'><head etag='f86c21035abab3d082378ac76602c541'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/set-car.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,13 +28,13 @@ margin-left: 1em;
 (<b>set-car</b> <i>list</i> <i>item</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Assigns <code>item</code> to the first item of <code>list</code>.</p>
-<pre><code>user &gt; (let z '(111 2 3))
+<pre><code>make-html &gt; (let z '(111 2 3))
 it: z
-user &gt; (set-car z 111)
+make-html &gt; (set-car z 111)
 it: 111
-user &gt; z
+make-html &gt; z
 it: (111 2 3)
-user &gt; (macroexpand '(setf (car z) 111))
+make-html &gt; (macroexpand '(setf (car z) 111))
 it: (set-car z 111)
 </code></pre>
 

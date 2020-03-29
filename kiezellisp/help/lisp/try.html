@@ -1,4 +1,4 @@
-<html lang='en'><head etag='573b2ab91d77040314b573a4268dd09d'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/try.mdk</title><style>
+<html lang='en'><head etag='9a0a8ccacd648f85c73d749951907827'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/try.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,12 +28,12 @@ margin-left: 1em;
 (<b>try</b> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Exception handling.</p>
-<pre><code>user &gt; (try
-           (+ 3 hello)
-           (catch (ex)
-               (print-line ex))
-           (finally (print-line 111)))
-#&lt;LispException Message=&quot;Undefined variable: user:hello&quot;&gt;
+<pre><code>make-html &gt; (try
+                (+ 3 hello)
+                (catch (ex)
+                    (print-line ex))
+                (finally (print-line 111)))
+#&lt;LispException Message=&quot;Undefined variable: make-html::hello&quot;&gt;
 111
 
 </code></pre>

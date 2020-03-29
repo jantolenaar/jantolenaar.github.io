@@ -1,4 +1,4 @@
-<html lang='en'><head etag='4dc5d6046558a89c19fceb7ae535e07e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(dollar)print-prototype-with-braces.mdk</title><style>
+<html lang='en'><head etag='edf0ddadf658057936ecf2a871fea3b4'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/(dollar)print-prototype-with-braces.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -25,14 +25,14 @@ margin-left: 1em;
 <p>special-variable</p>
 <h2>Description</h2>
 <p>When true, prototypes are printed like <code>{...}</code> otherwise like <code>#s(...)</code>.</p>
-<pre><code>user &gt; (do
-           (let $print-prototype-with-braces true)
-           (write-line (new :a 1 :b 2)))
+<pre><code>make-html &gt; (do
+                (let $print-prototype-with-braces true)
+                (write-line (new :a 1 :b 2)))
 { :a 1 :b 2 }
 
-user &gt; (do
-           (let $print-prototype-with-braces false)
-           (write-line (new :a 1 :b 2)))
+make-html &gt; (do
+                (let $print-prototype-with-braces false)
+                (write-line (new :a 1 :b 2)))
 #s(:a 1 :b 2)
 
 </code></pre>

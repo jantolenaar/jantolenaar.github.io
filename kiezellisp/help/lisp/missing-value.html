@@ -1,4 +1,4 @@
-<html lang='en'><head etag='fd5e82ca87fcdae56a30048f6ae3ce1b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/missing-value.mdk</title><style>
+<html lang='en'><head etag='4e621d3049dcb009480061377fa59ce0'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/missing-value.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,14 +28,14 @@ margin-left: 1em;
 <b>missing-value</b></code><br/></p>
 <h2>Description</h2>
 <p>Alternative for <code>null</code> default arguments.</p>
-<pre><code>user &gt; (defmacro some-return (&amp;optional (a missing-value))
-           (if (missing-value? a)
-                 `(return)
-               `(return ,a)))
+<pre><code>make-html &gt; (defmacro some-return (&amp;optional (a missing-value))
+                (if (missing-value? a)
+                      `(return)
+                    `(return ,a)))
 it: some-return
-user &gt; (macroexpand '(some-return))
+make-html &gt; (macroexpand '(some-return))
 it: (return)
-user &gt; (macroexpand '(some-return null))
+make-html &gt; (macroexpand '(some-return null))
 it: (return null)
 </code></pre>
 <h2>See also</h2>

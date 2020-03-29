@@ -1,4 +1,4 @@
-<html lang='en'><head etag='3351093f48f320906c4a39fec57c285a'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/complement.mdk</title><style>
+<html lang='en'><head etag='3ad1b00288255351f88a7bd1b2ddffbb'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/complement.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,9 +28,9 @@ margin-left: 1em;
 (<b>complement</b> <i>func</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns a function that applies <code>not</code> to the result of <code>func</code>.</p>
-<pre><code>user &gt; (mapv odd? (series 5))
+<pre><code>make-html &gt; (mapv odd? (series 5))
 it: #v(true false true false true)
-user &gt; (mapv (complement odd?) (series 5))
+make-html &gt; (mapv (complement odd?) (series 5))
 it: #v(false true false true false)
 </code></pre>
 

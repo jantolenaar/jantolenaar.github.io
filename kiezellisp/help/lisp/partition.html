@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c40834169f64746e02a03c43c7882f7e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partition.mdk</title><style>
+<html lang='en'><head etag='c956ac09496abe3c14777e284edf4b72'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/partition.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -34,15 +34,15 @@ margin-left: 1em;
 <p>Divides <code>seq</code> into subsequences of length <code>size</code>. Default <code>step</code> equals <code>size</code>.
 In order to get the right <code>size</code>, the last subsequence may borrow elements
 from the sequence <code>padding</code>.</p>
-<pre><code>user &gt; (partition 3 (series 10))
+<pre><code>make-html &gt; (partition 3 (series 10))
 it: ((1 2 3) (4 5 6) (7 8 9))
-user &gt; (partition 3 2 (series 10))
+make-html &gt; (partition 3 2 (series 10))
 it: ((1 2 3) (3 4 5) (5 6 7) (7 8 9))
-user &gt; (partition 3 4 (series 10))
+make-html &gt; (partition 3 4 (series 10))
 it: ((1 2 3) (5 6 7))
-user &gt; (partition 3 3 '(a b) (series 10))
+make-html &gt; (partition 3 3 '(a b) (series 10))
 it: ((1 2 3) (4 5 6) (7 8 9) (10 a b))
-user &gt; (partition 3 3 '(a) (series 10))
+make-html &gt; (partition 3 3 '(a) (series 10))
 it: ((1 2 3) (4 5 6) (7 8 9))
 </code></pre>
 

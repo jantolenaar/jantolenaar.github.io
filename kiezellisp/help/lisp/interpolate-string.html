@@ -1,4 +1,4 @@
-<html lang='en'><head etag='2c676a4313027d8a0aea83b50b7e8108'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/interpolate-string.mdk</title><style>
+<html lang='en'><head etag='7036adb82511c87c7492a5ca3a5239f1'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/interpolate-string.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,9 +30,9 @@ margin-left: 1em;
 <p>Evaluates lisp code embedded in <code>str</code> and returns a new string. String literals
 in source code are automatically interpolated. And that is why this example is so
 difficult to type in.</p>
-<pre><code>user &gt; (string (string (string (string &quot;aap#{(+ &quot;))) &quot;3 4)}noot&quot;)
+<pre><code>make-html &gt; (string (string (string (string &quot;aap#{(+ &quot;))) &quot;3 4)}noot&quot;)
 it: &quot;aap#{(+ 3 4)}noot&quot;
-user &gt; (interpolate-string it)
+make-html &gt; (interpolate-string it)
 it: &quot;aap#{(+ 3 4)}noot&quot;
 </code></pre>
 

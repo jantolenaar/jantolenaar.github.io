@@ -1,4 +1,4 @@
-<html lang='en'><head etag='8db3e312faac62632cacdb502e84b0ce'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/continue-if.mdk</title><style>
+<html lang='en'><head etag='18b19d6566cfe376ee3d8a8905c7b0fd'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/continue-if.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -29,12 +29,12 @@ margin-left: 1em;
 <h2>Description</h2>
 <p>Starts the next iteration of the current <code>loop</code>, <code>while</code> or <code>foreach</code> loop if
 <code>test</code> condition is true.</p>
-<pre><code>user &gt; (loop
-           (for i in (series 5))
-           (print-line i)
-           (continue-if
-               (odd? i))
-           (print-line i))
+<pre><code>make-html &gt; (loop
+                (for i in (series 5))
+                (print-line i)
+                (continue-if
+                    (odd? i))
+                (print-line i))
 1
 2
 2

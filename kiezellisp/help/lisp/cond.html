@@ -1,4 +1,4 @@
-<html lang='en'><head etag='6a2b311620ff582402a02c7f90828f34'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/cond.mdk</title><style>
+<html lang='en'><head etag='3b9888e55dd595a648d0388036d90ce4'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/cond.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,15 +28,15 @@ margin-left: 1em;
 (<b>cond</b> <i>clause*</i>)</code><br/></p>
 <h2>Description</h2>
 <p>clause := '( test-expr form* ')'</p>
-<pre><code>user &gt; (let a 137)
+<pre><code>make-html &gt; (let a 137)
 it: a
-user &gt; (cond
-           ((&lt; a 100)
-                (print-line 'smaller-than-100))
-           ((&lt; a 200)
-                (print-line 'smaller-than-200))
-           (true
-                (print-line 'large)))
+make-html &gt; (cond
+                ((&lt; a 100)
+                     (print-line 'smaller-than-100))
+                ((&lt; a 200)
+                     (print-line 'smaller-than-200))
+                (true
+                     (print-line 'large)))
 smaller-than-200
 
 </code></pre>

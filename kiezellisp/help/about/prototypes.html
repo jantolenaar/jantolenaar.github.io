@@ -1,4 +1,4 @@
-<html lang='en'><head etag='9337a4515b04e1a86f47bfe3df7026be'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/prototypes.mdk</title><style>
+<html lang='en'><head etag='9a4171d428d5eb8cca9c7f228557ea3f'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/prototypes.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,25 +30,25 @@ function <code>new</code> at run-time.</p>
 <p>When the literal expression or the <code>new</code> function call has an even number of
 arguments, the arguments are key-value pairs. The key can be given as a keyword,
 symbol or string. The key's string representation is the real key.</p>
-<pre><code>user &gt; (var a { :name b :city &quot;amsterdam&quot; })
+<pre><code>make-html &gt; (var a { :name b :city &quot;amsterdam&quot; })
 it: a
-user &gt; (var b #s( name b city &quot;amsterdam&quot; ))
+make-html &gt; (var b #s( name b city &quot;amsterdam&quot; ))
 it: b
-user &gt; (.name a)
+make-html &gt; (.name a)
 it: b
-user &gt; (.city a)
+make-html &gt; (.city a)
 it: &quot;amsterdam&quot;
-user &gt; (.telephone a)
+make-html &gt; (.telephone a)
 it: null
-user &gt; (var x &quot;mies&quot;)
+make-html &gt; (var x &quot;mies&quot;)
 it: x
-user &gt; (var c (new :name x :city &quot;amsterdam&quot; :telephone null))
+make-html &gt; (var c (new :name x :city &quot;amsterdam&quot; :telephone null))
 it: c
-user &gt; (.name c)
+make-html &gt; (.name c)
 it: &quot;mies&quot;
-user &gt; (.city c)
+make-html &gt; (.city c)
 it: &quot;amsterdam&quot;
-user &gt; (.telephone c)
+make-html &gt; (.telephone c)
 it: null
 </code></pre>
 <p>When the number of arguments is odd, the first argument must be either a type
@@ -57,11 +57,11 @@ object or the name of a type created by <code>deftype</code>, <code>defclass</co
 <code>import</code>.</p>
 <p>In second part of the next example every argument is a constant: <code>b</code> is the name
 of a type.</p>
-<pre><code>user &gt; (deftype b #s( :country &quot;netherlands&quot; ))
+<pre><code>make-html &gt; (deftype b #s( :country &quot;netherlands&quot; ))
 it: #s(b :country &quot;netherlands&quot; )
-user &gt; #s(b)
+make-html &gt; #s(b)
 it: #s(b :country &quot;netherlands&quot; )
-user &gt; #s(b name &quot;john&quot; city &quot;amsterdam&quot; )
+make-html &gt; #s(b name &quot;john&quot; city &quot;amsterdam&quot; )
 it: #s(b :city &quot;amsterdam&quot;
          :country &quot;netherlands&quot;
          :name &quot;john&quot; )
@@ -69,37 +69,37 @@ it: #s(b :city &quot;amsterdam&quot;
 <p>In the second part of the next example every argument is evaluated: <code>b</code> is the
 name of a variable with a prototype value. The last two lines show that a
 prototype object can be used as a function.</p>
-<pre><code>user &gt; (def b (new :country &quot;netherlands&quot;))
+<pre><code>make-html &gt; (def b (new :country &quot;netherlands&quot;))
 it: b
-user &gt; (def a (new b
-                   :name &quot;john&quot;
-                   :city &quot;amsterdam&quot;))
+make-html &gt; (def a (new b
+                        :name &quot;john&quot;
+                        :city &quot;amsterdam&quot;))
 it: a
-user &gt; a
+make-html &gt; a
 it: #s( :city &quot;amsterdam&quot;
         :country &quot;netherlands&quot;
         :name &quot;john&quot; )
-user &gt; (.name a)
+make-html &gt; (.name a)
 it: &quot;john&quot;
-user &gt; (.nam a)
+make-html &gt; (.nam a)
 it: null
-user &gt; (elt a &quot;name&quot;)
+make-html &gt; (elt a &quot;name&quot;)
 it: &quot;john&quot;
-user &gt; (elt a :name)
+make-html &gt; (elt a :name)
 it: &quot;john&quot;
-user &gt; (elt a 'name)
+make-html &gt; (elt a 'name)
 it: &quot;john&quot;
-user &gt; (.city a)
+make-html &gt; (.city a)
 it: &quot;amsterdam&quot;
-user &gt; (.country a)
+make-html &gt; (.country a)
 it: &quot;netherlands&quot;
-user &gt; (prototype:keys a)
+make-html &gt; (prototype:keys a)
 it: (&quot;name&quot; &quot;city&quot; &quot;country&quot;)
-user &gt; (prototype:get-parents a)
+make-html &gt; (prototype:get-parents a)
 it: (#s(:country &quot;netherlands&quot;))
-user &gt; (funcall a &quot;city&quot;)
+make-html &gt; (funcall a &quot;city&quot;)
 it: &quot;amsterdam&quot;
-user &gt; (map a '(city name))
+make-html &gt; (map a '(city name))
 it: (&quot;amsterdam&quot; &quot;john&quot;)
 </code></pre>
 <p><a href="../lisp/defclass.html">defclass</a> <a href="../lisp/defstruct.html">defstruct</a>

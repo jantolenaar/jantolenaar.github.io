@@ -1,4 +1,4 @@
-<html lang='en'><head etag='418e6c2e94ceae8a734ac82fc40b3b20'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/compile-time-vs-run-time-values.mdk</title><style>
+<html lang='en'><head etag='146c27f618a8d131b87601af0ee0e2ef'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/compile-time-vs-run-time-values.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -31,30 +31,30 @@ run-time value is considered.</p>
 <h2>Examples</h2>
 <p><code>do</code> is a special form equivalent to a <code>{...}</code> block in other languages. It has
 a compile-time value but no run-time value:</p>
-<pre><code>user &gt; (do (print-line 1) (print-line 1))
+<pre><code>make-html &gt; (do (print-line 1) (print-line 1))
 1
 1
 
-user &gt; do
+make-html &gt; do
 Undefined variable: lisp:do
 </code></pre>
 <p><code>+</code> is a function. It has a no compile-time value but only a run-time value:</p>
-<pre><code>user &gt; (+ 3 4)
+<pre><code>make-html &gt; (+ 3 4)
 it: 7
-user &gt; +
+make-html &gt; +
 it: #&lt;Function Name=&quot;Kiezel.Runtime.Add&quot;&gt;
-user &gt; (map + '(1 2) '(3 4))
+make-html &gt; (map + '(1 2) '(3 4))
 it: (4 6)
 </code></pre>
 <p><code>or</code> is a special form and a function. It has a compile-time value and a
 run-time value:</p>
-<pre><code>user &gt; (or (number? (do (print-line 123) 123))
-           (string? (do (print-line &quot;abc&quot;) &quot;abc&quot;)))
+<pre><code>make-html &gt; (or (number? (do (print-line 123) 123))
+                (string? (do (print-line &quot;abc&quot;) &quot;abc&quot;)))
 123
 it: true
-user &gt; or
+make-html &gt; or
 it: #&lt;Function Name=&quot;Kiezel.Runtime.LogicalOr&quot;&gt;
-user &gt; (map or '(true false) '(true true))
+make-html &gt; (map or '(true false) '(true true))
 it: (true true)
 </code></pre>
 <h2>Functions with special forms</h2>
@@ -69,19 +69,19 @@ functions, but the equivalent functions are nice to have.</p>
 <h2>Compiler Macros</h2>
 <p>Kiezellisp compiler macros are similar to Common Lisp compiler macros. Use a
 compiler macro to optimize special cases of a function call.</p>
-<pre><code>user &gt; (defun ++ (&amp;rest numbers)
-           (apply + numbers))
+<pre><code>make-html &gt; (defun ++ (&amp;rest numbers)
+                (apply + numbers))
 it: ++
-user &gt; (define-compiler-macro ++ (&amp;rest numbers &amp;whole original-form)
-           (if (and (= (length numbers) 2)
-                    (number? (second numbers))
-                    (= (second numbers) 1))
-               `(inc ,(first numbers))
-               original-form))
+make-html &gt; (define-compiler-macro ++ (&amp;rest numbers &amp;whole original-form)
+                (if (and (= (length numbers) 2)
+                         (number? (second numbers))
+                         (= (second numbers) 1))
+                    `(inc ,(first numbers))
+                    original-form))
 it: ++
-user &gt; (macroexpand '(++ a b c))
+make-html &gt; (macroexpand '(++ a b c))
 it: (++ a b c)
-user &gt; (macroexpand '(++ a 1))
+make-html &gt; (macroexpand '(++ a 1))
 it: (inc a)
 </code></pre>
 <h2>Rules</h2>

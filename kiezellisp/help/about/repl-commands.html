@@ -1,4 +1,4 @@
-<html lang='en'><head etag='92193ff70ef180cbbc60b022f4b7b110'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/repl-commands.mdk</title><style>
+<html lang='en'><head etag='3294274e98d588b8f324ce990d41f0d1'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/repl-commands.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -22,10 +22,10 @@ margin-left: 1em;
     </style></head><body><div class='narrow'><big><b><span><a href='../../../index.html'>jan tolenaar</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/index.html'>kiezellisp</a></span><span>&nbsp;/&nbsp;<a href='../../../kiezellisp/help/index.html'>index-of-everything</a></span></b></big><div><h2>Name</h2>
 <p>about:repl-commands</p>
 <h2>Description</h2>
-<p>Lines starting with a colon or comma are top-level commands
+<p>Lines starting with a colon or semicolon are top-level commands
 which may be abbreviated. Other lines are lisp expressions.</p>
 <p>General top-level commands:</p>
-<pre><code>:clear                  Clear screen and history.
+<pre><code>:clear                  Clear history.
 :describe [expr]        Describe expression or last result.
 :force [expr]           Force lazy expression or last result.
 :globals [pattern]      Show global variables that contain the pattern.
@@ -50,12 +50,7 @@ which may be abbreviated. Other lines are lisp expressions.</p>
 <p>While in the debugger, the existing lexical environments on the call stack
 are readonly, so no <code>setq</code> or <code>setf</code>. You can still fix the value of a lexical
 variable with the <code>:modify</code> command.</p>
-<p>Lisp expressions:</p>
-<p>If the variable <code>$repl-optional-parentheses</code> is true and if the line has no leading
-whitespace and the first term is a symbol that names a function, special form or macro,
-then the line will be enclosed in parentheses and executed.</p>
 <h2>See also</h2>
-<p><a href="../lisp/(dollar)repl-force-it.html">$repl-force-it</a>
-<a href="../lisp/(dollar)repl-optional-parentheses.html">$repl-optional-parentheses</a></p>
+<p><a href="../lisp/(dollar)repl-force-it.html">$repl-force-it</a></p>
 
 </div></div></body></html>

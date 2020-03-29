@@ -1,4 +1,4 @@
-<html lang='en'><head etag='dba89d4a3ab9ebb9cff149d6adcb845a'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defmacro.mdk</title><style>
+<html lang='en'><head etag='be88c312e6d9ea2505436e202c02d25f'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defmacro.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -30,19 +30,19 @@ margin-left: 1em;
 <p>Macros are functions that do not evaluate their arguments but use them as given
 in order to construct and return lisp code which is then compiled and executed.</p>
 <p>Typically, the return value of a macro is a backquote (aka quasiquote) expression:</p>
-<pre><code>user &gt; (defmacro my-trace (expr)
-           (when $debugging
-               (var result (gentemp))
-               `(when $tracing
-                   (var ,result ,expr)
-                   (write-line (string
-                                   ,(write-to-string expr :escape true)
-                                   &quot; =&gt; &quot;
-                                   (write-to-string ,result :escape true)) :stream $stdlog))))
+<pre><code>make-html &gt; (defmacro my-trace (expr)
+                (when $debugging
+                    (var result (gentemp))
+                    `(when $tracing
+                        (var ,result ,expr)
+                        (write-line (string
+                                        ,(write-to-string expr :escape true)
+                                        &quot; =&gt; &quot;
+                                        (write-to-string ,result :escape true)) :stream $stdlog))))
 it: my-trace
 </code></pre>
 <p>The code returned by this macro is always <code>null</code> in no-debug mode, but otherwise...</p>
-<pre><code>user &gt; (macroexpand '(my-trace (setq x (blabla))))
+<pre><code>make-html &gt; (macroexpand '(my-trace (setq x (blabla))))
 it: (if $tracing
       (do?
         (var temp::temp-1 (setq x (blabla)))

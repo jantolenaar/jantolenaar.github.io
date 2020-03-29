@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c7c3e76c57d00e7fcf2a57bc9dab141e'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/pattern-matching.mdk</title><style>
+<html lang='en'><head etag='fc5260e16909235479cc7129b51d8cb6'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/pattern-matching.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,39 +28,39 @@ margin-left: 1em;
 <p>Inspired by the Common Lisp library <a href="https://github.com/m2ym/optima">optima</a>.</p>
 <p>The simplest pattern is a constant, such as a <code>number</code>, <code>string</code> or <code>'expression</code>.
 It matches anything that is <code>equal</code> to it.</p>
-<pre><code>user &gt; (if-match 123 (+ 100 23) true)
+<pre><code>make-html &gt; (if-match 123 (+ 100 23) true)
 it: true
-user &gt; (var expr '(1 2 3))
+make-html &gt; (var expr '(1 2 3))
 it: expr
-user &gt; (if-match '(1 2 3) expr true)
+make-html &gt; (if-match '(1 2 3) expr true)
 it: true
 </code></pre>
 <p>The <code>symbol</code> pattern is usually found as a subpattern of a structural pattern.
 The symbol names a variable that will be declared and bound when the pattern
 matches.</p>
-<pre><code>user &gt; (var expr '(1 2 3))
+<pre><code>make-html &gt; (var expr '(1 2 3))
 it: expr
-user &gt; (if-match (list a b c) expr &quot;a=${a} b=${b} c=${c}&quot;)
+make-html &gt; (if-match (list a b c) expr &quot;a=${a} b=${b} c=${c}&quot;)
 it: &quot;a=1 b=2 c=3&quot;
-user &gt; (if-match (list 1 2 c) expr &quot;c=${c}&quot;)
+make-html &gt; (if-match (list 1 2 c) expr &quot;c=${c}&quot;)
 it: &quot;c=3&quot;
 </code></pre>
 <p>Patterns can be combined with <code>and</code>, <code>or</code> and <code>not</code>.</p>
-<pre><code>user &gt; (if-match (and (satisfies integer?) (satisfies odd?)) &quot;a&quot; true)
+<pre><code>make-html &gt; (if-match (and (satisfies integer?) (satisfies odd?)) &quot;a&quot; true)
 it: null
-user &gt; (if-match (and (satisfies integer?) (satisfies odd?)) 123 true)
+make-html &gt; (if-match (and (satisfies integer?) (satisfies odd?)) 123 true)
 it: true
-user &gt; (if-match (and (satisfies integer?) (satisfies odd?) x) 123 x)
+make-html &gt; (if-match (and (satisfies integer?) (satisfies odd?) x) 123 x)
 it: 123
 </code></pre>
 <p>The <code>property</code> pattern tests one or more properties of a prototype object.</p>
-<pre><code>user &gt; (var obj (new :name &quot;teun&quot; :city &quot;leiden&quot; :country &quot;netherlands&quot;))
+<pre><code>make-html &gt; (var obj (new :name &quot;teun&quot; :city &quot;leiden&quot; :country &quot;netherlands&quot;))
 it: obj
-user &gt; (if-match (property :name &quot;teun&quot; :city &quot;leiden&quot;) obj true)
+make-html &gt; (if-match (property :name &quot;teun&quot; :city &quot;leiden&quot;) obj true)
 it: true
-user &gt; (if-match (property :name (type 'string)) obj true)
+make-html &gt; (if-match (property :name (type 'string)) obj true)
 it: true
-user &gt; (if-match (property :city (regex &quot;lei&quot;) name) obj name)
+make-html &gt; (if-match (property :city (regex &quot;lei&quot;) name) obj name)
 it: &quot;leiden&quot;
 </code></pre>
 <h2>Patterns</h2>

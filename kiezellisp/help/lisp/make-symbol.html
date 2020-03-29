@@ -1,4 +1,4 @@
-<html lang='en'><head etag='c1c36600f446d59c6da563d97ba7d7e9'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/make-symbol.mdk</title><style>
+<html lang='en'><head etag='89be45dd0cb57c493d8a9dc45fcffbe3'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/make-symbol.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,11 +28,11 @@ margin-left: 1em;
 (<b>make-symbol</b> &amp;rest <i>args</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Returns an existing symbol or creates a new one. For use by macros.</p>
-<pre><code>user &gt; (let a 'test1)
+<pre><code>make-html &gt; (let a 'test1)
 it: a
-user &gt; (let b (make-symbol &quot;test&quot; 1))
+make-html &gt; (let b (make-symbol &quot;test&quot; 1))
 it: b
-user &gt; (eq a b)
+make-html &gt; (eq a b)
 it: true
 </code></pre>
 

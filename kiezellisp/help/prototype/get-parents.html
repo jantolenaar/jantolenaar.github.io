@@ -1,4 +1,4 @@
-<html lang='en'><head etag='a83f15b9c14482cf28f2f46e824b1617'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/get-parents.mdk</title><style>
+<html lang='en'><head etag='31f4589ae20877afd22e44f6fd266179'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/prototype/get-parents.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -28,13 +28,13 @@ margin-left: 1em;
 (<b>prototype:get-parents</b> <i>object</i> &amp;key (<i>inherited</i> false))</code><br/></p>
 <h2>Description</h2>
 <p>Returns the list of parent objects of the prototype object <code>object</code>.</p>
-<pre><code>user &gt; (let a (new :color &quot;black&quot;
-                   :model &quot;0&quot;))
+<pre><code>make-html &gt; (let a (new :color &quot;black&quot;
+                        :model &quot;0&quot;))
 it: a
-user &gt; (let b (new a
-                   :model &quot;12&quot;))
+make-html &gt; (let b (new a
+                        :model &quot;12&quot;))
 it: b
-user &gt; (prototype:get-parents b)
+make-html &gt; (prototype:get-parents b)
 it: (#s(:color &quot;black&quot; :model &quot;0&quot;))
 </code></pre>
 

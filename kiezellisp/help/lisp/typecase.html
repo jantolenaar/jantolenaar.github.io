@@ -1,4 +1,4 @@
-<html lang='en'><head etag='da88e3fc28f0f2ecafd8bd868d2e866d'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/typecase.mdk</title><style>
+<html lang='en'><head etag='cd6c1094f0444dd602e24b2988232f01'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/typecase.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -31,15 +31,15 @@ margin-left: 1em;
 otherwise-clause := '(' {true|otherwise} form* ')'
 type := symbol corresponding to a (imported) class
 </code></pre>
-<pre><code>user &gt; (let s 'aap)
+<pre><code>make-html &gt; (let s 'aap)
 it: s
-user &gt; (typecase s
-           (integer
-                (print-line 1))
-           (symbol
-                (print-line 2))
-           (otherwise
-                (print-line 3)))
+make-html &gt; (typecase s
+                (integer
+                     (print-line 1))
+                (symbol
+                     (print-line 2))
+                (otherwise
+                     (print-line 3)))
 2
 
 </code></pre>
