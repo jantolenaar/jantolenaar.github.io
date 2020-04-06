@@ -1,4 +1,4 @@
-<html lang='en'><head etag='93a2ab128dc2e57394d1fab07cee2fe9'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/in-package.mdk</title><style>
+<html lang='en'><head etag='2a96d30844b1932da198128b0b87e592'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/in-package.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -25,13 +25,13 @@ margin-left: 1em;
 <p>builtin-function</p>
 <h2>Syntax</h2>
 <p><code class=syntax>
-(<b>in-package</b> <i>name</i>)</code><br/></p>
+(<b>package</b> <i>name</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Sets the current package. The special variable <code>$package</code> holds the
 value of the current package.</p>
-<pre><code>make-html &gt; (in-package &quot;test-not-found&quot;)
-Undefined package: test-not-found
-make-html 1 &gt; (in-package &quot;user&quot;)
+<pre><code>make-html &gt; (package &quot;test-not-found&quot;)
+it: &lt;Package Name=&quot;test-not-found&quot;&gt;
+test-not-found &gt; (package &quot;user&quot;)
 it: &lt;Package Name=&quot;user&quot;&gt;
 </code></pre>
 <h2>See also</h2>

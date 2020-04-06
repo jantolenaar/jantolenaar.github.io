@@ -1,4 +1,4 @@
-<html lang='en'><head etag='01c5ad43ded205a9c20cd58289302d5b'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/defstruct.mdk</title><style>
+<html lang='en'><head etag='2ca526daf3880e6d920737625b658c91'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/defstruct.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -38,19 +38,19 @@ it: (do
       (defun person-name (obj)
         (.name obj))
       (define-compiler-macro person-name (obj)
-        (list (list '. (force &quot;name&quot;)) (force obj)))
+        (bq:list (bq:list (bq:quote .) (bq:force &quot;name&quot;)) (bq:force obj)))
       (defun person-address (obj)
         (.address obj))
       (define-compiler-macro person-address (obj)
-        (list (list '. (force &quot;address&quot;)) (force obj)))
+        (bq:list (bq:list (bq:quote .) (bq:force &quot;address&quot;)) (bq:force obj)))
       (defun person-city (obj)
         (.city obj))
       (define-compiler-macro person-city (obj)
-        (list (list '. (force &quot;city&quot;)) (force obj)))
+        (bq:list (bq:list (bq:quote .) (bq:force &quot;city&quot;)) (bq:force obj)))
       (defun person-country (obj)
         (.country obj))
       (define-compiler-macro person-country (obj)
-        (list (list '. (force &quot;country&quot;)) (force obj)))
+        (bq:list (bq:list (bq:quote .) (bq:force &quot;country&quot;)) (bq:force obj)))
       'person)
 </code></pre>
 

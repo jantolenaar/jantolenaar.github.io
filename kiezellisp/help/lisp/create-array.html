@@ -1,4 +1,4 @@
-<html lang='en'><head etag='f185104087d3798578b23e1d19f52884'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/create-array.mdk</title><style>
+<html lang='en'><head etag='45a6030d35339da54bcb3d421758a708'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/create-array.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -31,8 +31,7 @@ margin-left: 1em;
 <pre><code>make-html &gt; (let a (create-array 'int64 4))
 it: a
 make-html &gt; :d
-#s( :exported false
-    :members #s( :is-fixed-size true
+#s( :members #s( :is-fixed-size true
                  :is-read-only false
                  :is-synchronized false
                  :length 4
@@ -41,6 +40,7 @@ make-html &gt; :d
                  :sync-root [0 0 0 0] )
     :name &quot;a&quot;
     :package &quot;make-html&quot;
+    :public false
     :symbol a
     :type &quot;System.Int64[]&quot;
     :usage variable

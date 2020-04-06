@@ -1,4 +1,4 @@
-<html lang='en'><head etag='10b930a7a8a74dcc070b5c444ecf02f9'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/index.html</title><style>
+<html lang='en'><head etag='1b570e105330e2da90f60ab1d7ba7e38'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/index.html</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -54,6 +54,7 @@ margin-left: 1em;
 <a href='lisp/(dollar)stdlog.html'>$stdlog</a><br/>
 <a href='lisp/(dollar)stdout.html'>$stdout</a><br/>
 <a href='lisp/(dollar)tracing.html'>$tracing</a><br/>
+<a href='lisp/(dollar)use-list.html'>$use-list</a><br/>
 <a href='lisp/(perc).html'>%</a><br/>
 <a href='lisp/(star).html'>*</a><br/>
 <a href='lisp/(plus).html'>+</a><br/>
@@ -90,6 +91,9 @@ margin-left: 1em;
 <br/>
 <a href='file/read-shared-all-lines.html'>file:read-shared-all-lines</a><br/>
 <a href='file/read-shared-all-text.html'>file:read-shared-all-text</a><br/>
+<br/>
+<a href='lisp/import-symbol.html'>import-symbol</a><br/>
+<a href='lisp/in-package.html'>in-package</a><br/>
 <br/>
 <a href='math/ceiling.html'>math:ceiling</a><br/>
 <a href='math/conjugate.html'>math:conjugate</a><br/>
@@ -160,7 +164,9 @@ margin-left: 1em;
 <a href='system/get-lexical-or-environment-variable.html'>system:get-lexical-or-environment-variable</a><br/>
 <a href='system/get-safe-enumerator.html'>system:get-safe-enumerator</a><br/>
 <a href='system/get-task-result.html'>system:get-task-result</a><br/>
-<a href='system/optimizer.html'>system:optimizer</a><br/><br/><a href='lisp/acons.html'>acons</a><br/>
+<a href='system/optimizer.html'>system:optimizer</a><br/>
+<br/>
+<a href='lisp/unuse-package.html'>unuse-package</a><br/><br/><a href='lisp/acons.html'>acons</a><br/>
 <a href='lisp/add-event-handler.html'>add-event-handler</a><br/>
 <a href='lisp/adjoin.html'>adjoin</a><br/>
 <a href='lisp/and.html'>and</a><br/>
@@ -260,7 +266,6 @@ margin-left: 1em;
 <a href='lisp/defmethod.html'>defmethod</a><br/>
 <a href='lisp/defmulti.html'>defmulti</a><br/>
 <a href='lisp/defonce.html'>defonce</a><br/>
-<a href='lisp/defpackage.html'>defpackage</a><br/>
 <a href='lisp/defsetf.html'>defsetf</a><br/>
 <a href='lisp/defstruct.html'>defstruct</a><br/>
 <a href='lisp/deftype.html'>deftype</a><br/>
@@ -292,7 +297,6 @@ margin-left: 1em;
 <a href='lisp/except.html'>except</a><br/>
 <a href='lisp/exception(qm).html'>exception?</a><br/>
 <a href='lisp/exit.html'>exit</a><br/>
-<a href='lisp/export-symbol.html'>export-symbol</a><br/>
 <br/>
 <a href='lisp/fifth.html'>fifth</a><br/>
 <a href='lisp/filter.html'>filter</a><br/>
@@ -333,9 +337,7 @@ margin-left: 1em;
 <a href='lisp/ignore-errors.html'>ignore-errors</a><br/>
 <a href='lisp/ilist(qm).html'>ilist?</a><br/>
 <a href='lisp/import.html'>import</a><br/>
-<a href='lisp/import-symbol.html'>import-symbol</a><br/>
 <a href='lisp/in-list-enumerator.html'>in-list-enumerator</a><br/>
-<a href='lisp/in-package.html'>in-package</a><br/>
 <a href='lisp/inc.html'>inc</a><br/>
 <a href='lisp/incf.html'>incf</a><br/>
 <a href='lisp/index-of.html'>index-of</a><br/>
@@ -365,8 +367,8 @@ margin-left: 1em;
 <a href='lisp/list(star).html'>list*</a><br/>
 <a href='lisp/list-all-packages.html'>list-all-packages</a><br/>
 <a href='lisp/list-all-types.html'>list-all-types</a><br/>
-<a href='lisp/list-external-symbols.html'>list-external-symbols</a><br/>
-<a href='lisp/list-internal-symbols.html'>list-internal-symbols</a><br/>
+<a href='lisp/list-private-symbols.html'>list-private-symbols</a><br/>
+<a href='lisp/list-public-symbols.html'>list-public-symbols</a><br/>
 <a href='lisp/list-symbols.html'>list-symbols</a><br/>
 <a href='lisp/list(qm).html'>list?</a><br/>
 <a href='lisp/literal(qm).html'>literal?</a><br/>
@@ -414,6 +416,7 @@ margin-left: 1em;
 <a href='lisp/open-log.html'>open-log</a><br/>
 <a href='lisp/or.html'>or</a><br/>
 <br/>
+<a href='lisp/package.html'>package</a><br/>
 <a href='lisp/pairlis.html'>pairlis</a><br/>
 <a href='lisp/parallel-each.html'>parallel-each</a><br/>
 <a href='lisp/parallel-foreach.html'>parallel-foreach</a><br/>
@@ -430,10 +433,12 @@ margin-left: 1em;
 <a href='lisp/print.html'>print</a><br/>
 <a href='lisp/print-line.html'>print-line</a><br/>
 <a href='lisp/print-warning.html'>print-warning</a><br/>
+<a href='lisp/private.html'>private</a><br/>
 <a href='lisp/prog.html'>prog</a><br/>
 <a href='lisp/prototype(qm).html'>prototype?</a><br/>
 <a href='lisp/psetf.html'>psetf</a><br/>
 <a href='lisp/psetq.html'>psetq</a><br/>
+<a href='lisp/public.html'>public</a><br/>
 <a href='lisp/push.html'>push</a><br/>
 <a href='lisp/pushnew.html'>pushnew</a><br/>
 <br/>
@@ -496,7 +501,7 @@ margin-left: 1em;
 <a href='lisp/set-third.html'>set-third</a><br/>
 <a href='lisp/setf.html'>setf</a><br/>
 <a href='lisp/setq.html'>setq</a><br/>
-<a href='lisp/shadow-symbol.html'>shadow-symbol</a><br/>
+<a href='lisp/shadow.html'>shadow</a><br/>
 <a href='lisp/shuffle.html'>shuffle</a><br/>
 <a href='lisp/sleep.html'>sleep</a><br/>
 <a href='lisp/sort.html'>sort</a><br/>
@@ -533,14 +538,12 @@ margin-left: 1em;
 <a href='lisp/typeof.html'>typeof</a><br/>
 <br/>
 <a href='lisp/undef.html'>undef</a><br/>
-<a href='lisp/unexport-symbol.html'>unexport-symbol</a><br/>
 <a href='lisp/union.html'>union</a><br/>
 <a href='lisp/unread-char.html'>unread-char</a><br/>
 <a href='lisp/unreduced.html'>unreduced</a><br/>
-<a href='lisp/unuse-package.html'>unuse-package</a><br/>
 <a href='lisp/unzip.html'>unzip</a><br/>
-<a href='lisp/use-package.html'>use-package</a><br/>
 <a href='lisp/use-package-alias.html'>use-package-alias</a><br/>
+<a href='lisp/use-package-symbols.html'>use-package-symbols</a><br/>
 <a href='lisp/using.html'>using</a><br/>
 <br/>
 <a href='lisp/var.html'>var</a><br/>

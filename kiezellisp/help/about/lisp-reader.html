@@ -1,4 +1,4 @@
-<html lang='en'><head etag='e3206c18507a1af86cdaca2ce3a8c1c4'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/about/lisp-reader.mdk</title><style>
+<html lang='en'><head etag='69fa7caf29ef00940ec9e264cd1f5fef'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -94,17 +94,17 @@ to produce output. The names <code>bq:list</code>, <code>bq:force</code>, <code>
 are used to clarify the translation of the backquote expression. They behave as
 their counterparts in the <code>lisp</code> package.</p>
 <pre><code>make-html &gt; (quote `(a b c))
-it: (list 'a 'b 'c)
+it: (bq:list (bq:quote a) (bq:quote b) (bq:quote c))
 make-html &gt; `(a b c)
 it: (a b c)
 make-html &gt; (var b '(1 2 3))
 it: b
 make-html &gt; (quote `(a ,b c))
-it: (list 'a (force b) 'c)
+it: (bq:list (bq:quote a) (bq:force b) (bq:quote c))
 make-html &gt; `(a ,b c)
 it: (a (1 2 3) c)
 make-html &gt; (quote `(a ,@b c))
-it: (append (list 'a) (force b) (list 'c))
+it: (bq:append (bq:list (bq:quote a)) (bq:force b) (bq:list (bq:quote c)))
 make-html &gt; `(a ,@b c)
 it: (a 1 2 3 c)
 </code></pre>
@@ -143,12 +143,6 @@ it: ((compile-time-branch 1 2))
 </code></pre>
 <p>Please note that this feature is form-aware and not line-aware and that the
 forms in the choosen branch are executed as a single top-level form.</p>
-<h2>Infix notation</h2>
-<pre><code>make-html &gt; '#i(1+x)
-it: (+ 1 x)
-make-html &gt; '#i(math:sin(x)**(1+1)+math:cos(x)**2)
-it: (+ (math:pow (math:sin x) (+ 1 1)) (math:pow (math:cos x) 2))
-</code></pre>
 <h2>Structures</h2>
 <p>The <code>#s(...)</code> reader macro produces a prototype object as a literal. When the
 number of items in the list is odd, the first item must be the type name of a

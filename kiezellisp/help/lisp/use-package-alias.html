@@ -1,4 +1,4 @@
-<html lang='en'><head etag='896687d0258d451c3c6acb7fa02ed661'><meta name='copyright' content='Jan Tolenaar (c) 2009-2019'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><meta http-equiv='CACHE-CONTROL' content='NO-CACHE'><title>help/lisp/use-package-alias.mdk</title><style>
+<html lang='en'><head etag='5d480fe31dea225626cd94c7750dfb6c'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/use-package-alias.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -27,10 +27,13 @@ margin-left: 1em;
 <p><code class=syntax>
 (<b>use-package-alias</b> <i>package-name</i> <i>nick-name</i>)</code><br/></p>
 <h2>Description</h2>
-<p>Gives the package with the long offical name <code>package-name</code> a short <code>nick-name</code>
-but only within the current package.</p>
-<pre><code>make-html &gt; (use-package-alias &quot;lisp&quot; &quot;l&quot;)
-it: &quot;l&quot;
+<p>Gives the package with the long offical name <code>package-name</code> a short <code>nick-name</code>.</p>
+<pre><code>make-html &gt; (package &quot;very-annoying-name&quot;)
+it: &lt;Package Name=&quot;very-annoying-name&quot;&gt;
+very-annoying-name &gt; (use-package-alias &quot;very-annoying-name&quot; &quot;van&quot;)
+it: &quot;van&quot;
 </code></pre>
+<h2>See also</h2>
+<p><a href="../lisp/delete-package.html">delete-package</a></p>
 
 </div></div></body></html>
