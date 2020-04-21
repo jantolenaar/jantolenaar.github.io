@@ -1,4 +1,4 @@
-<html lang='en'><head etag='69fa7caf29ef00940ec9e264cd1f5fef'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><style>
+<html lang='en'><head etag='779fe2999de5e1e6270e171977eddb77'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/about/lisp-reader.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -143,6 +143,10 @@ it: ((compile-time-branch 1 2))
 </code></pre>
 <p>Please note that this feature is form-aware and not line-aware and that the
 forms in the choosen branch are executed as a single top-level form.</p>
+<h2>Infix notation</h2>
+<pre><code>make-html &gt; '#infix(1+2*y*x)
+it: (+ 1 (* 2 y x))
+</code></pre>
 <h2>Structures</h2>
 <p>The <code>#s(...)</code> reader macro produces a prototype object as a literal. When the
 number of items in the list is odd, the first item must be the type name of a

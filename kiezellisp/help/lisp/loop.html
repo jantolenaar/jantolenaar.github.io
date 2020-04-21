@@ -1,4 +1,4 @@
-<html lang='en'><head etag='0e4560334444b685507b3367be71fae4'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/loop.mdk</title><style>
+<html lang='en'><head etag='173714ec20ecca01c3a3516d1487701e'><meta content='Jan Tolenaar (c) 2009-2019' name='copyright'><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta content='NO-CACHE' http-equiv='CACHE-CONTROL'><title>help/lisp/loop.mdk</title><style>
 
 div.narrow {
 max-width: 50em;
@@ -25,10 +25,13 @@ margin-left: 1em;
 <p>macro</p>
 <h2>Syntax</h2>
 <p><code class=syntax>
-(<b>loop</b> &amp;body <i>forms</i>)</code><br/></p>
+(<b>loop</b> &amp;body <i>forms</i>)</code><br/>
+<code class=syntax>
+(<b>loopv</b> &amp;body <i>forms</i>)</code><br/></p>
 <h2>Description</h2>
 <p>Creates a loop. The <code>loop</code> macro is based on the Common Lisp <code>iterate</code> macro
-by Jonathan Amsterdam.</p>
+by Jonathan Amsterdam. <code>loop</code> can collect items into a list. <code>loopv</code> can
+collect items in a vector.</p>
 <h3>Elements of a loop</h3>
 <p>A loop consists of top-level clauses that drive the loop, such as <code>for</code> and
 <code>generate</code>, clauses that may appear at deeper levels than the top level, such
